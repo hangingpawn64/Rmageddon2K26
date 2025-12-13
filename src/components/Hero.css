@@ -1,0 +1,136 @@
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+/* dark vignette */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 35%, black 95%);
+  opacity: 0.6;
+}
+
+/* MAIN LAYOUT */
+.hero__overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* 👈 important for desktop */
+  padding: 4rem 5rem;    /* 👈 more breathing space */
+  gap: 3rem;
+}
+
+/* LEFT SIDE */
+.hero__left {
+  width: 55%;
+}
+
+/* HEADING */
+.hero__heading {
+  font-size: clamp(2.8rem, 3vw, 3.4rem);
+  margin-bottom: 2rem;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+.hero__heading-main {
+  color: #ff5252;
+}
+
+/* CARD STACK */
+.hero__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;   /* more separation */
+  max-width: 620px;
+}
+
+/* RIGHT SIDE */
+/* RIGHT SIDE – DESKTOP */
+.hero__right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.hero__art {
+  max-height: 80vh;   /* reduced from 85–90vh */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+/* ========================= */
+/* LARGE DESKTOP (16"+) */
+/* ========================= */
+@media (min-width: 1400px) {
+  .hero__overlay {
+    padding: 5rem 7rem;
+  }
+
+  .hero__heading {
+    font-size: 3.5rem;
+  }
+
+  .hero__cards {
+    max-width: 680px;
+  }
+
+  .hero__art {
+    max-height: 78vh;
+  }
+}
+
+/* ========================= */
+/* TABLET & BELOW */
+/* ========================= */
+@media (max-width: 900px) {
+  .hero__overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .hero__left,
+  .hero__right {
+    width: 100%;
+  }
+
+  .hero__heading {
+    white-space: normal;
+    font-size: 2.2rem;
+  }
+
+   .hero__right {
+    position: relative;      /* 🔥 KEY FIX */
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: auto;
+  }
+
+/* MOBILE IMAGE SIZE CONTROL */
+@media (max-width: 768px) {
+  .hero__art {
+    max-height: 260px;   /* 👈 key fix */
+    width: auto;
+  }
+}

@@ -1,0 +1,96 @@
+.step {
+  padding: 1.4rem 1.8rem;
+  border-radius: 8px;
+
+  /* white glass */
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* subtle border, no glow */
+  border: 1px solid rgba(255, 200, 60, 0.45);
+  box-shadow: none;
+
+  transition: 
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.step {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.35),
+    0 0 14px rgba(255, 200, 60, 0.4);
+}
+
+
+.step__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.step__stars {
+  display: flex;
+}
+
+.step__star {
+  width: 22px;
+  height: 22px;
+  background: url("../assets/star1.png") no-repeat center;
+  background-size: contain;
+  margin-right: 4px;
+
+  transform: scale(1);
+  filter: brightness(0.9);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* When hovering the CARD, change stars */
+.step:hover .step__star {
+  background-image: url("../assets/star_activated1.png");
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(255, 200, 60, 0.8));
+}
+
+.step:hover .step__star:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.step:hover .step__star:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.step:hover .step__star:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.step {
+  cursor: pointer;
+}
+
+
+.step__stars:hover .step__star {
+  background-image: url("../assets/star_activated1.png");
+}
+
+.step__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ff5252;
+}
+
+.step__text {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
