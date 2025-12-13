@@ -1,3 +1,7 @@
+*{
+    font-family: "Saira Semi Condensed", sans-serif;
+}
+
 .contact-us {
     cursor: url('/crosshair.svg') 16 16, crosshair; /* Image + fallback */
     background-image: url("../assets/mapbg.png");
@@ -27,7 +31,6 @@
     text-align: center;
     margin: 0;
     color: #D3A40A;
-
     letter-spacing: 4px;
     text-transform: uppercase;
 }
