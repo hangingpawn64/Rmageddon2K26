@@ -1,5 +1,7 @@
 body {
   font-family: 'Saira Stencil One', sans-serif;
+  margin: 0%;
+  padding: 0%;
 }
 
 .bg {
@@ -66,7 +68,7 @@ body {
 /* Responsive Design */
 /* Tablets */
 @media (max-width: 1024px) {
-  .accomodation {
+  .accommodation {
     font-size: 3rem;
   }
   .soon {
@@ -84,8 +86,8 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .accomodation {
-    font-size: 2.2rem;
+  .accommodation {
+    font-size: 2rem;
     top: 30%;
   }
   .soon {
