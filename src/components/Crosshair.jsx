@@ -4,7 +4,6 @@ import "./Crosshair.css";
 export default function CrosshairCursor() {
     const [pos, setPos] = useState({ x: -100, y: -100 });
     const [shooting, setShooting] = useState(false);
-    const [dir, setDir] = useState(true); // true = right, false = left
 
 
     useEffect(() => {
