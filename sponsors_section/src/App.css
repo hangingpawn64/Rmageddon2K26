@@ -1,0 +1,113 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* APP CONTAINER */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+/* SPONSORS SECTION */
+.sponsors-section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;           /* Full viewport height */
+  max-height: 100vh;           /* Prevent extra long page */
+  background-image: url('./assets/SponsorBg1.png'); 
+  background-size: cover;       /* Cover entire section */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* LEFT SIDE */
+.sponsors-left {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;               /* Reduced padding to fit better */
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  max-width: 600px;
+}
+
+/* RIGHT SIDE */
+.sponsors-right {
+     flex: 2;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    /* backdrop-filter: blur(6px); */
+    /* width: 100%; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+/* WRAPPER for VERTICAL SLIDER */
+.vertical-slider-wrapper {
+  /* width: 100%;
+  max-width: 300px;         
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+  transform-origin: center center; */
+    /* width: 90%;  */
+    transform: rotate(90deg); 
+  max-width: 875px;
+  padding: 2rem 0;
+}
+
+/* SLIDER CONTENT */
+/* .vertical-slider img {
+  width: auto;
+  max-height: 120px;
+  object-fit: contain;
+} */
+
+/* TEXT STYLING */
+.sponsor-title {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.sponsor-desc {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sponsors-section {
+    flex-direction: column;
+  }
+
+  .sponsors-left,
+  .sponsors-right {
+    flex: unset;
+    width: 100%;
+    min-height: 50vh;
+    padding: 30px;
+  }
+
+  /* Reset slider rotation on mobile */
+  .vertical-slider-wrapper {
+    transform: rotate(0deg);
+    max-width: 100%;
+  }
+}
