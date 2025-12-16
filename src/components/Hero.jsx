@@ -1,8 +1,8 @@
 import "./Hero.css";
-import bgImg from "../assets/img1.jpg";
+import bgImg from "../assets/bg.png";
 import gtaArt from "../assets/char.png";
 import Logo from "./Logo";
-import StepCard from "./Stepcard";
+import StepCard from "./StepCard"; // ✅ correct casing
 import { steps } from "./StepsData";
 
 export default function Hero() {
@@ -11,24 +11,41 @@ export default function Hero() {
       className="hero"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <Logo />
+      {/* TOP-RIGHT LOGO */}
+      {/* <Logo /> */}
 
+      {/* HUD TITLE */}
+ <h1 className="hud-title">
+  <span className="hud-line-1">
+    Steps to confirm your seat in
+  </span>
+
+  <span className="hud-line-2">
+    RMAGEDDON 26
+    <span className="hud-connector"></span>
+  </span>
+</h1>
+
+
+
+      {/* MAIN CONTENT */}
       <div className="hero__overlay">
+        {/* LEFT SIDE – CARDS */}
         <div className="hero__left">
-          <h1 className="hero__heading">
-            Steps to confirm your seat in{" "}
-            <span className="hero__heading-main">RMAGEDDON 26</span>
-          </h1>
-
           <div className="hero__cards">
-            {steps.map(step => (
+            {steps.map((step) => (
               <StepCard key={step.title} {...step} />
             ))}
           </div>
         </div>
 
+        {/* RIGHT SIDE – CHARACTER */}
         <div className="hero__right">
-          <img src={gtaArt} alt="Artwork" className="hero__art" />
+          <img
+            src={gtaArt}
+            alt="RMAGEDDON Character"
+            className="hero__art"
+          />
         </div>
       </div>
     </section>

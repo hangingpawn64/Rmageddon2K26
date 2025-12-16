@@ -1,9 +1,10 @@
 .logo {
   position: absolute;
-  top: 20px;
-  right: 25px;
-  z-index: 1000;
+  top: 24px;
+  right: 32px;
+  z-index: 10;
 }
+
 
 .logo img {
   width: 90px;
