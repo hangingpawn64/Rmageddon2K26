@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Slider from "./component/slider.jsx";
+import exploreBtn from "./assets/exploreBtn.svg"; 
 
 function App() {
   return (
@@ -9,11 +10,42 @@ function App() {
 
         {/* LEFT SIDE (WIDE) */}
         <div className="sponsors-left">
-          <div className="glass-box">
-            <h1 className="sponsor-title">OUR SPONSORS</h1>
-            <p className="sponsor-desc">
-              Powering Rmageddon 2K26 with innovation, robotics & technology.
-            </p>
+
+          <div className="left-upper">
+            <div className="upper-head">
+              <div className="title">
+                <p>RNXG</p>
+                <span className="underline"></span>
+              </div>
+
+              <a href="#explore" className="exploreBtn">
+                <img src={exploreBtn} alt="Explore" />
+              </a>
+            </div>
+
+
+            <div className="glass">
+              <div className="desc"><p>Members of the RNXG, regardless of their fields, collaborate as a team to generate multidisciplinary technical expertise. Robotics for Next Generation, or RNXG, is the greatest platform for working on various issue statements and developing the best solutions for them.</p></div>
+            </div>
+
+          </div>
+
+         <div className="left-down">
+            <div className="down-head">
+
+              <div className="title">
+                <p>OUR SPONSOR</p>
+                <span className="underline"></span>
+              </div>
+
+        
+            </div>
+
+
+            <div className="glass">
+              <div className="desc"><p>Powered by our sponsors fueling innovation, robotic excellence, and the future of technology. for Next Generation, or RNXG, is the greatest platform for working on various issue statements and developing the best solutions for them.</p></div>
+            </div>
+
           </div>
         </div>
 
@@ -30,3 +62,5 @@ function App() {
 }
 
 export default App;
+
+
