@@ -58,11 +58,11 @@
 }
 
 .title p {
-  font-size: 62px;
-  font-weight: 800;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: #00C6FF;
+     font-size: 55px;
+    font-weight: 800;
+    /* letter-spacing: 0.3px; */
+    text-transform: uppercase;
+    color: #00C6FF;
 }
 
 /* LONG UNDERLINE */
@@ -89,7 +89,7 @@
 /* ---------- GLASS DESCRIPTION ---------- */
 .glass {
       background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(-15px);
     border-radius: 22px;
     border: 0px solid rgba(255, 255, 255, 0.2);
