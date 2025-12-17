@@ -42,7 +42,7 @@ const Navbar = () => {
         {/* LEFT */}
         <div className="nav-left">
          <img
-  src="/src/assets/LeftLogo.png"
+  src="../src/assets/LeftLogo.png"
   className="left-logo"
   alt="logo"
 />
