@@ -49,6 +49,48 @@
 }
 
 /* ================= MOBILE ================= */
+.vertical-slide img {
+  width: 180px; /* 🔥 CONTROL LOGO SIZE */
+  height: 170px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+  .vertical-slide img {
+  width: 150px; /* 🔥 CONTROL LOGO SIZE */
+  height: 170px;
+  object-fit: contain;
+}
+  .vertical-slider-container {
+    height: 580px;
+  }
+
+  .vertical-slide {
+    height: 120px;
+  }
+
+  .vertical-slide.active-slide {
+    transform: scale(1);
+  }
+
+
+
+
+  /* ACTIVE SLIDE – increase width */
+.vertical-slide.active-slide {
+  opacity: 1;
+  transform: scale(1.25, 1.15); /* 🔥 width , height */
+  z-index: 10;
+}
+
+}
+
 @media (max-width: 900px) {
   .vertical-slider-container {
     height: 380px;

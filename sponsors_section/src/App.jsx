@@ -16,7 +16,7 @@ function App() {
             <div className="upper-head">
               <div className="title">
                 <p>RNXG</p>
-                <span className="underline"></span>
+                <span className="Rnxg-underline"></span>
               </div>
 
               <a href="#explore" className="exploreBtn">
@@ -36,7 +36,7 @@ function App() {
 
               <div className="title">
                 <p>OUR SPONSOR</p>
-                <span className="underline"></span>
+                <span className="Spon-underline"></span>
               </div>
 
 
