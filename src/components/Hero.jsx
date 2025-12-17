@@ -4,13 +4,16 @@ import gtaArt from "../assets/char.png";
 import Logo from "./Logo";
 import StepCard from "./StepCard"; // ✅ correct casing
 import { steps } from "./StepsData";
+import Navbar from "./Navbar"
 
 export default function Hero() {
   return (
+    
     <section
       className="hero"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
+      <Navbar/>
       {/* TOP-RIGHT LOGO */}
       {/* <Logo /> */}
 
