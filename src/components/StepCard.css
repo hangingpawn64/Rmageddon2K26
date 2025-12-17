@@ -110,9 +110,15 @@
 .step__title {
   font-size: 0.9rem;
   font-weight: 700;
+  font-family:"science gothic";
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #ff4d4d;
+  display:flex;
+  justify-content:center;
+  text-align:center;
+ 
+  
+  color: #40F4FF;
 }
 
 /* ========================= */
@@ -120,9 +126,11 @@
 /* ========================= */
 
 .step__text {
+  
   margin: 0;
   font-size: 0.85rem;
   line-height: 1.6;
+  font-family:"science gothic";
   color: #ffffffff; /* readable on white glass */
 }
 
