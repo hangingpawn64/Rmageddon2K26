@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import "./Slider.css";
+import "./VerticalSlider.css";
 
-const HorizontalSlider = ({ className }) => {
-  const originalSlides = [
+const VerticalSlider = () => {
+  const baseSlides = [
     {
       image:
         "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
@@ -24,46 +24,38 @@ const HorizontalSlider = ({ className }) => {
     },
   ];
 
-  // Duplicate slides for smooth looping
-  const slides = [...originalSlides, ...originalSlides, ...originalSlides];
+  // 🔥 duplicate slides for smooth loop
+  const slides = [...baseSlides, ...baseSlides, ...baseSlides];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className={className}>
+    <div className="vertical-slider-container">
       <Swiper
-        direction="horizontal"
+        direction="vertical"
         slidesPerView={3}
-        spaceBetween={10}
-        loop={true}
-        loopAdditionalSlides={2}
+        spaceBetween={30}
         centeredSlides={true}
+        loop={true}
+        speed={800}
         autoplay={{
-          delay: 1300,
+          delay: 1400,
           disableOnInteraction: false,
         }}
         onSlideChange={(swiper) =>
-          setActiveIndex(swiper.realIndex % originalSlides.length)
+          setActiveIndex(swiper.realIndex % baseSlides.length)
         }
         modules={[Autoplay]}
-        className="horizontal-swiper"
-        breakpoints={{
-          901: { slidesPerView: 3, centeredSlides: true },
-          900: { slidesPerView: 2, centeredSlides: false },
-          480: { slidesPerView: 2, centeredSlides: false },
-          0: { slidesPerView: 1, centeredSlides: false },
-        }}
+        className="vertical-swiper"
       >
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`hori-slide-custom ${
-              activeIndex === index % originalSlides.length ? "active-slide" : ""
+            className={`vertical-slide ${
+              activeIndex === index % baseSlides.length ? "active-slide" : ""
             }`}
           >
-            <img
-              src={slide.image}
-              alt={`Slide ${(index % originalSlides.length) + 1}`}
-            />
+            <img src={slide.image} alt={slide.text} />
             <div className="slide-text">{slide.text}</div>
           </SwiperSlide>
         ))}
@@ -72,4 +64,4 @@ const HorizontalSlider = ({ className }) => {
   );
 };
 
-export default HorizontalSlider;
+export default VerticalSlider;

@@ -1,0 +1,77 @@
+/* ================= CONTAINER ================= */
+.vertical-slider-container {
+  width: 100%;
+  height: 700px; /* 🔥 controls total slider height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ================= SWIPER ================= */
+.vertical-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= SLIDE ================= */
+.vertical-slide {
+  height: 180px; /* 🔥 CONTROL INDIVIDUAL SLIDE HEIGHT */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* ================= IMAGE ================= */
+.vertical-slide img {
+  width: 180px; /* 🔥 CONTROL LOGO SIZE */
+  height: 170px;
+  object-fit: contain;
+}
+
+/* ================= TEXT ================= */
+.slide-text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ================= ACTIVE SLIDE ================= */
+.vertical-slide.active-slide {
+  opacity: 1;
+  transform: scale(1.25);
+  z-index: 10;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .vertical-slider-container {
+    height: 380px;
+  }
+
+  .vertical-slide {
+    height: 120px;
+  }
+
+  .vertical-slide.active-slide {
+    transform: scale(1);
+  }
+
+  .vertical-slide img {
+    width: 110px;
+  }
+
+
+  /* ACTIVE SLIDE – increase width */
+.vertical-slide.active-slide {
+  opacity: 1;
+  transform: scale(1.25, 1.15); /* 🔥 width , height */
+  z-index: 10;
+}
+
+}

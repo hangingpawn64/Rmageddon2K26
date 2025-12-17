@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import Slider from "./component/slider.jsx";
-import exploreBtn from "./assets/exploreBtn.svg"; 
+import VerticalSlider from "./component/VerticalSlider";
+import exploreBtn from "./assets/exploreBtn.svg";
+import lineVectors from "./assets/lineVectors.svg";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
 
           </div>
 
-         <div className="left-down">
+          <div className="left-down">
             <div className="down-head">
 
               <div className="title">
@@ -38,7 +39,7 @@ function App() {
                 <span className="underline"></span>
               </div>
 
-        
+
             </div>
 
 
@@ -51,9 +52,16 @@ function App() {
 
         {/* RIGHT SIDE (VERTICAL SLIDER) */}
         <div className="sponsors-right">
-          <div className="vertical-slider-wrapper">
-            <Slider />
-          </div>
+          <img
+            src={lineVectors}
+            alt="vector line"
+            aria-hidden="true"
+            className="vector-line"
+          />
+          {/* {/* <div className="vertical-slider-wrapper"></div> */}
+            <VerticalSlider />
+
+      
         </div>
 
       </section>

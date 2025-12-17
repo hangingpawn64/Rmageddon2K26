@@ -58,11 +58,11 @@
 }
 
 .title p {
-  font-size: 72px;
+  font-size: 62px;
   font-weight: 800;
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #00C6FF;
 }
 
 /* LONG UNDERLINE */
@@ -78,7 +78,7 @@
      width: 249px;
     cursor: pointer;
     transition: transform 0.75s ease, filter 0.35s ease;
-    margin-top: 38px;
+    margin-top: 28px;
 }
 
 .exploreBtn:hover img {
@@ -98,7 +98,7 @@
 
 .desc p {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 2;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -130,13 +130,24 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 40px;
+  padding: 20px;
+   position: relative;   /*this line added extra*/
+}
+
+
+.vector-line {
+position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    /* opacity: 97.8; */
+    pointer-events: none;
 }
 
 /* ---------- SLIDER WRAPPER ---------- */
 .vertical-slider-wrapper {
-  transform: rotate(90deg);
-  max-width: 900px;
+  /* transform: rotate(90deg); */
+ min-width: 754px;
   width: 100%;
   padding: 2rem 0;
 }
@@ -162,11 +173,11 @@
     width: 100%;
     padding: 40px 25px;
   }
-
+/* 
   .vertical-slider-wrapper {
-    transform: rotate(0deg);
+
     max-width: 100%;
-  }
+  } */
 
   .rnxg-title p {
     font-size: 48px;
