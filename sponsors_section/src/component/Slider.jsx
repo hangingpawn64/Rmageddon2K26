@@ -14,13 +14,13 @@ const HorizontalSlider = ({ className }) => {
     },
     {
       image:
-        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739782897/bitmark_iiguxv.jpg",
-      text: "Educational Sponsor",
+        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
+      text: "Co-Powered By",
     },
     {
-      image:
-        "https://res.cloudinary.com/ds1brunxe/image/upload/v1738677593/images_mx0uho.jpg",
-      text: "Media Sponsor",
+     image:
+        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
+      text: "Co-Powered By",
     },
   ];
 
