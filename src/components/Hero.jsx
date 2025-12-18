@@ -1,10 +1,11 @@
 import "./Hero.css";
-import bgImg from "../assets/bg.png";
+import bgImg from "../assets/bg2.jpeg";
 import gtaArt from "../assets/char.png";
 import leftHUD from "../assets/Group1.svg";
 import rightHUD from "../assets/Group2.svg";
 import StepCard from "./StepCard";
 import { steps } from "./StepsData";
+
 
 export default function Hero() {
   return (
@@ -12,6 +13,7 @@ export default function Hero() {
       className="hero"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
+     
       {/* HUD TITLE */}
     {/* HUD TITLE BLOCK */}
 <div className="hud-container">
