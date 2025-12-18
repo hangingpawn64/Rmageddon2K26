@@ -10,11 +10,27 @@
   width: 100%;
   min-height: 100vh;
   font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ================= SPONSORS SECTION ================= */
+/* .sponsors-section {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./assets/sponsorBg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-position: center;
+  padding: 40px 0;
+ 
+} */
+
 .sponsors-section {
-  border: border-box;
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -34,6 +50,7 @@
   justify-content: center;
   padding: 30px;
   gap: 18vh;
+  min-width: 280px;
 }
 
 /* ---------- LEFT UPPER ---------- */
@@ -49,36 +66,42 @@
   display: flex;
   align-items: center;
   gap: 40px;
+  justify-content: space-between;
 }
 
 /* RNXG TEXT */
 .title {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
 }
 
 .title p {
   font-size: 55px;
   font-weight: 800;
-  /* letter-spacing: 0.3px; */
   text-transform: uppercase;
   color: #51D4FF;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
 
-/* LONG UNDERLINE */
+/* LONG UNDERLINES (responsive widths) */
 .Rnxg-underline {
-  width: 508px;
   height: 2px;
   background: linear-gradient(91deg, #ffffff, rgba(255, 255, 255, 0.2));
   border-radius: 16px;
+  width: 260px;
+  min-width: 120px;
+  max-width: 100%;
 }
 
 .Spon-underline {
-  width: 508px;
   height: 2px;
   background: linear-gradient(91deg, #ffffff, rgba(255, 255, 255, 0.2));
   border-radius: 16px;
+  width: 508px;
+  min-width: 120px;
+  max-width: 100%;
 }
 
 /* ---------- EXPLORE BUTTON ---------- */
@@ -86,37 +109,36 @@
   width: 249px;
   cursor: pointer;
   transition: transform 0.75s ease, filter 0.35s ease;
-  margin-top: 28px;
+  margin-top: 8px;
+  display: block;
 }
 
 .exploreBtn:hover img {
-  transform: scale(1.1) translateY(-2px);
-  filter: drop-shadow(0 0 18px rgba(0, 255, 255, 0.7));
+  transform: scale(1.08) translateY(-3px);
+  filter: drop-shadow(0 0 18px rgba(0, 255, 255, 0.6));
 }
 
 /* ---------- GLASS DESCRIPTION ---------- */
 .glass {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(-15px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 22px;
-  border: 0px solid rgba(255, 255, 255, 0.2);
+  border: 0px solid rgba(255, 255, 255, 0.12);
   padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  max-width: 100%;
 }
 
 .desc p {
   font-size: 16px;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+  word-break: break-word;
+  text-align: left;
 }
 
-
-
-
-
 /* ---------- LEFT DOWN ---------- */
-
-/* ---------- LEFT UPPER ---------- */
 .left-down {
   display: flex;
   flex-direction: column;
@@ -124,7 +146,7 @@
   max-width: 780px;
 }
 
-/* ---------- TITLE + BUTTON ---------- */
+/* ---------- DOWN HEAD ---------- */
 .down-head {
   display: flex;
   align-items: center;
@@ -132,18 +154,6 @@
 }
 
 /* ================= RIGHT SIDE ================= */
-/* .sponsors-right {
-  flex: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 20px;
-  position: relative;
- 
-} */
-
-
 .sponsors-right {
   flex: 2;
   display: flex;
@@ -153,17 +163,17 @@
   overflow-y: hidden;
   padding: 20px;
   position: relative;
+  min-width: 260px;
 }
 
-
-
+/* decorative vector line */
 .vector-line {
   position: absolute;
   top: 20px;
   right: 20px;
   width: 300px;
-  /* opacity: 97.8; */
   pointer-events: none;
+  user-select: none;
 }
 
 /* ---------- SLIDER WRAPPER ---------- */
@@ -175,22 +185,34 @@
 
 .slider-horizontal {
   display: none;
+  width: 100%;
 }
 
+/* utility to keep large images from overflowing */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE: large -> small ================= */
+
+/* ----- <= 1024px ----- */
 @media (max-width: 1024px) {
   .sponsors-section {
     display: flex;
     flex-direction: row;
+    padding: 0px;
   }
 
+
+
   .title p {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .Rnxg-underline {
-    width: 325px;
+    width: 214pxpx;
   }
 
   .Spon-underline {
@@ -199,7 +221,7 @@
   }
 
   .desc p {
-    font-size: 15px;
+    font-size: 13.6px;
   }
 
   .exploreBtn img {
@@ -212,14 +234,38 @@
   .glass {
     padding: 15px;
   }
+
+  .upper-head {
+    gap: 42px;
+}
+.left-down{
+    gap: 42px;
+}
 }
 
 
 
 
+
+
+/* ----- <= 900px (switch to column layout) ----- */
 @media (max-width: 900px) {
   .sponsors-section {
     flex-direction: column;
+    align-items: center;
+    padding: 28px 18px;
+    gap: 24px;
+  }
+
+  .sponsors-left,
+  .sponsors-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .upper-head {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .slider-vertical {
@@ -228,80 +274,185 @@
 
   .slider-horizontal {
     display: block;
-    width: 100%;
-
   }
-
-
 }
 
-
-
+/* ----- <= 768px ----- */
 @media (max-width: 768px) {
-
-.sponsors-section {
-    flex-direction: column;
+  .upper-head {
+    gap: 28px;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-  
-  }
-  .sponsors-left,
-  .sponsors-right {
-    width: 100%;
-    padding: 20px ;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
+  .title p {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .Rnxg-underline{
+    width: 265px;
+  }
+  .Spon-underline {
+    width: 400px;
+  }
 
   .exploreBtn img {
     width: 180px;
   }
 
-    .desc p {
-    font-size: 13px;
-  }
-  .Spon-underline {
-    width: 500px;
-
-  }
-
-  .title p {
-    font-size: 38px;
-  }
-
-  .upper-head {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 155px;
-  }
-
   .glass {
-    padding: 15px;
-    max-width: 96%;
+    padding: 16px;
+    border-radius: 18px;
   }
 
-  .sponsors-left {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 30px; */
-    gap: 8vh;
+  .desc p {
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: left;
   }
 
   .vector-line {
     display: none;
   }
 
+  .sponsors-left {
+    gap: 8vh;
+    padding: 10px 12px;
+  }
 
-
-
-
-
-
-
-
-
+  .sponsors-right {
+    padding: 12px;
+  }
 }
+
+/* ----- <= 425px (important mobile breakpoint) ----- */
+@media (max-width: 525px) {
+  .sponsors-section {
+    padding: 20px 12px;
+  }
+
+  .sponsors-left {
+    gap: 6vh;
+    padding: 12px;
+  }
+
+  .upper-head {
+   flex-direction: row;
+        /* gap: 11px; */
+        align-items: center;
+        text-align: center;
+  }
+
+  .title p {
+    font-size: 25px;
+  }
+
+  .Rnxg-underline{
+ width: 170px;
+  }
+  .Spon-underline {
+   width: 250px;
+  }
+
+  .exploreBtn img {
+    width: 140px;
+    margin-top: 6px;
+  }
+
+  .glass {
+    padding: 14px;
+  }
+
+  .desc p {
+    font-size: 10px;
+        line-height: 1.4;
+        text-align: left;
+  }
+
+  .left-down,
+  .left-upper {
+    max-width: 100%;
+  }
+}
+
+/* ----- <= 360px ----- */
+@media (max-width: 360px) {
+  .title p {
+    font-size: 22px;
+  }
+
+  .exploreBtn img {
+    width: 140px;
+    margin-top: 0px;
+  }
+
+  .desc p {
+    font-size: 10.5px;
+    line-height: 1.2;
+  }
+
+  .Rnxg-underline {
+    width: 86%;
+   
+  }
+  
+  .Spon-underline{
+ width: 225px;
+  }
+
+  .glass {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .upper-head,.left-down {
+    gap: 25px;
+  }
+}
+
+/* ----- <= 320px (smallest phones) ----- */
+@media (max-width: 320px) {
+  .title p {
+    font-size: 24px;
+  }
+
+  .exploreBtn img {
+    width: 130px;
+  }
+
+  .desc p {
+    font-size: 10px;
+  }
+
+ 
+  .Spon-underline {
+    width: 225px;
+  }
+
+  .upper-head {
+    gap: 10px;
+  }
+
+  .sponsors-section {
+    padding: 14px 10px;
+  }
+  .exploreBtn img {
+  width: 100px;
+ 
+}
+}
+
+/* ================= ACCESSIBILITY / SMALL TOUCH TARGETS ================= */
+a.exploreBtn {
+  display: inline-block;
+  outline: none;
+}
+
+.exploreBtn img {
+  touch-action: manipulation;
+ 
+}
+
+/* end of file */
