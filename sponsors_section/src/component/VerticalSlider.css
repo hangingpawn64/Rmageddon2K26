@@ -1,7 +1,7 @@
 /* ================= CONTAINER ================= */
 .vertical-slider-container {
   width: 100%;
-  height: 700px; /* 🔥 controls total slider height */
+  height: 650px; /* 🔥 controls total slider height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,12 +11,12 @@
 /* ================= SWIPER ================= */
 .vertical-swiper {
   width: 100%;
-  height: 100%;
+  height: 98%;
 }
 
 /* ================= SLIDE ================= */
 .vertical-slide {
-  height: 180px; /* 🔥 CONTROL INDIVIDUAL SLIDE HEIGHT */
+  height: 10px; /* 🔥 CONTROL INDIVIDUAL SLIDE HEIGHT */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
 
 /* ================= IMAGE ================= */
 .vertical-slide img {
-  width: 180px; /* 🔥 CONTROL LOGO SIZE */
+  width: 170px; /* 🔥 CONTROL LOGO SIZE */
   height: 170px;
   object-fit: contain;
 }
@@ -35,7 +35,7 @@
 /* ================= TEXT ================= */
 .slide-text {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 10px;
   color: white;
   text-align: center;
   letter-spacing: 0.5px;
@@ -50,7 +50,7 @@
 
 /* ================= MOBILE ================= */
 .vertical-slide img {
-  width: 180px; /* 🔥 CONTROL LOGO SIZE */
+  width: 170px; /* 🔥 CONTROL LOGO SIZE */
   height: 170px;
   object-fit: contain;
 }
@@ -63,12 +63,12 @@
 @media (max-width: 1024px) {
 
   .vertical-slide img {
-  width: 150px; /* 🔥 CONTROL LOGO SIZE */
-  height: 170px;
+  width: 120px; /* 🔥 CONTROL LOGO SIZE */
+  height: 140px;
   object-fit: contain;
 }
   .vertical-slider-container {
-    height: 580px;
+    height: 500px;
   }
 
   .vertical-slide {

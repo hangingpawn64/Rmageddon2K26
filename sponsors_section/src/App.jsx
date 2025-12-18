@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import VerticalSlider from "./component/VerticalSlider";
+import Slider from "./component/Slider";
 import exploreBtn from "./assets/exploreBtn.svg";
 import lineVectors from "./assets/lineVectors.svg";
 
@@ -58,11 +59,18 @@ function App() {
             aria-hidden="true"
             className="vector-line"
           />
-          {/* {/* <div className="vertical-slider-wrapper"></div> */}
-            <VerticalSlider />
 
-      
+          {/* Desktop */}
+          <div className="slider-vertical">
+            <VerticalSlider />
+          </div>
+
+          {/* Mobile */}
+          <div className="slider-horizontal">
+            <Slider />
+          </div>
         </div>
+
 
       </section>
     </div>

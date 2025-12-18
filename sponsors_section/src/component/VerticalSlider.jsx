@@ -34,7 +34,7 @@ const VerticalSlider = () => {
       <Swiper
         direction="vertical"
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={10}
         centeredSlides={true}
         loop={true}
         speed={800}

@@ -31,7 +31,7 @@ const HorizontalSlider = ({ className }) => {
   return (
     <div className={className}>
       <Swiper
-        direction="vertical"
+        direction="horizontal"
         slidesPerView={3}
         spaceBetween={10}
         loop={true}
