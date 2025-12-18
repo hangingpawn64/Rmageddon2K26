@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { NavLink, BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Sling as Hamburger } from "hamburger-react";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -11,11 +12,10 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         {/* SVG BACKGROUND */}
-        <div className="navbar-svg" />
+        <div className="navbar-svg"></div>
 
         {/* CONTENT */}
         <div className="navbar-content">
-
           {/* LEFT */}
           <div className="nav-left">
             <img
@@ -26,12 +26,12 @@ const Navbar = () => {
 
             <ul className="nav-links">
               <li>
-                <NavLink to="/" end onClick={closeMenu}>
+                <NavLink to="/" end>
                   HOME
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/events" onClick={closeMenu}>
+                <NavLink to="/events">
                   EVENTS
                 </NavLink>
               </li>
@@ -45,38 +45,54 @@ const Navbar = () => {
           <div className="nav-right">
             <ul className="nav-links">
               <li>
-                <NavLink to="/accommodation" onClick={closeMenu}>
-                  ACCOMMODATION
+                <NavLink to="/accommodation">
+                  ACCOMODATION
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact-us" onClick={closeMenu}>
+                <NavLink to="/contact">
                   CONTACT
                 </NavLink>
               </li>
             </ul>
           </div>
 
-          {/* HAMBURGER */}
-          <button
-            className={`hamburger ${menuOpen ? "is-active" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
+          {/* HAMBURGER (hamburger-react) */}
+          <div className="hamburger-wrapper">
+            <Hamburger
+              toggled={menuOpen}
+              toggle={setMenuOpen}
+              size={26}
+              color="#ffffff"
+              duration={0.4}
+              easing="ease-in-out"
+            />
+          </div>
         </div>
       </nav>
 
       {/* MOBILE MENU */}
       <ul className={`mobile-menu ${menuOpen ? "show" : ""}`}>
-        <li><NavLink to="/" end onClick={closeMenu}>HOME</NavLink></li>
-        <li><NavLink to="/events" onClick={closeMenu}>EVENTS</NavLink></li>
-        <li><NavLink to="/accommodation" onClick={closeMenu}>ACCOMMODATION</NavLink></li>
-        <li><NavLink to="/contact-us" onClick={closeMenu}>CONTACT</NavLink></li>
+        <li>
+          <NavLink to="/" end onClick={closeMenu}>
+            HOME
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/events" onClick={closeMenu}>
+            EVENTS
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/accommodation" onClick={closeMenu}>
+            ACCOMODATION
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" onClick={closeMenu}>
+            CONTACT
+          </NavLink>
+        </li>
       </ul>
     </>
   );

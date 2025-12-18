@@ -24,7 +24,7 @@ export default function Hero() {
       Steps to confirm your seat in
     </span>
     <span className="hud-line-2">
-      RMAGEDDON 26
+      RMAGEDDON 2K26
     </span>
   </h1>
 

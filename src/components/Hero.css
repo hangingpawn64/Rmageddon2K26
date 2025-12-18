@@ -7,11 +7,9 @@
   width: 100%;
   position: relative;
   padding-top: 90px;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff;
   overflow: hidden;
 }
 
@@ -47,10 +45,6 @@
 }
 
 /* ========================= */
-/* HUD TITLE + SVGs */
-/* ========================= */
-
-/* ========================= */
 /* HUD CONTAINER */
 /* ========================= */
 
@@ -58,7 +52,7 @@
   position: relative;
   z-index: 2;
   width: fit-content;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.2rem; /* reduced top gap */
 }
 
 /* ========================= */
@@ -66,7 +60,7 @@
 /* ========================= */
 
 .hud-title {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Ethnocentric", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: center;
@@ -74,76 +68,54 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
 
   position: relative;
 }
 
-/* Line 1 */
 .hud-line-1 {
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
   color: #7ffcff;
   white-space: nowrap;
 }
 
-/* Line 2 */
 .hud-line-2 {
-  font-size: clamp(2.6rem, 3.8vw, 3.8rem);
-  color: #ff4d4d;
+  font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+  color:#7ffcff;
   line-height: 1.1;
   white-space: nowrap;
 }
 
 /* ========================= */
-/* HUD SVGs (FIGMA-ACCURATE) */
+/* HUD SVGs (RESPONSIVE) */
 /* ========================= */
 
 .hud-svg {
   position: absolute;
   height: auto;
   pointer-events: none;
+  opacity: 0;
+  animation: hudFadeIn 1s ease forwards;
 }
 
-/* LEFT SVG — smaller, upper-left */
+@keyframes hudFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* LEFT SVG — smaller */
 .hud-svg-left {
-  width: 120px;                /* 👈 smaller */
-  top: -6px;                   /* aligns with first line */
-  left: -140px;                /* pulled left */
+  width: clamp(60px, 10vw, 120px);
+  top: -4px;
+  left: clamp(-120px, -18vw, -160px);
 }
 
-/* RIGHT SVG — bigger, aligned to RMAGEDDON */
+/* RIGHT SVG — larger */
 .hud-svg-right {
-  width: 500px;                /* 👈 larger */
-  bottom: -15px;                 /* aligns with second line */
-  right: -300px;               /* extends to the right */
-}
-
-/* ========================= */
-/* HUD TEXT */
-/* ========================= */
-
-.hud-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  font-family: "Orbitron", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.hud-line-1 {
-  font-size: clamp(1.3rem, 2vw, 2rem);
-  color: #7ffcff;
-  white-space: nowrap;
-}
-
-.hud-line-2 {
-  font-size: clamp(2.4rem, 3.6vw, 3.6rem);
-  color: #ff4d4d;
-  line-height: 1.1;
-  white-space: nowrap;
+  width: clamp(160px, 36vw, 500px);
+  bottom: -32px;
+  right: clamp(-240px, -30vw, -300px);
 }
 
 /* ========================= */
@@ -153,11 +125,9 @@
 .hero__overlay {
   position: relative;
   z-index: 1;
-
   display: grid;
   grid-template-columns: 58% 42%;
   align-items: stretch;
-
   padding: 0 5rem 4rem;
   gap: 3rem;
 }
@@ -182,14 +152,14 @@
 }
 
 .hero__art {
-  max-width: 600px;
+  max-width: clamp(260px, 32vw, 600px);
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* TABLET */
 /* ========================= */
 
 @media (max-width: 1024px) {
@@ -202,19 +172,11 @@
   }
 }
 
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
 @media (max-width: 900px) {
-  .hud-container {
-    gap: 0.6rem;
-  }
-
-  .hud-left {
-    width: 70px;
-  }
-
-  .hud-right {
-    width: 120px;
-  }
-
   .hero__overlay {
     grid-template-columns: 1fr;
   }
@@ -228,7 +190,24 @@
   .hero__art {
     max-width: 280px;
   }
+
+  /* SVGs shrink + move closer */
+  .hud-svg-left {
+    width: 55px;
+    left: -70px;
+    top: -2px;
+  }
+
+  .hud-svg-right {
+    width: 180px;
+    right: -90px;
+    bottom: -20px;
+  }
 }
+
+/* ========================= */
+/* SMALL PHONES */
+/* ========================= */
 
 @media (max-width: 480px) {
   .hud-line-1 {
@@ -241,7 +220,14 @@
     white-space: normal;
   }
 
-  .hud-svg {
-    display: none; /* clean mobile */
+  .hud-svg-left {
+    width: 45px;
+    left: -30px;
+  }
+
+  .hud-svg-right {
+    width: 140px;
+    right: -60px;
+    bottom: -14px;
   }
 }
