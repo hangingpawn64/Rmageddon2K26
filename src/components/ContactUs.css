@@ -26,10 +26,12 @@
     font-weight: 800;
     text-align: center;
     margin: 0;
+    margin-top: 6rem;
     /* color: #D3A40A; */
-    color: #00C6FF;
+    color: #51D4FF;
     letter-spacing: 4px;
     text-transform: uppercase;
+    font-family: "Saira Stencil One", sans-serif;
 }
 
 

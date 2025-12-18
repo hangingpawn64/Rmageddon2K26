@@ -6,7 +6,7 @@ const Events = () => {
     return (
         <>
             {/* Navbar Overlay */}
-            <div className="top-0 left-0 w-full z-50 flex justify-center pt-6">
+            <div className="absolute top-0 left-0 w-full z-50 flex justify-center">
                 <Navbar />
             </div>
             <div>Events</div>

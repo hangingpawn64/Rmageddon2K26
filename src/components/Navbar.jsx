@@ -1,85 +1,84 @@
-import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink, BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  useEffect(() => {
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    const navItems = document.querySelectorAll(
-      ".nav-links li, .mobile-menu li"
-    );
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-      hamburger.classList.toggle("is-active");
-      mobileMenu.classList.toggle("show");
-    };
-
-    hamburger.addEventListener("click", toggleMenu);
-
-    navItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        navItems.forEach((i) => i.classList.remove("active"));
-        item.classList.add("active");
-
-        mobileMenu.classList.remove("show");
-        hamburger.classList.remove("is-active");
-      });
-    });
-
-    return () => {
-      hamburger.removeEventListener("click", toggleMenu);
-    };
-  }, []);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar">
-      {/* SVG BACKGROUND */}
-      <div className="navbar-svg"></div>
+    <>
+      <nav className="navbar">
+        {/* SVG BACKGROUND */}
+        <div className="navbar-svg" />
 
-      {/* CONTENT */}
-      <div className="navbar-content">
-        {/* LEFT */}
-        <div className="nav-left">
-         <img
-  src="../src/assets/LeftLogo.png"
-  className="left-logo"
-  alt="logo"
-/>
+        {/* CONTENT */}
+        <div className="navbar-content">
 
-          <ul className="nav-links">
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/events">EVENTS</Link></li>
-          </ul>
+          {/* LEFT */}
+          <div className="nav-left">
+            <img
+              src="/src/assets/LeftLogo.png"
+              className="left-logo"
+              alt="logo"
+            />
+
+            <ul className="nav-links">
+              <li>
+                <NavLink to="/" end onClick={closeMenu}>
+                  HOME
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/events" onClick={closeMenu}>
+                  EVENTS
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* CENTER */}
+          <div className="nav-center" />
+
+          {/* RIGHT */}
+          <div className="nav-right">
+            <ul className="nav-links">
+              <li>
+                <NavLink to="/accommodation" onClick={closeMenu}>
+                  ACCOMODATION
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact-us" onClick={closeMenu}>
+                  CONTACT
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* HAMBURGER */}
+          <button
+            className={`hamburger ${menuOpen ? "is-active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
-
-        {/* CENTER */}
-        <div className="nav-center"></div>
-
-        {/* RIGHT */}
-        <div className="nav-right">
-          <ul className="nav-links">
-            <li><Link to="/accommodation">ACCOMODATION</Link></li>
-            <li><Link to="/contact">CONTACT</Link></li>
-          </ul>
-        </div>
-
-        {/* HAMBURGER */}
-        <button className="hamburger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      </nav>
 
       {/* MOBILE MENU */}
-      <ul className="mobile-menu">
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/events">EVENTS</Link></li>
-        <li><Link to="/accommodation">ACCOMODATION</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
+      <ul className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+        <li><NavLink to="/" end onClick={closeMenu}>HOME</NavLink></li>
+        <li><NavLink to="/events" onClick={closeMenu}>EVENTS</NavLink></li>
+        <li><NavLink to="/accommodation" onClick={closeMenu}>ACCOMODATION</NavLink></li>
+        <li><NavLink to="/contact-us" onClick={closeMenu}>CONTACT</NavLink></li>
       </ul>
-    </nav>
+    </>
   );
 };
 

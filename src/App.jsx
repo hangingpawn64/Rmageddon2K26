@@ -28,11 +28,11 @@ function App() {
           element: <HomePage />,
         },
         {
-          path: "/Events",
+          path: "/events",
           element: <Events />,
         },
         {
-          path: "/Accommodation",
+          path: "/accommodation",
           element: <Accommodation />,
         },
         {

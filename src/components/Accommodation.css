@@ -1,5 +1,4 @@
 body {
-  font-family: "Saira Stencil One", sans-serif;
   margin: 0%;
   padding: 0%;
 }
@@ -24,11 +23,12 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3.2rem;
-  color: red;
-  font-weight: bold;
+  font-size: 64px;
+  font-weight: 800;
+  color: #51D4FF;
   text-shadow: 2px 2px 4px #000;
   text-align: center;
+  font-family: "Saira Stencil One", sans-serif;
 }
 
 .soon {
@@ -41,6 +41,7 @@ body {
   font-weight: bold;
   text-shadow: 2px 2px 4px #000;
   text-align: center;
+    font-family: "orbitron", sans-serif;
 }
 
 .left {
