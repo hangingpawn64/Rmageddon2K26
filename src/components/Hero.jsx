@@ -19,7 +19,7 @@ export default function Hero() {
 <div className="hud-container">
   <img src={leftHUD} alt="" className="hud-svg hud-svg-left" />
 
-  <h1 className="hud-title">
+  <h1 className="hud-title hud-fade-in">
     <span className="hud-line-1">
       Steps to confirm your seat in
     </span>

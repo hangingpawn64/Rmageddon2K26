@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink,BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { NavLink, BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Events" onClick={closeMenu}>
+                <NavLink to="/events" onClick={closeMenu}>
                   EVENTS
                 </NavLink>
               </li>
@@ -45,12 +45,12 @@ const Navbar = () => {
           <div className="nav-right">
             <ul className="nav-links">
               <li>
-                <NavLink to="/Accommodation" onClick={closeMenu}>
-                  ACCOMODATION
+                <NavLink to="/accommodation" onClick={closeMenu}>
+                  ACCOMMODATION
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Contact" onClick={closeMenu}>
+                <NavLink to="/contact-us" onClick={closeMenu}>
                   CONTACT
                 </NavLink>
               </li>
@@ -75,8 +75,8 @@ const Navbar = () => {
       <ul className={`mobile-menu ${menuOpen ? "show" : ""}`}>
         <li><NavLink to="/" end onClick={closeMenu}>HOME</NavLink></li>
         <li><NavLink to="/events" onClick={closeMenu}>EVENTS</NavLink></li>
-        <li><NavLink to="/accommodation" onClick={closeMenu}>ACCOMODATION</NavLink></li>
-        <li><NavLink to="/contact" onClick={closeMenu}>CONTACT</NavLink></li>
+        <li><NavLink to="/accommodation" onClick={closeMenu}>ACCOMMODATION</NavLink></li>
+        <li><NavLink to="/contact-us" onClick={closeMenu}>CONTACT</NavLink></li>
       </ul>
     </>
   );
