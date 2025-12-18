@@ -49,7 +49,7 @@ body {
 .nav-left {
     gap: clamp(80px, 10vw, 150px);
     justify-content: flex-start;
-    padding-left: 80px;
+    padding-left: clamp(20px, 5vw, 80px);
 }
 
 .nav-right {
@@ -60,6 +60,7 @@ body {
 
 .left-logo {
     width: 52px;
+    flex-shrink: 0;
     /* position:fixed; */
 }
 
