@@ -5,6 +5,7 @@ import leftHUD from "../assets/Group1.svg";
 import rightHUD from "../assets/Group2.svg";
 import StepCard from "./StepCard";
 import { steps } from "./StepsData";
+import Navbar from "./Navbar";
 
 
 export default function Hero() {
@@ -16,6 +17,7 @@ export default function Hero() {
      
       {/* HUD TITLE */}
     {/* HUD TITLE BLOCK */}
+    
 <div className="hud-container">
   <img src={leftHUD} alt="" className="hud-svg hud-svg-left" />
 
@@ -24,7 +26,7 @@ export default function Hero() {
       Steps to confirm your seat in
     </span>
     <span className="hud-line-2">
-      RMAGEDDON 2K26
+      RMAGEDDON 2026
     </span>
   </h1>
 

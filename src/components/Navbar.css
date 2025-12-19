@@ -1,6 +1,7 @@
 /* ===============================
    GLOBAL
 ================================ */
+
 body {
   margin: 0;
   background: #000;
@@ -17,22 +18,70 @@ body {
   height: 96px;
   overflow: hidden;
 }
+.mobile-menu {
+  z-index: 20;          /* MUST be higher than navbar-content */
+  pointer-events: auto; /* ENSURE clicks work */
+}
+
+/* LEFT / RIGHT */
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-left {
+    gap: clamp(80px, 10vw, 150px);
+    justify-content: flex-start;
+    padding-left: clamp(20px, 5vw, 80px);
+}
+
+.nav-right {
+    justify-content: flex-end;
+    padding-right: 20px;
+    gap: clamp(40px, 6vw, 100px);
+}
 
 /* ===============================
-   SVG BACKGROUND
+   SVG SWITCH
 ================================ */
+.navbar-svg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .navbar-svg {
   position: absolute;
   top: 0;
   left: 50%;
   width: 100%;
-  min-width: 1440px; /* prevents shrinking */
+  min-width: 1440px;
   height: 96px;
   transform: translateX(-50%);
-  background: url("/src/assets/navmain.svg") no-repeat center top;
   background-size: 100% 100%;
-  pointer-events: none;
-  z-index: 1;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.45s ease;
+}
+
+.default-svg {
+  background-image: url("/src/assets/navmain.svg");
+}
+
+.events-svg {
+  background-image: url("/src/assets/eventnav.svg");
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50%) scale(1.03);
 }
 
 /* ===============================
@@ -45,45 +94,21 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px minmax(0, 1fr);
   align-items: center;
-  padding: 0 clamp(20px, 4vw, 60px);
+  padding: 0 60px;
   padding-left: 120px;
 }
 
 /* ===============================
-   LEFT / RIGHT SECTIONS
-================================ */
-.nav-left,
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-/* LEFT */
-.nav-left {
-  justify-content:left;
-  gap:180px;
-  padding-left: 0px;   /* IMPORTANT */
-}
-
-/* RIGHT */
-.nav-right {
-  justify-content: flex-start;
-  gap: clamp(40px, 6vw, 100px);
-}
-
-/* ===============================
-   LOGO
+   FIXED LOGO
 ================================ */
 .left-logo {
   position: absolute;
+  left: 32px;
   top: 50%;
-  left: 32px;            /* horizontal alignment */
   transform: translateY(-50%);
   width: 52px;
   z-index: 10;
-  pointer-events: auto;
 }
-
 
 /* ===============================
    NAV LINKS
@@ -91,23 +116,32 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: clamp(32px, 5vw, 80px);
+  gap: 48px;
   padding: 0;
   margin: 0;
 }
 
-.nav-links a,
-.mobile-menu a {
+.nav-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: clamp(15px, 1.2vw, 22px);
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
-  white-space: nowrap;
+  transition: color 0.35s ease;
 }
 
-/* underline animation */
+/* DEFAULT ACTIVE — BLUE */
+.nav-links a.active {
+  color: #51d4ff;
+}
+
+/* EVENTS PAGE — RED */
+.navbar.events-mode .nav-links a.active {
+  color: #ff2d2d;
+}
+
+/* UNDERLINE */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -116,187 +150,99 @@ body {
   width: 0;
   height: 2px;
   background: #51d4ff;
-  transition: width 0.25s ease;
+  transition: width 0.25s ease, background 0.35s ease;
 }
 
-.nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
 }
 
-.nav-links a.active {
-  color: #51d4ff;
+.navbar.events-mode .nav-links a::after {
+  background: #ff2d2d;
 }
 
 /* ===============================
-   HAMBURGER (hamburger-react wrapper)
+   HAMBURGER
 ================================ */
+.navbar-svg-wrapper,
+.navbar-svg {
+  pointer-events: none;
+}
+
 .hamburger-wrapper {
   display: none;
   position: absolute;
   right: 24px;
   z-index: 6;
 }
+.hamburger-wrapper {
+  pointer-events: auto;
+}
+
 
 /* ===============================
    MOBILE MENU
 ================================ */
-/* ===============================
-   MOBILE MENU (ANIMATED)
-================================ */
-/* ===============================
-   MOBILE MENU — ENHANCED ANIMATION
-================================ */
 .mobile-menu {
   position: absolute;
   top: 96px;
-  left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(6px);
   padding: 36px 0;
   text-align: center;
-  z-index: 5;
-  font-family:"Science gothic";
-
-  /* hidden state */
   opacity: 0;
-  transform:
-    translateY(-20px)
-    scaleY(0.95);
+  transform: translateY(-20px) scaleY(0.95);
   transform-origin: top;
-
   pointer-events: none;
-
-  transition:
-    opacity 0.35s ease,
-    transform 0.4s cubic-bezier(.4,0,.2,1);
+  transition: opacity 0.35s ease, transform 0.4s ease;
 }
 
-/* OPEN STATE */
 .mobile-menu.show {
   opacity: 1;
-  transform:
-    translateY(0)
-    scaleY(1);
+  transform: translateY(0) scaleY(1);
   pointer-events: auto;
 }
 
-
 .mobile-menu li {
   margin: 18px 0;
-
-  opacity: 0;
-  transform:
-    translateY(-12px)
-    scale(0.98);
-
-  transition:
-    opacity 0.35s ease,
-    transform 0.35s cubic-bezier(.4,0,.2,1);
 }
-
-.mobile-menu.show li {
-  opacity: 1;
-  transform:
-    translateY(0)
-    scale(1);
-}
-
-/* STAGGER TIMING */
-.mobile-menu.show li:nth-child(1) { transition-delay: 0.08s; }
-.mobile-menu.show li:nth-child(2) { transition-delay: 0.14s; }
-.mobile-menu.show li:nth-child(3) { transition-delay: 0.20s; }
-.mobile-menu.show li:nth-child(4) { transition-delay: 0.26s; }
-
-
 
 .mobile-menu a {
+  color: #ffffff;
   font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.35s ease;
 }
 
+/* MOBILE ACTIVE — BLUE */
 .mobile-menu a.active {
   color: #51d4ff;
 }
 
-/* ===============================
-   TABLET BREAKPOINT
-================================ */
-@media (max-width: 1200px) {
-  .navbar-content {
-    grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr);
-  }
+/* MOBILE EVENTS — RED */
+.navbar.events-mode .mobile-menu a.active {
+  color: #ff2d2d;
 }
 
 /* ===============================
-   SMALL TABLET
+   RESPONSIVE
 ================================ */
-@media (max-width: 900px) {
-  .nav-left {
-    gap: 48px;
-  }
-
-  .nav-right {
-    gap: 48px;
-  }
-
-  .nav-links {
-    gap: 32px;
-  }
-}
-
-/* ===============================
-   MOBILE
-================================ */
-@media (max-width: 480px) {
-  .left-logo {
-    width: 42px;
-    left: 16px;
-  }
-
-  .navbar-content {
-    padding-left: 90px;
-  }
-}
-
 @media (max-width: 1024px) {
-    .nav-left {
-    gap: 48px;
-  }
   .nav-links {
     display: none;
   }
 
   .hamburger-wrapper {
     display: flex;
-    align-items: center;
-  }
-
-  .navbar-content {
-    padding: 0 20px;
-  }
-
-  .nav-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
   }
 }
 
-/* ===============================
-   SMALL MOBILE
-================================ */
 @media (max-width: 480px) {
-    .nav-left {
-    gap: 48px;
-  }
   .left-logo {
     width: 42px;
-  }
-
-  .mobile-menu a {
-    font-size: 16px;
+    left: 16px;
   }
 }
