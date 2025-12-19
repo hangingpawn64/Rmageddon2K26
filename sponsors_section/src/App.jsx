@@ -21,7 +21,7 @@ function App() {
               </div>
 
               <a href="#explore" className="exploreBtn">
-                <img src={exploreBtn} alt="Explore" />
+                <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"} alt="Explore" />
               </a>
             </div>
 
@@ -54,7 +54,7 @@ function App() {
         {/* RIGHT SIDE (VERTICAL SLIDER) */}
         <div className="sponsors-right">
           <img
-            src={lineVectors}
+            src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182940/Group_514617163_1_z4f8qx.png"}
             alt="vector line"
             aria-hidden="true"
             className="vector-line"

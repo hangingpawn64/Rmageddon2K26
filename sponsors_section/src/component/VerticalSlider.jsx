@@ -9,19 +9,20 @@ const VerticalSlider = () => {
   const baseSlides = [
     {
       image:
-        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
-      text: "Co-Powered By",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+      text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
-      text: "Co-Powered By",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+      text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/ds1brunxe/image/upload/v1739783043/5_ihggwg.jpg",
-      text: "Co-Powered By",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+      text: "",
     },
+
   ];
 
   // 🔥 duplicate slides for smooth loop
