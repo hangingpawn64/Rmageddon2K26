@@ -1,16 +1,17 @@
 import React from "react";
 import "./App.css";
+import Accommodation from "./components/accommodation";
+import Home_page3 from "./components/Home_page3";
 
 export default function App() {
   return (
     <div>
-      <div className="bg">
-       <div className="overlay"></div>  
-         <div className="accommodation">ACCOMMODATION</div>
-           <div className="soon">COMING SOON</div>
-        <div className="left"> </div>
-       <div className="right"> </div>
-      </div>
+      <Accommodation />
+      
+      <Home_page3 />
+      
+    
     </div>
+    
   );
 }
