@@ -8,6 +8,60 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
+/* ===============================
+   DESKTOP LAYOUT CONTROL
+================================ */
+@media (min-width: 1280px) {
+
+  /* CONTROL OVERALL NAV WIDTH */
+  .navbar-content {
+    padding-left: 140px;  /* keeps left logo isolated */
+    padding-right: 100px;
+    grid-template-columns: 1fr 340px 1fr;
+  }
+
+  /* LEFT SIDE LINKS (HOME / EVENTS) */
+  .nav-left {
+    justify-content: flex-end;
+    gap: 200px;           /* distance from logo → HOME */
+  }
+
+  .nav-left .nav-links {
+    gap: 120px;            /* HOME ↔ EVENTS */
+  }
+
+  /* RIGHT SIDE LINKS (ACCOM / CONTACT) */
+  .nav-right {
+    justify-content: flex-start;
+    gap: 150px;           /* distance from center */
+  }
+
+  .nav-right .nav-links {
+    gap: 100px;            /* ACCOM ↔ CONTACT */
+  }
+}
+
+@media (min-width: 1536px) {
+  .nav-left {
+    gap: 240px;
+  }
+
+  .nav-right {
+    gap: 220px;
+  }
+
+  .nav-links {
+    gap: 96px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+}
+
 /* ===============================
    NAVBAR
 ================================ */
@@ -116,15 +170,16 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 48px;
+  gap: 4px;
   padding: 0;
   margin: 0;
+
 }
 
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;

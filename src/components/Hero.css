@@ -114,7 +114,7 @@
 /* RIGHT SVG — larger */
 .hud-svg-right {
   width: clamp(160px, 36vw, 500px);
-  bottom: -32px;
+  bottom: -45px;
   right: clamp(-240px, -30vw, -300px);
 }
 
