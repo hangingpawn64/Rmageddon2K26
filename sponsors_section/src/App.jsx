@@ -40,12 +40,13 @@ function App() {
                 <span className="Spon-underline"></span>
               </div>
 
-
             </div>
-
 
             <div className="glass">
               <div className="desc"><p>Powered by our sponsors fueling innovation, robotic excellence, and the future of technology. for Next Generation, or RNXG, is the greatest platform for working on various issue statements and developing the best solutions for them.</p></div>
+            </div>
+            <div className="arrow">
+              <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png" alt="" />
             </div>
 
           </div>
