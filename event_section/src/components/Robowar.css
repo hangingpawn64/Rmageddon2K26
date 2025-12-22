@@ -1,0 +1,180 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aldrich';
+  src: url('../assets/fonts/Aldrich Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+.robowar-container {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766428880/ChatGPT_Image_Dec_16_2025_10_58_11_PM_1_3_heyhec.png");
+  width: 100%;
+  background-color: #000000;
+  min-height: 100vh;
+  /* background: radial-gradient(circle, #1a1a1a, #000); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  color: #ffffff;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  /* background-position: 100% 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+
+}
+
+/* ================= LEFT SECTION ================= */
+.robowar-left {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  align-items: center;
+  margin-top: 4.6rem;
+}
+
+.robowarHeader {
+  position: relative;
+  /* Make it a container for absolute positioning */
+  display: inline-block;
+  /* shrink to image size */
+}
+
+.robowarHeader img {
+  width: 40rem;
+  max-width: 100%;
+  display: block;
+}
+
+.RoboTitle {
+  position: absolute;
+  /* overlay on image */
+  top: 50%;
+  /* vertically center */
+  left: 50%;
+  /* horizontally center */
+  transform: translate(-50%, -50%);
+  font-size: 44px;
+  font-weight: bold;
+  color: #51D4FF;
+  /* text-shadow: 2px 2px 8px rgba(30, 144, 255, 0.7); */
+  text-align: center;
+  pointer-events: none;
+  /* allows clicking the image under text if needed */
+  font-family: 'Ethnocentric', sans-serif;
+}
+
+/* Content */
+.robowar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  line-height: 1.6;
+  font-size: 21px;
+  color: #ffffff;
+  align-items: center;
+  width: 85%;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.content-bottom p {
+  text-align: center;
+}
+
+.content-top p {
+  text-align: center;
+}
+
+/* Buttons */
+.robowar-buttons {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+
+
+
+.robowar-btn {
+  width: 15rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.robowar-btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.2);
+}
+
+/* ================= RIGHT SECTION ================= */
+.robowar-right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 65px;
+}
+
+/* Character */
+.robowar-character img {
+  width: 350px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  display: block;
+}
+
+/* Carousel */
+.robowar-carousel {
+  position: absolute;
+  top: 84%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fill-available;
+  max-width: 480px;
+  /* border: 3px solid #0f0f0f; */
+}
+
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .robowar-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .robowar-left,
+  .robowar-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .robowar-buttons {
+    justify-content: center;
+  }
+}

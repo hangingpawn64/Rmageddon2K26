@@ -1,0 +1,102 @@
+/* ================= MAIN SWIPER CONTAINER ================= */
+.horizontal-swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= CAROUSEL WRAPPER ================= */
+.imagesSliderContainer {
+width: min-content;
+    max-width: 400px;
+    height: 234px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+/* ================= SINGLE SLIDE ================= */
+.hori-slide-custom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= SLIDE IMAGE ================= */
+.hori-slide-custom img {
+  width: 420px;            /* 🔥 image width */
+  height: 200px;           /* 🔥 image height */
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* ================= ACTIVE SLIDE EFFECT ================= */
+.hori-slide-custom.active-slide img {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= SLIDE TEXT ================= */
+.slide-text {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  width: 100%;
+}
+
+/* ================= PAGINATION ================= */
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffd700;
+  opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .imagesSliderContainer {
+    max-width: 580px;
+    height: 250px;
+  }
+
+  .hori-slide-custom img {
+    width: 360px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imagesSliderContainer {
+    max-width: 92%;
+    height: 220px;
+  }
+
+  .hori-slide-custom img {
+    width: 300px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hori-slide-custom img {
+    width: 240px;
+    height: 140px;
+  }
+}
