@@ -1,5 +1,4 @@
 body {
-  font-family: 'Saira Stencil One', sans-serif;
   margin: 0%;
   padding: 0%;
 }
@@ -84,22 +83,45 @@ body {
   }
 }
 
+
+
 /* Mobile */
 @media (max-width: 768px) {
   .accommodation {
-    font-size: 2rem;
+    font-size: 2.2rem;
     top: 30%;
   }
   .soon {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     top: 55%;
   }
   .left {
-    width: 190px;
-    height: 170px;
+    width: 270px;
+    height: 230px;
   }
   .right {
-    width: 150px;
-    height: 200px;
+    width: 210px;
+    height: 280px;
   }
 }
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .accommodation {
+    font-size: 1.8rem;
+    top: 30%;
+  }
+  .soon {
+    font-size: 2.5rem;
+    top: 50%;
+  }
+  .left {
+    width: 200px;
+    height: 150px;
+  }
+  .right {
+    width: 140px;
+    height: 190px;
+  }
+}
+

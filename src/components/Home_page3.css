@@ -1,19 +1,22 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
 }
 
-.home3-bg {   
-  min-width: 100vw;
-  /* width: 100%; */
+/* ===================== Main Section ===================== */
+
+.home3-bg {
   height: 100vh;
+  width: 100%;
   background-image: url('/page3_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .home3-overlay {
@@ -22,77 +25,89 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+
 .title {
+  width: 100%;
   position: absolute;
   left: 9%;
   font-size: 4rem;
   color: #51D4FF;
-  font-family: 'Ethnocentric-regular.woff2';
+  font-family: 'Ethnocentric';
   font-weight: bold;
   text-shadow: 2px 2px 4px #000;
   margin: 0;
 }
 
-.textbg {
+.textbg img {
   position: absolute;
-  top: 18%;
+  top: 14%;
   left: 9%;
-  width: 30%;
+  width: 31%;
   height: 40%;
   padding: 1.5%;
-  background-image: url('./textbg.png');
   background-repeat: no-repeat;
-  background-size: contain;   
+  background-size: contain;
 }
 
 .content {
   position: absolute;
-  top: 21%;
-  left: 13%;
-  width: 27%;
-  font-size: 1.2rem;
+  top: 17%;
+  left: 10%;
+  width: 30%;
+  font-size: 1.3rem;
   color: white;
   font-family: 'orbitron', sans-serif;
 }
 
-.leftimg {
+
+.leftimg img {
   position: absolute;
   bottom: 0;
-  left: 25%;
-  width: 35%;
-  height: 52%;
-  background-image: url('/page3_left.png');
+  left: 27%;
+  width: 28%;
+  height: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   transition: transform 0.4s ease-in-out;
 }
 
-.leftimg:hover {
+.leftimg img:hover {
   transform: translate(15px, -15px);
 }
 
-.rightimg,
-.rightimg2 {
+.rightimg img,
+.rightimg2 img {
   position: absolute;
-  width: 35%;
-  height: 55%;
-  right: 5%;
-  background-image: url('/button.png');
+  width: 31%;
+  height: 15%;
+  right: 9%;
   background-repeat: no-repeat;
+  transition: transform 0.4s ease-in-out;
 }
 
-.rightimg {
+.rightimg img {
   top: 80%;
 }
 
-.rightimg2 {
+.rightimg2 img {
   top: 55%;
 }
+
+.image img {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 35%;
+  height: 9%;
+  background-repeat: no-repeat;
+}
+
+/* ===================== Interactive Text ===================== */
 
 .innertext,
 .innertext2 {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-family: 'Ethnocentric', sans-serif;
   color: white;
   cursor: pointer;
@@ -103,14 +118,14 @@ html, body {
   will-change: transform;
 }
 
+.innertext {
+  left: 61%;
+  top: 85%;
+}
+
 .innertext2 {
   left: 70%;
   top: 60%;
-}
-
-.innertext{
-  left: 61%;
-  top :85%;
 }
 
 .innertext::before,
@@ -121,12 +136,7 @@ html, body {
   top: 50%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #51D4FF,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #51D4FF, transparent);
   pointer-events: none;
 }
 
@@ -158,177 +168,294 @@ html, body {
   animation: glitchLayer 0.6s steps(2, end);
 }
 
+/* ===================== Animations ===================== */
+
 @keyframes glitchText {
-  0%   { transform: translate(0) scale(1); }
-  20%  { transform: translate(-2px, 1px) scale(1.05); }
-  40%  { transform: translate(2px, -1px) scale(1.08); }
-  60%  { transform: translate(-1px, 2px) scale(1.06); }
-  80%  { transform: translate(1px, -2px) scale(1.1); }
-  100% { transform: translate(0) scale(1); }
+  0% {
+    transform: translate(0) scale(1);
+  }
+  20% {
+    transform: translate(-2px, 1px) scale(1.05);
+  }
+  40% {
+    transform: translate(2px, -1px) scale(1.08);
+  }
+  60% {
+    transform: translate(-1px, 2px) scale(1.06);
+  }
+  80% {
+    transform: translate(1px, -2px) scale(1.1);
+  }
+  100% {
+    transform: translate(0) scale(1);
+  }
 }
 
 @keyframes glitchLayer {
-  0%   { clip-path: inset(0 0 80% 0); }
-  50%  { clip-path: inset(20% 0 20% 0); }
-  100% { clip-path: inset(0 0 0 0); }
+  0% {
+    clip-path: inset(0 0 80% 0);
+  }
+  50% {
+    clip-path: inset(20% 0 20% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @keyframes scan {
-  from { left: -100%; }
-  to   { left: 100%; }
-}
-
-.image {
-  position: absolute;
-  top: 15%;
-  right: 0;
-  width: 40%;
-  height: 10%;
-  background-image: url('/image.png');
-  background-repeat: no-repeat;
-}
-
-/* Responsive Design */
-/* Tablets */
-@media (max-width: 1024px) {
-  .title {
-    font-size: 3rem;
+  from {
+    left: -100%;
   }
-  .textbg {
-    width: 60%;
-    height: 30%;
+  to {
+    left: 100%;
+  }
+}
+
+/* ===================== Responsive Design ===================== */
+
+/* Large screens */
+@media (max-width: 1350px) {
+  .title{
+    font-size: 3.5rem;
     left: 5%;
-    padding: 2%;
   }
   .content {
-    width: 40%;
-    font-size: 1.1rem;
-    left: 8%;
+    font-size: 1rem;
   }
-  .leftimg {
+
+  .innertext{
+    font-size: 1.1rem;
+    top: 86%;
+    left:59% ;
+  }
+
+  .innertext2{
+    font-size: 1.3rem;
+  }
+
+  .rightimg img,
+  .rightimg2 img{
+    width: 32%;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3.2rem;
+    left: 5%;
+  }
+
+  .textbg img {
+    width: 45%;
+    height: 31%;
+    left: 5%;
+    top: 15%;
+  }
+
+  .content {
+    width: 45%;
+    top: 18%;
+    font-size: 0.95rem;
+    left: 5%;
+  }
+
+  .leftimg img {
+    width: 35%;
+    height: 50%;
+    left: 18%;
+  }
+
+  .rightimg img,
+  .rightimg2 img {
+    width: 35%;
+    right: 5%;
+  }
+
+  .innertext {
+    left: 61%;
+    top: 86%;
+    font-size: 1.1rem;
+  }
+
+  .innertext2 {
+    left: 70%;
+    top: 60%;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .textbg img {
+    width: 50%;
+    height: 35%;
+    top: 15%;
+  }
+
+  .content {
+    width: 50%;
+    font-size: 1rem;
+    top: 17%;
+  }
+
+  .leftimg img {
     width: 40%;
     height: 45%;
     left: 15%;
   }
-  .rightimg,
-  .rightimg2 {
-    width: 41%;
-    height: 40%;
-    right:0;
-    padding: 3%;
+
+  .rightimg img,
+  .rightimg2 img {
+    width: 35%;
+    height: 12%;
   }
-  .innertext,
-  .innertext2 {
-    font-size: 1.3rem;
+
+  .innertext {
+    left: 67%;
+    top: 83%;
+    font-size: 1rem;
   }
 
   .innertext2 {
+    top: 59%;
     left: 68%;
-    top: 62%;
   }
-  .innertext{
-    left: 57%;
-    top :86%;
-  }
-  .image {
-    width: 55%;
-    padding: 2%;
-    top: 11%;
+
+  .image img {
+    height: 7%;
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
-    left: 0;
-    text-align: center;
-  }
-  .textbg {
-    width: 50%;
-    height: 50%;
-    left: 2%;
-  }
+/* Mid mobile */
+@media (min-width: 481px) and (max-width: 645px) {
   .content {
-    width: 40%;
-    font-size: 1rem;
-    top: 20%;
-    left: 8%;
-  }
-  .leftimg {
-    width: 50%;
-    height: 40%;
-    left: 0;
-    bottom: 0;
-  }
-  .rightimg,
-  .rightimg2 {
-    width: 50%;
-    height: 0%;
-  }
-  .rightimg {
-    top: 75%;
-  }
-  .rightimg2 {
-    top: 50%;
-  }
-  .innertext,
-  .innertext2 {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    width: 55%;
+    left: 3%;
   }
 
-.image {
-  display: none;
+  .textbg img {
+    width: 55%;
+    height: 35%;
+    left: 3%;
+  }
+
+  .innertext{
+    font-size: 0.9rem;
+    left: 64%;
+  }
+
+  .innertext2{
+    font-size: 1rem;
+    left: 65%;
 }
 }
 
-/* Small Mobile */
+/* Mobile view */
 @media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+    left: 3%;
+  }
 
+  .textbg img {
+    width: 85%;
+    height: 35%;
+    top: 15%;
+    left: 4%;
+  }
 
+  .content {
+    width: 85%;
+    font-size: 0.9rem;
+    top: 18%;
+    left: 3%;
+  }
+
+  .leftimg img {
+    width: 50%;
+    height: 35%;
+    left: 0%;
+  }
+
+  .rightimg img,
+  .rightimg2 img {
+    width: 40%;
+    height: 10%;
+    right: 3%;
+  }
+
+  .rightimg2 img {
+    top: 65%;
+  }
+
+  .rightimg img {
+    top: 85%;
+  }
+
+  .innertext {
+    left: 63%;
+    top: 88%;
+    font-size: 0.9rem;
+  }
+
+  .innertext2 {
+    top: 69%;
+    left: 65%;
+    font-size: 0.9rem;
+  }
+
+  .image img {
+    display: none;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 376px) {
   .title {
     font-size: 1.9rem;
   }
 
-  .textbg {
-    width: 25rem;
-    height: 20rem;
-    top: 15%;
-    left: 1%;
-
+  .textbg img {
+    width: 90%;
+    height: 40%;
+    top: 17%;
   }
 
   .content {
-    font-size: 0.95rem;
     width: 90%;
-    top: 17%;
-    left: 10%;
+    font-size: 0.9rem;
+    top: 19%;
   }
 
-  .leftimg {
-    width: 100%;
-    height: 10rem;
-    left: 20%;
-    bottom: 0;
+  .leftimg img {
+    width: 60%;
+    height: 35%;
+    left: 0%;
   }
 
-  .rightimg,
-  .rightimg2 {
-    width: 25rem;
-    height: 6rem;
-    left: 0;
+  .innertext {
+    left: 60%;
+    top: 88%;
+    font-size: 0.8rem;
   }
 
-  .innertext,
   .innertext2 {
-    font-size: 1rem;
+    top: 69%;
+    left: 63%;
+    font-size: 0.8rem;
   }
-  .innertext2 {
-    left: 40%;
-    top: 56%;
-  }
-  .innertext{
-    left: 35%;
-    top :80%;
-  }
+}
+
+
+@font-face {
+  font-family: 'Ethnocentric'; /* Name your font */
+  src: url('/Ethnocentric-Regular.woff2') format('woff2');
+  
 }
