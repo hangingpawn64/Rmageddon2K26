@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="navbar-content">
           {/* LEFT LOGO (FIXED) */}
           <img
-            src="/src/assets/LeftLogo.png"
+            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/LeftLogo_v7tgve.png"
             className="left-logo"
             alt="logo"
           />
