@@ -165,6 +165,7 @@
   .robowar-container {
     flex-direction: column;
     padding: 40px 20px;
+
   }
 
   .robowar-left,
@@ -174,7 +175,191 @@
     text-align: center;
   }
 
+  .robowar-left {
+    margin-top: 2rem;
+    gap: 4rem;
+  }
+
+  .robowar-content {
+    font-size: 18px;
+    gap: 20px;
+  }
+
   .robowar-buttons {
     justify-content: center;
+  }
+
+  .robowarHeader img {
+    width: 37rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .RoboTitle {
+    font-size: 38px;
+  }
+
+  .robowar-character img {
+    width: 287px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    display: block;
+  }
+
+  .robowar-carousel {
+    position: absolute;
+    top: 80%;
+    left: 53.2%;
+    transform: translate(-50%, -50%);
+    /* width: -webkit-fill-available; */
+    max-width: 480px;
+    /* border: 3px solid #0f0f0f; */
+  }
+
+
+}
+
+@media(max-width:768px) {
+  .robowar-left {
+    margin-top: 1.5rem;
+    gap: 3rem;
+  }
+
+  .robowarHeader img {
+    width: 34rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .robowar-btn {
+    width: 13rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .robowar-content {
+    font-size: 16px;
+    gap: 3rem;
+  }
+
+  .robowar-character img {
+    width: 254px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    display: block;
+  }
+  
+  .robowar-carousel {
+
+    top: 80%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+@media(max-width:555px) {
+  .robowar-left {
+    margin-top: 0.8rem;
+    gap: 2rem;
+  }
+
+  .robowar-content {
+    font-size: 14px;
+    gap: 30px;
+    width: 100%;
+  }
+
+
+  .RoboTitle {
+    font-size: 32px;
+  }
+}
+
+@media(max-width:480px) {
+  .robowar-left {
+    margin-top: 1rem;
+    gap: 2.3rem;
+  }
+
+  .robowar-content {
+    font-size: 12px;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 23.5rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .RoboTitle {
+    font-size: 25px;
+  }
+
+  .robowar-btn {
+    width: 9rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 26px;
+  }
+
+  .robowar-carousel {
+
+    top: 80%;
+    left: 36.5%;
+    transform: translate(-50%, -50%);
+
+  }
+
+    .robowar-character img {
+        width: 202px;
+    }
+}
+
+@media(max-width:375px) {
+  .robowar-left {
+    margin-top: 0.5rem;
+    gap: 1.8rem;
+  }
+
+  .robowar-content {
+    font-size: 10px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 20rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .RoboTitle {
+    font-size: 20px;
+  }
+
+  .robowar-btn {
+    width: 8rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 20px;
+  }
+
+  .robowar-carousel {
+
+    top: 80%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .robowar-character img {
+    width: 171px;
+
   }
 }

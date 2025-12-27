@@ -9,9 +9,9 @@
 
 /* ================= CAROUSEL WRAPPER ================= */
 .imagesSliderContainer {
-width: min-content;
-    max-width: 400px;
-    height: 234px;
+    width: min-content;
+    max-width: 495px;
+    height: 246px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,10 @@ width: min-content;
 
 /* ================= SLIDE IMAGE ================= */
 .hori-slide-custom img {
-  width: 420px;            /* 🔥 image width */
-  height: 200px;           /* 🔥 image height */
+  width: 420px;
+  /* 🔥 image width */
+  height: 200px;
+  /* 🔥 image height */
   max-width: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -72,7 +74,7 @@ width: min-content;
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .imagesSliderContainer {
-    max-width: 580px;
+    max-width: 432px;
     height: 250px;
   }
 
@@ -83,10 +85,6 @@ width: min-content;
 }
 
 @media (max-width: 600px) {
-  .imagesSliderContainer {
-    max-width: 92%;
-    height: 220px;
-  }
 
   .hori-slide-custom img {
     width: 300px;
@@ -100,3 +98,17 @@ width: min-content;
     height: 140px;
   }
 }
+
+@media(max-width: 425px) {
+    .imagesSliderContainer {
+        max-width: 361px;
+        height: 207px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .imagesSliderContainer {
+        max-width: 294px !important;
+        max-height: 185px;
+    }
+  }
