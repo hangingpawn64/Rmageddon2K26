@@ -8,7 +8,6 @@ export default function Home_page3() {
         <div className="title">
           Discover Your Potential with Rmageddon
         </div>
-
         <div className="container">
           <div className="leftside">
             <div className="textbg">
@@ -21,8 +20,7 @@ export default function Home_page3() {
             <div className="content">
               <ul>
                 <li>
-                  Development of teamwork and learn "GAMESMANSHIP" and
-                  "CREATIVITY" - a crucial 21st century skills.
+                  Develop teamwork and creativity through GTA.
                 </li>
                 <li>
                   Exceptional hands-on learning experience with designing,
@@ -50,7 +48,7 @@ export default function Home_page3() {
           <div className="rightside">
             <div className="image">
               <img
-                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766337076/Group_514617161_xwk6xm.png"
+                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766933652/ChatGPT_Image_Dec_28_2025_07_01_20_PM_1_u3hcr7.png"
                 alt=""
               />
             </div>

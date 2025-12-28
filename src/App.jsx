@@ -6,7 +6,7 @@ import Home_page3 from "./components/Home_page3";
 export default function App() {
   return (
     <div>
-      {/* <Accommodation /> */}
+      <Accommodation />
       
       <Home_page3 />
       
