@@ -9,19 +9,25 @@ const HorizontalSlider = ({ className = "" }) => {
   const originalSlides = [
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
       text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
       text: "",
     },
     {
       image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
       text: "",
     },
+    {
+      image:
+        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
+      text: "",
+    },
+
   ];
 
   // Duplicate slides for smooth looping

@@ -54,8 +54,6 @@ const Robowar = () => {
             />
           </div>
 
-
-
         </div>
       </div>
 
@@ -65,7 +63,7 @@ const Robowar = () => {
         {/* Character Image */}
         <div className="robowar-character">
           <img
-            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766426218/image-removebg-preview_1_1_jn2ydl.png"
+            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766919193/image-removebg-preview_1_1_1_zfojwm.png"
             alt="Character"
           />
         </div>
