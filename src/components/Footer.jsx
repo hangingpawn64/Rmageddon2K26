@@ -73,14 +73,14 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 font-bold sm:gap-4 px-4 sm:px-8 py-3 sm:py-4 border-t border-white/20 text-[14px] sm:text-[16px] md:text-[18px] text-white/80 font-saira">
             <div className="flex-1 text-center sm:text-left">
-              <p className="m-0">Copyright © 2025 RNXG. All Rights Reserved</p>
+              <p className="m-0">Copyright © 2026 RNXG. All Rights Reserved</p>
             </div>
-            <div className="flex-1 text-center hidden sm:block">
-              <p className="m-0">Design and Develop by Team RNXG.</p>
+            <div className="flex-1 text-center sm:block">
+              <p className="m-0">Designed and Developed by Team RNXG.</p>
             </div>
             <div className="flex-1 text-center sm:text-right">
               <a href="mailto:info@rmageddon2025.tech" className="text-white/90 underline hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-300">
-                info@rmageddon2025.tech
+                info@rmageddon2026.tech
               </a>
             </div>
           </div>

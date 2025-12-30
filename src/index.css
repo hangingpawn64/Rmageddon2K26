@@ -1,20 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-    --font-saira: "Saira", sans-serif;
-    --font-saira-stencil: "Saira Stencil One", sans-serif;
-    --font-gta: "Saira Stencil One", sans-serif;
-    --font-orbitron: "Orbitron", sans-serif;
-    --font-ethnocentric: "Ethnocentric", sans-serif;
-    --cursor-my-crosshair: url("/crosshair.svg"), auto;
+  --font-saira: "Saira", sans-serif;
+  --font-saira-stencil: "Saira Stencil One", sans-serif;
+  --font-gta: "Saira Stencil One", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-ethnocentric: "Ethnocentric", sans-serif;
+  --cursor-my-crosshair: url("/crosshair.svg"), auto;
 }
 
 @font-face {
-  font-family: 'Ethnocentric'; /* Name your font */
-  src: url('/public/Ethnocentric-Regular.woff2') format('woff2'),
+  font-family: 'Ethnocentric';
+  /* Name your font */
+  src: url('/Ethnocentric-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/Aldrich-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-body{
-    background-color: #000;
+body {
+  background-color: #000;
 }

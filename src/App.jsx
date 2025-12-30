@@ -3,10 +3,10 @@ import Footer from './components/Footer'
 import CrosshairCursor from "./components/Crosshair";
 import Navbar from './components/Navbar';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import Events from './components/Events';
-import Accommodation from './components/Accommodation';
-import ContactUs from './components/ContactUs';
+import HomePage from './pages/HomePage';
+import Events from './pages/Events';
+import Accommodation from './pages/Accommodation';
+import ContactUs from './pages/ContactUs';
 
 const Layout = () => {
   return (

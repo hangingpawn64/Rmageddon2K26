@@ -1,0 +1,421 @@
+/* ================= MAIN CONTAINER ================= */
+.robowar-container {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766428880/ChatGPT_Image_Dec_16_2025_10_58_11_PM_1_3_heyhec.png");
+  width: 100%;
+  background-color: #000000;
+  min-height: 100vh;
+  /* background: radial-gradient(circle, #1a1a1a, #000); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  color: #ffffff;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  /* background-position: 100% 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ================= LEFT SECTION ================= */
+.robowar-left {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  align-items: center;
+  margin-top: 4.1rem;
+}
+
+.robowarHeader {
+  position: relative;
+  /* Make it a container for absolute positioning */
+  display: inline-block;
+  /* shrink to image size */
+}
+
+.robowarHeader img {
+  width: 40rem;
+  max-width: 100%;
+  display: block;
+}
+
+.RoboTitle {
+  position: absolute;
+  /* overlay on image */
+  top: 50%;
+  /* vertically center */
+  left: 50%;
+  /* horizontally center */
+  transform: translate(-50%, -50%);
+  font-size: 44px;
+  font-weight: bold;
+  color: #51D4FF;
+  /* text-shadow: 2px 2px 8px rgba(30, 144, 255, 0.7); */
+  text-align: center;
+  pointer-events: none;
+  /* allows clicking the image under text if needed */
+  font-family: 'Ethnocentric', sans-serif;
+}
+
+/* Content */
+.robowar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  line-height: 1.6;
+  font-size: 21px;
+  color: #ffffff;
+  align-items: center;
+  width: 85%;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.content-bottom p {
+  text-align: center;
+}
+
+.content-top p {
+  text-align: center;
+}
+
+/* Buttons */
+.robowar-buttons {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+
+
+
+.robowar-btn {
+  width: 15rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.robowar-btn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.2);
+}
+
+/* ================= RIGHT SECTION ================= */
+.robowar-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Character */
+.robowar-character {
+  padding: 0;
+  margin: 0;
+  height: 24rem;
+  /* height: 100%; */
+}
+
+.robowar-character img {
+  width: 260px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  /* display: block; */
+}
+
+/* Carousel */
+.robowar-carousel {
+  max-width: 280px;
+  scale: 1.25;
+
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .robowar-container {
+    /* flex-direction: column; */
+    padding: 40px 20px;
+
+  }
+
+  /* .robowar-left,
+  .robowar-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  } */
+
+  .robowar-left {
+    margin-top: 2rem;
+    gap: 3.8rem;
+  }
+
+  .robowar-content {
+    font-size: 16px;
+    gap: 40px;
+  }
+
+  .robowar-buttons {
+    justify-content: space-evenly;
+
+  }
+
+  .robowar-btn {
+    width: 12.4rem;
+
+  }
+
+  .robowarHeader img {
+    width: 34rem;
+    max-width: 100%;
+    /* display: block; */
+  }
+
+  .RoboTitle {
+    font-size: 38px;
+  }
+
+  .robowar-character img {
+    width: 245px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    /* display: block; */
+  }
+
+  .robowar-character {
+    height: 19rem;
+  }
+
+  .robowar-carousel {
+    scale: 1.07;
+    max-width: 480px;
+
+  }
+
+
+}
+
+@media(max-width:768px) {
+  .robowar-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+
+  .robowar-left {
+    margin-top: 3.5rem;
+    gap: 2.9rem;
+  }
+
+
+  .robowarHeader img {
+    width: 34rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .robowar-btn {
+    width: 13rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .robowar-buttons {
+    gap: 0px;
+  }
+
+  .robowar-content {
+    font-size: 16px;
+    gap: 3rem;
+  }
+
+  .robowar-character img {
+    width: 254px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    /* display: block; */
+  }
+
+  .robowar-character {
+    width: 244px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    /* display: block; */
+  }
+
+  .robowar-carousel {
+    scale: 1;
+    max-width: 400px;
+
+
+  }
+}
+
+@media(max-width:555px) {
+  .robowar-left {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+
+  .robowar-right {
+    margin-bottom: 1rem;
+  }
+
+  .robowarHeader img {
+    width: 28rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .robowar-content {
+    font-size: 14px;
+    gap: 30px;
+    width: 100%;
+  }
+
+
+  .RoboTitle {
+    font-size: 30px;
+  }
+
+  .robowar-btn {
+    width: 10rem;
+  }
+}
+
+@media(max-width:425px) {
+  .robowar-left {
+    margin-top: 1rem;
+    padding: 9px;
+    gap: 2.3rem;
+  }
+
+  .robowar-content {
+    font-size: 12px;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 23.5rem;
+    max-width: 100%;
+    display: block;
+  }
+
+  .RoboTitle {
+    font-size: 25px;
+  }
+
+  .robowar-btn {
+    width: 9rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 26px;
+  }
+
+  .robowar-carousel {
+    scale: 0.9;
+  }
+
+  .robowar-character img {
+    width: 190px;
+  }
+
+  .robowar-character {
+    margin-left: 2rem;
+    height: 230px;
+  }
+}
+
+@media(max-width:375px) {
+  .robowar-left {
+    margin-top: 0.5rem;
+    gap: 1.8rem;
+  }
+
+  .robowar-content {
+    font-size: 10px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 20rem;
+    max-width: 100%;
+    /* display: block; */
+  }
+
+  .RoboTitle {
+    font-size: 20px;
+  }
+
+  .robowar-btn {
+    width: 8.5rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 20px;
+  }
+
+  .robowar-carousel {
+    scale: 1;
+  }
+
+}
+
+@media(max-width:320px) {
+
+  .robowar-left {
+    margin-top: 0.5rem;
+    gap: 1.8rem;
+    padding: 0px 15px;
+  }
+
+  .robowar-content {
+    font-size: 10px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 17rem;
+    max-width: 100%;
+    /* display: block; */
+  }
+
+  .RoboTitle {
+    font-size: 20px;
+  }
+
+  .robowar-btn {
+    width: 7.5rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 20px;
+  }
+
+  .robowar-carousel {
+    scale: 1;
+  }
+
+  .robowar-character {
+    height: 11rem;
+    width: 65%;
+  }
+
+  .robowar-character img {
+    width: 155px;
+  }
+
+}

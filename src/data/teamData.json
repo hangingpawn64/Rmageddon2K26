@@ -2,11 +2,11 @@
   "teamMembers": [
     {
       "id": 1,
-      "name": "Amruta Deshmukh",
-      "role": "RNXG Vice Coordinator",
+      "name": "Ujjwal Mahajan",
+      "role": "Event Coordinator",
       "image": "/src/assets/ayush.jpeg",
       "characterImage": "/src/assets/AyushGTAnobg.png",
-      "instagram": "https://www.github.com/hangingpawn64",
+      "instagram": "https://instagram.com",
       "linkedin": "https://linkedin.com",
       "whatsapp": "https://wa.me/1234567890"
     },
@@ -22,6 +22,26 @@
     },
     {
       "id": 3,
+      "name": "Mukul Bagad",
+      "role": "Event Coordinator",
+      "image": "/src/assets/ayush.jpeg",
+      "characterImage": "/src/assets/AyushGTAnobg.png",
+      "instagram": "https://instagram.com",
+      "linkedin": "https://linkedin.com",
+      "whatsapp": "https://wa.me/1234567890"
+    },
+    {
+      "id": 4,
+      "name": "Amruta Deshmukh",
+      "role": "RNXG Vice Coordinator",
+      "image": "/src/assets/ayush.jpeg",
+      "characterImage": "/src/assets/AyushGTAnobg.png",
+      "instagram": "https://www.github.com/hangingpawn64",
+      "linkedin": "https://linkedin.com",
+      "whatsapp": "https://wa.me/1234567890"
+    },
+    {
+      "id": 5,
       "name": "Avishkar Kamble",
       "role": "RNXG Vice Coordinator",
       "image": "/src/assets/ayush.jpeg",
@@ -31,19 +51,9 @@
       "whatsapp": "https://wa.me/1234567890"
     },
     {
-      "id": 4,
-      "name": "Ujjwal Mahajan",
-      "role": "Event Coordinator",
-      "image": "/src/assets/ayush.jpeg",
-      "characterImage": "/src/assets/AyushGTAnobg.png",
-      "instagram": "https://instagram.com",
-      "linkedin": "https://linkedin.com",
-      "whatsapp": "https://wa.me/1234567890"
-    },
-    {
-      "id": 5,
-      "name": "Mukul Bagad",
-      "role": "Event Coordinator",
+      "id": 6,
+      "name": "Ruchie Patil",
+      "role": "PRC Manager",
       "image": "/src/assets/ayush.jpeg",
       "characterImage": "/src/assets/AyushGTAnobg.png",
       "instagram": "https://instagram.com",
