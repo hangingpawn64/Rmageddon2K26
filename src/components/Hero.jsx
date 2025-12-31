@@ -23,6 +23,7 @@ export default function Hero() {
   useEffect(() => {
     const width = window.innerWidth;
 
+    
     /* 📱 MOBILE + iPAD — STATIC ONLY */
     if (width <= 1024) {
       gsap.set(driftCarRef.current, { display: "none" });
