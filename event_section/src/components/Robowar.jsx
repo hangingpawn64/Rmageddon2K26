@@ -1,79 +1,111 @@
 import React from "react";
 import "./Robowar.css";
-import WarCarousel from "./WarCarousel"; // adjust path if needed
+import WarCarousel from "./WarCarousel";
+import Card from "./Cards/Card";
 
 const Robowar = () => {
   return (
-    <section className="robowar-container">
-      {/* ================= LEFT SECTION ================= */}
-      <div className="robowar-left">
-
-        {/* Title */}
-        <div className="robowarHeader">
-          <p className="RoboTitle">ROBOWAR</p>
-          <img
-            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766426168/Group_514617166_x6dsaa.png"
-            alt="Robowar Title"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="robowar-content">
-          <div className="content-top">
-            <p>
-              Enter the world of Robo Wars, where power meets precision, strategy, and innovation rules the battlefield
-            </p>
+    <>
+      {/* ================= ROBOWAR SECTION ================= */}
+      <section className="robowar-container">
+        <div className="robowar-left">
+          <div className="robowarHeader">
+            <p className="RoboTitle">ROBOWAR</p>
+            <img
+              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766426168/Group_514617166_x6dsaa.png"
+              alt="Robowar Title"
+            />
           </div>
 
-          <div className="content-bottom">
-            <p>
-              Last year RoboWars created history as Marathwada’s first-ever
-              RoboWars event. This year, the battlefield is open again and it’s
-              your chance to step in. Whether you’re a first-time builder or a
-              seasoned team, RoboWar is the ultimate stage to test your robot,
-              prove your skills, and make your mark.
-            </p>
+          <div className="robowar-content">
+            <div className="content-top">
+              <p>
+                Enter the world of Robo Wars, where power meets precision,
+                strategy, and innovation rules the battlefield
+              </p>
+            </div>
+
+            <div className="content-bottom">
+              <p>
+                Last year, RoboWars made history as Marathwada’s first RoboWars
+                event. This year, the battlefield opens again—your chance to test
+                your robot, prove your skills, and make your mark.
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Buttons */}
-        <div className="robowar-buttons">
-
-          <div>
+          <div className="robowar-buttons">
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766434804/Group_2_fd0ezd.png"
               alt="Register"
               className="robowar-btn"
             />
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766434800/Group_1_poqin9.png"
-              alt="Rule Book"
+             <img
+              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766434804/Group_2_fd0ezd.png"
+              alt="Register"
               className="robowar-btn"
             />
           </div>
-
-        </div>
-      </div>
-
-      {/* ================= RIGHT SECTION ================= */}
-      <div className="robowar-right">
-
-        {/* Character Image */}
-        <div className="robowar-character">
-          <img
-            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766919193/image-removebg-preview_1_1_1_zfojwm.png"
-            alt="Character"
-          />
         </div>
 
-        {/* Carousel */}
-        <div className="robowar-carousel">
-          <WarCarousel />
+        <div className="robowar-right">
+          <div className="robowar-character">
+            <img
+              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766919193/image-removebg-preview_1_1_1_zfojwm.png"
+              alt="Character"
+            />
+          </div>
+
+          <div className="robowar-carousel">
+            <WarCarousel />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ================= SECTION 2 ================= */}
+      <section className="event-section bg-section-2">
+        <div className="event-container">
+
+          <div className="event-cards">
+            <Card
+              title="Robo Soccer"
+              description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
+             image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+               />
+          </div>
+
+          <div className="event-cards">
+            <Card
+              title="Robo Race"
+              description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SECTION 3 ================= */}
+      <section className="event-section bg-section-3">
+        <div className="event-container">
+           <div className="event-cards">
+            <Card
+              title="Line Follower"
+              description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
+              image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+            />
+          </div>
+
+          <div className="event-cards">
+            <Card
+              title="Robo Sumo"
+              description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
+             image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
+            />
+          </div>
+        </div>
+      </section>
+
+    </>
   );
 };
 
