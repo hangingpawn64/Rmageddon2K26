@@ -208,6 +208,7 @@
   .robowar-container {
     flex-direction: column;
     padding: 20px 10px;
+    gap: 60px;
   }
 
 
@@ -239,17 +240,11 @@
   }
 
   .robowar-character img {
-    width: 254px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    /* display: block; */
+    display: none;
   }
 
   .robowar-character {
-    width: 244px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    /* display: block; */
+    display: none;
   }
 
   .robowar-carousel {
@@ -291,7 +286,7 @@
     width: 10rem;
   }
 }
-
+/* 
 @media(max-width:425px) {
   .robowar-left {
     margin-top: 1rem;
@@ -309,7 +304,7 @@
     width: 23.5rem;
     max-width: 100%;
     display: block;
-  }
+  } 
 
   .RoboTitle {
     font-size: 25px;
@@ -336,6 +331,70 @@
     margin-left: 2rem;
     height: 230px;
   }
+} */
+
+
+@media(max-width:424px) {
+  
+  .robowar-left {
+    flex: 0.1;
+    margin-top: 0.5rem;
+    gap: 2rem;
+    padding: 0px 6px;
+  }
+  .robowar-right {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+  }
+  
+  .robowar-content {
+    font-size: 13px;
+    gap: 25px;
+    width: 96.5%;
+  }
+  
+  .robowarHeader img {
+    width: 18rem;
+    max-width: 100%;
+    display: block;
+  }
+  
+  .RoboTitle {
+    font-size: 19px;
+  }
+  
+  .robowar-btn {
+    width: 9.2rem;
+  }
+  
+  .robowar-buttons {
+    gap: 10px;
+    gap: 20px;
+  }
+  
+  .robowar-carousel {
+    scale: 1;
+  }
+  
+  .robowar-character {
+    height: 11rem;
+    width: 65%;
+  }
+  
+  .robowar-character img {
+    width: 155px;
+  }
+  .robowar-container {
+    min-height: 90vh;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 40px;
+  }
+  
+  
 }
 
 @media(max-width:375px) {
@@ -343,9 +402,12 @@
     margin-top: 0.5rem;
     gap: 1.8rem;
   }
+  .robowar-container {
+   min-height: 78px;
+  }
 
   .robowar-content {
-    font-size: 10px;
+    font-size: 13px;
     gap: 25px;
     width: 100%;
   }
@@ -361,7 +423,7 @@
   }
 
   .robowar-btn {
-    width: 8.5rem;
+    width: 8.0rem;
   }
 
   .robowar-buttons {
@@ -373,66 +435,19 @@
     scale: 1;
   }
 
-}
-
-@media(max-width:320px) {
-
-  .robowar-left {
-    margin-top: 0.5rem;
-    gap: 1.8rem;
-    padding: 0px 15px;
-  }
-
-  .robowar-content {
-    font-size: 10px;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .robowarHeader img {
-    width: 17rem;
-    max-width: 100%;
-    /* display: block; */
-  }
-
-  .RoboTitle {
-    font-size: 18px;
-  }
-
-  .robowar-btn {
-    width: 7.5rem;
-  }
-
-  .robowar-buttons {
-    gap: 10px;
-    gap: 20px;
-  }
-
-  .robowar-carousel {
-    scale: 1;
-  }
-
-  .robowar-character {
-    height: 11rem;
-    width: 65%;
-  }
-
-  .robowar-character img {
-    width: 155px;
-  }
 
 }
 /* =========================================================
-   COMMON EVENT SECTION STYLES
-   ========================================================= */
+COMMON EVENT SECTION STYLES
+========================================================= */
 
 .event-section {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 120px 0;
-  overflow: hidden;
-  background-color: #000;
+    width: 100%;
+    min-height: 100vh;
+    padding: 190px 0px 0px 0px;
+    overflow: hidden;
+    background-color: #000;
 }
 
 
@@ -444,7 +459,7 @@
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767183513/Group_514617201_xvcho3.png");
 
   /* KEY FIX */
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -477,11 +492,9 @@
   width: 340px;
   height: 460px;
   border-radius: 22px;
-  background: linear-gradient(
-    180deg,
-    rgba(20, 20, 20, 0.88),
-    rgba(0, 0, 0, 0.9)
-  );
+  background: linear-gradient(180deg,
+      rgba(20, 20, 20, 0.88),
+      rgba(0, 0, 0, 0.9));
   border: 1px solid rgba(81, 212, 255, 0.22);
   backdrop-filter: blur(16px);
   box-shadow:
@@ -517,6 +530,74 @@
 @media (max-width: 992px) {
   .event-container {
     flex-direction: column;
-    gap: 50px;
+    gap: 112px;
   }
+}
+
+@media (max-width: 768px) {
+
+.event-section {
+position: relative;
+    width: 100%;
+    min-height: 160vh;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #000;
+}
+  .event-section::before {
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767288809/Group_514617203_nvyplz.png");
+  }
+
+
+.event-section::before {
+  z-index: 1;
+}
+
+.event-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* padding: 0 60px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 80px; */
+  margin-top: 10vh;
+}
+}
+
+
+
+@media (max-width: 425px) {
+
+.event-section {
+position: relative;
+    width: 100%;
+    min-height: 145vh;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #000;
+}
+  .event-section::before {
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767288809/Group_514617203_nvyplz.png");
+  }
+
+
+.event-section::before {
+  z-index: 1;
+}
+
+.event-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* padding: 0 60px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10vh;
+}
 }

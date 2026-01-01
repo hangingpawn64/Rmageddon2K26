@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
 
 .card {
+  scale: 1.1;
   background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
   width: 300px;
   clip-path: polygon(
@@ -87,4 +88,69 @@ text-align: center;
 
 .card-button:hover {
   color: white;
+}
+
+
+
+
+@media (max-width: 768px) {
+ 
+.card {
+  scale: 1.0;
+  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+  width: 300px;
+  clip-path: polygon(
+    0 0,
+    200px 0,
+    210px 10px,
+    280px 10px,
+    290px 0,
+    100% 0,
+    100% 150px,
+    290px 160px,
+    290px 300px,
+    100% 310px,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 400px,
+    10px 390px,
+    10px 100px,
+    0 90px
+  );
+  transition: all 0.2s linear;
+  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+  font-family: "Jost", sans-serif;
+}
+}
+
+@media (max-width: 425px) {
+ 
+.card {
+  scale: 0.74;
+  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+  width: 300px;
+  clip-path: polygon(
+    0 0,
+    200px 0,
+    210px 10px,
+    280px 10px,
+    290px 0,
+    100% 0,
+    100% 150px,
+    290px 160px,
+    290px 300px,
+    100% 310px,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 400px,
+    10px 390px,
+    10px 100px,
+    0 90px
+  );
+  transition: all 0.2s linear;
+  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+  font-family: "Jost", sans-serif;
+}
 }

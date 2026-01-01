@@ -37,36 +37,39 @@ const HorizontalSlider = ({ className = "" }) => {
   return (
     <div className={`imagesSliderContainer ${className}`}>
       <Swiper
-        direction="horizontal"
-        slidesPerView={1}
-        spaceBetween={20}
         loop={true}
-        loopAdditionalSlides={2}
         centeredSlides={true}
+        spaceBetween={20}
         autoplay={{
-          delay: 1300,
+          delay: 1500,
           disableOnInteraction: false,
         }}
-        onSlideChange={(swiper) =>
-          setActiveIndex(swiper.realIndex % originalSlides.length)
-        }
         modules={[Autoplay]}
         className="horizontal-swiper"
         breakpoints={{
-          0: { slidesPerView: 1, centeredSlides: false },
-          480: { slidesPerView: 1, centeredSlides: false },
-          900: { slidesPerView: 1, centeredSlides: false },
-          901: { slidesPerView: 1, centeredSlides: true },
+          0: {
+            slidesPerView: 1,
+            centeredSlides: false,
+          },
+          425: {
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
+          769: {
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
         }}
       >
+
+
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`hori-slide-custom ${
-              activeIndex === index % originalSlides.length
+            className={`hori-slide-custom ${activeIndex === index % originalSlides.length
                 ? "active-slide"
                 : ""
-            }`}
+              }`}
           >
             <img
               src={slide.image}
