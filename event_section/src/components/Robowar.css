@@ -209,6 +209,7 @@
     flex-direction: column;
     padding: 20px 10px;
     gap: 60px;
+    min-height: 100vh;
   }
 
 
@@ -216,7 +217,13 @@
     margin-top: 3.5rem;
     gap: 2.9rem;
   }
-
+.robowar-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
 
   .robowarHeader img {
     width: 34rem;
@@ -250,20 +257,27 @@
   .robowar-carousel {
     scale: 1;
     max-width: 400px;
-
-
   }
 }
 
 @media(max-width:555px) {
-  .robowar-left {
-    margin-top: 3rem;
-    gap: 2rem;
+
+    .robowar-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 60px;
+    min-height: 110vh;
   }
 
-  .robowar-right {
-    margin-bottom: 1rem;
+  .robowar-left {
+    margin-top: 3rem;
+    gap: 3rem;
   }
+
+    .robowar-right {
+        margin-bottom: 5rem;
+        flex: 0.1;
+    }
 
   .robowarHeader img {
     width: 23.2rem;
@@ -272,9 +286,9 @@
   }
 
   .robowar-content {
-    font-size: 12px;
+    font-size: 16px;
     gap: 30px;
-    width: 100%;
+    width: 86%;
   }
 
 
@@ -283,71 +297,26 @@
   }
 
   .robowar-btn {
-    width: 10rem;
+    width: 11.5rem;
   }
 }
-/* 
-@media(max-width:425px) {
-  .robowar-left {
-    margin-top: 1rem;
-    padding: 9px;
-    gap: 2.3rem;
-  }
-
-  .robowar-content {
-    font-size: 12px;
-    gap: 30px;
-    width: 100%;
-  }
-
-  .robowarHeader img {
-    width: 23.5rem;
-    max-width: 100%;
-    display: block;
-  } 
-
-  .RoboTitle {
-    font-size: 25px;
-  }
-
-  .robowar-btn {
-    width: 9rem;
-  }
-
-  .robowar-buttons {
-    gap: 10px;
-    gap: 26px;
-  }
-
-  .robowar-carousel {
-    scale: 0.9;
-  }
-
-  .robowar-character img {
-    width: 190px;
-  }
-
-  .robowar-character {
-    margin-left: 2rem;
-    height: 230px;
-  }
-} */
 
 
 @media(max-width:424px) {
   
-  .robowar-left {
-    flex: 0.1;
-    margin-top: 0.5rem;
-    gap: 2rem;
-    padding: 0px 6px;
-  }
+    .robowar-left {
+        flex: 0.1;
+        margin-top: 0.5rem;
+        gap: 2.8rem;
+        padding: 0px 6px;
+    }
   .robowar-right {
     flex: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 0rem;
+            margin-bottom: 2.5rem;
   }
   
   .robowar-content {
@@ -388,7 +357,7 @@
     width: 155px;
   }
   .robowar-container {
-    min-height: 90vh;
+    min-height: 88vh;
     flex-direction: column;
     padding: 20px 10px;
     gap: 40px;
