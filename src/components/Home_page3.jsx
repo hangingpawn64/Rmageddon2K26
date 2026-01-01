@@ -63,6 +63,9 @@ export default function Home_page3() {
             <div className="innertext">
               CERTIFICATE OF PARTICIPATION
             </div>
+              <div className="certificate">Every Participant will get the Certificate</div>
+
+
 
             <div className="rightimg2">
               <img
@@ -74,6 +77,8 @@ export default function Home_page3() {
             <div className="innertext2">
               CASH PRIZES
             </div>
+              <div className="cash">Cash prize up to x lakh</div>
+
           </div>
         </div>
       </div>
