@@ -5,8 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import leftHUD from "../assets/Group1.svg";
 // import rightHUD from "../assets/Group2.svg";
-import driftCar from "../assets/drift-car3.png";
-import driftSmoke from "../assets/smoke.png";
+// import driftCar from "../assets/drift-car3.png";
+// import driftSmoke from "../assets/smoke.png";
 
 import StepCard from "./StepCard";
 import { steps } from "./StepsData";
@@ -152,19 +152,19 @@ export default function Hero() {
     <section
       ref={heroRef}
       className="hero"
-      style={{ backgroundImage: "url(./src/assets/bg-2.png)" }}
+      style={{ backgroundImage: "url(./Images/bg-2.png)" }}
     >
       {/* DRIFT LAYER (DESKTOP ONLY) */}
       <div className="drift-layer">
         <img
           ref={driftCarRef}
-          src={driftCar}
+          src={"/Images/drift-car3.png"}
           className="drift-car"
           alt="drift car"
         />
         <img
           ref={smokeRef}
-          src={driftSmoke}
+          src={"/Images/smoke.png"}
           className="drift-smoke"
           alt="drift smoke"
         />
@@ -173,7 +173,7 @@ export default function Hero() {
       {/* STATIC CAR (ALL DEVICES) */}
       <img
         ref={staticCarRef}
-        src={driftCar}
+        src={"/Images/drift-car3.png"}
         className="hero-car-static"
         alt="RMAGEDDON car"
       />
