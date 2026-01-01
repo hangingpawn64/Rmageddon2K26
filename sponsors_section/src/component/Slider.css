@@ -87,3 +87,13 @@
     height: 90%;
   }
 }
+
+@media (max-width: 480px) {
+  
+.hori-slide-custom img {
+  width: 18rem;
+  height: 80%;
+  border: 1px white solid;
+}
+
+}
