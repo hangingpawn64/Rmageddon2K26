@@ -1,5 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Aldrich';
+  src: url('../assets/fonts/Aldrich Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .card {
   scale: 1.1;
   background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
@@ -25,7 +38,7 @@
   );
   transition: all 0.2s linear;
   filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
-  font-family: "Jost", sans-serif;
+  font-family: "";
 }
 
 .card:hover {
@@ -56,13 +69,17 @@
 }
 
 .card-content h2 {
+  font-size: 23px;
   color: #51D4FF;
   text-align: center;
+  font-family: 'Ethnocentric', sans-serif;;
 }
 
 .card-content p {
   margin: 10px 0px;
   letter-spacing: 2px;
+  font-family: 'Aldrich', sans-serif;
+  text-align: center;
 }
 
 .button-shadow {
