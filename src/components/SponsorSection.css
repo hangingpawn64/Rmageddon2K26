@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Ethnocentric';
-  src: url('../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* Ethnocentric font is defined in index.css */
 
 @font-face {
   font-family: 'Aldrich';
@@ -18,18 +12,14 @@
 
 
 /* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Global reset removed to prevent interference */
 
 
 .sponsors-section {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766339068/ChatGPT_Image_Dec_20_2025_03_34_36_AM_1_xor1ey.png");
+  background-image: url("/Images/sponsorBg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,7 +63,7 @@
 
 .title p {
   font-family: 'Ethnocentric', sans-serif;
-  font-size: 52px;
+  font-size: 54px;
   text-transform: uppercase;
   color: #51D4FF;
   line-height: 1;
@@ -129,7 +119,7 @@
   font-family: 'Aldrich', sans-serif;
   font-size: 16px;
   line-height: 1.9;
-  color: white;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 
@@ -149,9 +139,8 @@
 }
 
 .arrow img {
-width: 95%;
-    margin-top: 27px;
-    margin-left: 13px;
+  width: 100%;
+  margin-top: 22px;
 }
 
 
@@ -183,7 +172,7 @@ width: 95%;
 .slider-vertical {
   display: block;
   width: 100%;
-  height: 68%;
+  height: 76%;
 }
 
 .slider-horizontal {
@@ -257,7 +246,7 @@ img {
   .sponsors-section {
     flex-direction: column;
     align-items: center;
-    padding: 28px ;
+    padding: 28px;
     gap: 60px;
   }
 
@@ -277,9 +266,11 @@ img {
     width: 100%;
     justify-content: space-between;
   }
-.left-down{
-  gap: 27px;
-}
+
+  .left-down {
+    gap: 27px;
+  }
+
   .slider-vertical {
     display: none;
   }
@@ -287,7 +278,8 @@ img {
   .slider-horizontal {
     display: block;
   }
-  .arrow img{
+
+  .arrow img {
     /* margin-top: 2px; */
     width: 75%;
   }
@@ -295,9 +287,10 @@ img {
 
 /* ----- <= 768px ----- */
 @media (max-width: 768px) {
-  .arrow img{
+  .arrow img {
     width: 85%;
   }
+
   .upper-head {
     /* gap: 10rem; */
     align-items: center;
@@ -357,7 +350,7 @@ img {
   }
 
   .sponsors-left {
-    gap: 8vh;
+    gap: 6vh;
     padding: 12px;
   }
 
@@ -375,20 +368,19 @@ img {
   }
 
   .title p {
-    font-size: 30px;
+    font-size: 27px;
   }
- 
 
   .Rnxg-underline {
     width: 170px;
   }
 
   .Spon-underline {
-    width:21rem ;
+    width: 21rem;
   }
 
   .exploreBtn img {
-    width: 160px;
+    width: 140px;
     margin-top: 6px;
   }
 
@@ -398,7 +390,7 @@ img {
   }
 
   .desc p {
-    font-size: 13px;
+    font-size: 10px;
     line-height: 1.4;
     text-align: left;
   }
@@ -406,23 +398,26 @@ img {
   .left-down,
   .left-upper {
     max-width: 100%;
-    gap: 31px;
+    gap: 25px;
   }
-  .arrow img{
-   display: none;
+
+  .arrow img {
+    margin-top: 9px;
+    width: 94%;
   }
 }
 
 
-@media (max-width: 375px){
-  .Spon-underline{
+@media (max-width: 375px) {
+  .Spon-underline {
     width: 19;
   }
 }
+
 /* ----- <= 360px ----- */
 @media (max-width: 360px) {
   .title p {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .exploreBtn img {
@@ -442,7 +437,7 @@ img {
 
   .sponsors-left {
     gap: 9vh;
-   
+
   }
 
   .Spon-underline {
@@ -459,7 +454,40 @@ img {
     gap: 28px;
   }
 
+  .arrow img {
+    margin-top: 8px;
+    width: 90%;
+  }
 }
+
+/* ----- <= 320px (smallest phones) ----- */
+/* @media (max-width: 320px) {
+  .title p {
+    font-size: 24px;
+  }
+
+  .exploreBtn img {
+    width: 115px;
+    margin-top: 10px;
+  }
+
+  .desc p {
+    font-size: 9.5px;
+  }
+
+
+  .Spon-underline {
+    width: 225px;
+  }
+
+
+  .sponsors-section {
+    padding: 14px 10px;
+  }
+
+  .glass {
+    padding: 10px 8px;
+}} */
 
 @media (max-width: 320px) {
 
@@ -468,11 +496,7 @@ img {
     gap: 57px !important;
     padding: 10px !important;
   }
-.desc p{
-    font-size: 10px;
-    line-height: 18px;
-    font-weight: 300;
-}
+
   .left-upper,
   .left-down {
     gap: 38px !important;
@@ -490,19 +514,15 @@ img {
   }
 
   /* underlines become relative */
-  .Rnxg-underline{
+  .Rnxg-underline,
+  .Spon-underline {
     width: 100%;
     max-width: 220px;
   }
 
-  
-  .Spon-underline {
-    width: 100%;
-  }
-
   /* shrink images strongly */
   .exploreBtn img {
-    width: 7.8rem !important;
+    width: 7.7rem !important;
   }
 
   /* tighten glass */
@@ -525,11 +545,16 @@ img {
     min-width: 0;
   }
 
+  .arrow img {
 
- }
+    width: 96%;
+  }
 
- /* ================= GLOBAL NARROW-SCREEN SAFETY ================= */
+}
+
+/* ================= GLOBAL NARROW-SCREEN SAFETY ================= */
 @media (max-width: 300px) {
+
   html,
   body {
     width: 100%;
@@ -562,13 +587,13 @@ img {
   .sponsors-section {
     transform-origin: top center;
     transform: scale(calc(100vw / 280));
-        overflow: hidden;
+    overflow: hidden;
   }
 
 
   .title p {
     font-size: 19px;
-  
+
   }
 
   .exploreBtn img {
@@ -578,25 +603,27 @@ img {
   .desc p {
     font-size: 9.5px;
     line-height: 1.2;
-    
+
   }
 
   .sponsors-left {
     gap: 57px !important;
     padding: 8px !important;
   }
-  .Spon-underline{
+
+  .Spon-underline {
     width: 15rem;
   }
 
-.upper-head{
+  .upper-head {
     gap: 4px;
-}
+  }
 
 }
 
-/* 
+
 @media (max-width: 260px) {
+
   .sponsors-section,
   .sponsors-right,
   .upper-head,
@@ -604,10 +631,12 @@ img {
   .left-down {
     flex-wrap: wrap;
     gap: 28px !important;
+
     .sponsors-left {
       gap: 45px !important;
     }
-    .arrow img{
+
+    .arrow img {
       width: 100%;
     }
   }
@@ -622,6 +651,7 @@ img {
     font-size: clamp(8.5px, 3.5vw, 10px);
     line-height: 1.2;
   }
+
   .Rnxg-underline,
   .Spon-underline {
     width: 100% !important;
@@ -643,7 +673,8 @@ img {
   .arrow img {
     width: 90% !important;
   }
-    .glass {
+
+  .glass {
     padding: 8px !important;
     border-radius: 12px;
     backdrop-filter: blur(4px);
@@ -664,6 +695,7 @@ img {
     width: 75px !important;
   }
 }
+
 @media (max-width: 180px) {
 
 
@@ -695,4 +727,4 @@ a.exploreBtn {
 .exploreBtn img {
   touch-action: manipulation;
 
-} */
+}

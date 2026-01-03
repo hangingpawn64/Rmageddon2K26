@@ -1,21 +1,42 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aldrich';
+  src: url('../assets/fonts/Aldrich Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* ================= MAIN CONTAINER ================= */
 .robowar-container {
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766428880/ChatGPT_Image_Dec_16_2025_10_58_11_PM_1_3_heyhec.png");
   width: 100%;
   background-color: #000000;
   min-height: 100vh;
-  /* background: radial-gradient(circle, #1a1a1a, #000); */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 12px 40px;
   color: #ffffff;
   overflow: hidden;
-  font-family: "Arial", sans-serif;
-  /* background-position: 100% 100%; */
+  /* font-family: "Arial", sans-serif; */
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -24,54 +45,48 @@
   flex: 1.6;
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: 53px;
   align-items: center;
-  margin-top: 4.1rem;
+  margin-top: 6rem;
 }
 
 .robowarHeader {
   position: relative;
-  /* Make it a container for absolute positioning */
   display: inline-block;
-  /* shrink to image size */
 }
 
 .robowarHeader img {
-  width: 40rem;
+  width: 37rem;
   max-width: 100%;
   display: block;
 }
 
 .RoboTitle {
   position: absolute;
-  /* overlay on image */
   top: 50%;
-  /* vertically center */
   left: 50%;
-  /* horizontally center */
   transform: translate(-50%, -50%);
-  font-size: 44px;
+  font-size: 40px;
   font-weight: bold;
   color: #51D4FF;
-  /* text-shadow: 2px 2px 8px rgba(30, 144, 255, 0.7); */
   text-align: center;
   pointer-events: none;
-  /* allows clicking the image under text if needed */
   font-family: 'Ethnocentric', sans-serif;
 }
 
-/* Content */
 .robowar-content {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  line-height: 1.6;
-  font-size: 21px;
-  color: #ffffff;
-  align-items: center;
-  width: 85%;
-  font-family: 'Aldrich', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #ffffff;
+    align-items: center;
+    width: 80%;
+    font-family: 'Aldrich', sans-serif;
 }
+
+
 
 .content-bottom p {
   text-align: center;
@@ -105,57 +120,57 @@
 
 /* ================= RIGHT SECTION ================= */
 .robowar-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
 }
 
-/* Character */
+
 .robowar-character {
   padding: 0;
   margin: 0;
   height: 24rem;
-  /* height: 100%; */
 }
 
 .robowar-character img {
-  width: 260px;
-  max-width: 100%;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-  /* display: block; */
+margin-top: 84px;
+    width: 201px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
 }
 
-/* Carousel */
 .robowar-carousel {
   max-width: 280px;
-  scale: 1.25;
+  scale: 1.20;
 
 }
 
+
+/* cards war section */
 
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
+.robowar-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 69vh;
+}
+
   .robowar-container {
-    /* flex-direction: column; */
     padding: 40px 20px;
 
   }
 
-  /* .robowar-left,
-  .robowar-right {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  } */
-
-  .robowar-left {
-    margin-top: 2rem;
-    gap: 3.8rem;
-  }
-
+    .robowar-left {
+        margin-top: 2rem;
+        gap: 3.2rem;
+        /* height: 57vh; */
+    }
   .robowar-content {
     font-size: 16px;
     gap: 40px;
@@ -163,30 +178,26 @@
 
   .robowar-buttons {
     justify-content: space-evenly;
-
   }
 
   .robowar-btn {
     width: 12.4rem;
-
   }
 
   .robowarHeader img {
-    width: 34rem;
+    width: 32rem;
     max-width: 100%;
-    /* display: block; */
   }
 
   .RoboTitle {
-    font-size: 38px;
+    font-size: 34px;
   }
-
-  .robowar-character img {
-    width: 245px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    /* display: block; */
-  }
+    .robowar-character img {
+        margin-top: 30px;
+        width: 227px;
+        max-width: 100%;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+    }
 
   .robowar-character {
     height: 19rem;
@@ -194,17 +205,21 @@
 
   .robowar-carousel {
     scale: 1.07;
-    max-width: 480px;
-
+    max-width: 310px;
   }
+
 
 
 }
 
-@media(max-width:768px) {
+@media(max-width:800px) {
+
+
   .robowar-container {
     flex-direction: column;
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
+    /* gap: 60px; */
+    min-height: 100vh;
   }
 
 
@@ -213,6 +228,14 @@
     gap: 2.9rem;
   }
 
+  .robowar-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: 47%;
+  }
 
   .robowarHeader img {
     width: 34rem;
@@ -236,168 +259,126 @@
   }
 
   .robowar-character img {
-    width: 254px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    /* display: block; */
+    display: none;
   }
 
   .robowar-character {
-    width: 244px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    /* display: block; */
+    display: none;
   }
 
   .robowar-carousel {
     scale: 1;
     max-width: 400px;
-
-
   }
 }
 
 @media(max-width:555px) {
+
+  .robowar-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 39px;
+    min-height: 90vh;
+  }
+
   .robowar-left {
     margin-top: 3rem;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .robowar-right {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+    flex: 0.1;
   }
 
   .robowarHeader img {
-    width: 28rem;
+    width: 23.2rem;
     max-width: 100%;
     display: block;
   }
 
   .robowar-content {
-    font-size: 14px;
+    font-size: 16px;
     gap: 30px;
-    width: 100%;
+    width: 86%;
   }
 
-
-  .RoboTitle {
-    font-size: 30px;
-  }
-
-  .robowar-btn {
-    width: 10rem;
-  }
-}
-
-@media(max-width:425px) {
-  .robowar-left {
-    margin-top: 1rem;
-    padding: 9px;
-    gap: 2.3rem;
-  }
-
-  .robowar-content {
-    font-size: 12px;
-    gap: 30px;
-    width: 100%;
-  }
-
-  .robowarHeader img {
-    width: 23.5rem;
-    max-width: 100%;
-    display: block;
-  }
 
   .RoboTitle {
     font-size: 25px;
   }
 
   .robowar-btn {
-    width: 9rem;
-  }
-
-  .robowar-buttons {
-    gap: 10px;
-    gap: 26px;
-  }
-
-  .robowar-carousel {
-    scale: 0.9;
-  }
-
-  .robowar-character img {
-    width: 190px;
-  }
-
-  .robowar-character {
-    margin-left: 2rem;
-    height: 230px;
+    width: 11.5rem;
   }
 }
 
-@media(max-width:375px) {
-  .robowar-left {
-    margin-top: 0.5rem;
-    gap: 1.8rem;
+
+@media(max-width:440px) {
+  .event-section {
+    min-height: auto;
+    /* padding: 100px 10px 80px; */
   }
 
-  .robowar-content {
-    font-size: 10px;
-    gap: 25px;
-    width: 100%;
+  .event-section::before {
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
+    background-size: 100% 100%;
+    z-index: 0;
   }
 
-  .robowarHeader img {
-    width: 20rem;
-    max-width: 100%;
-    /* display: block; */
-  }
-
-  .RoboTitle {
-    font-size: 20px;
-  }
-
-  .robowar-btn {
-    width: 8.5rem;
-  }
-
-  .robowar-buttons {
-    gap: 10px;
+  .event-container {
+    position: relative;
+    z-index: 2;
+    flex-direction: column;
     gap: 20px;
+    margin-top: 0;
   }
 
-  .robowar-carousel {
-    scale: 1;
+
+  /* FORCE SLIDER ABOVE VECTOR */
+  .event-cards,
+  .event-card,
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    position: relative;
+    z-index: 5;
   }
-
-}
-
-@media(max-width:320px) {
 
   .robowar-left {
+    flex: 0.1;
     margin-top: 0.5rem;
-    gap: 1.8rem;
-    padding: 0px 15px;
+    gap: 2.8rem;
+    padding: 0px 6px;
+  }
+
+  .robowar-right {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 2.5rem;
   }
 
   .robowar-content {
-    font-size: 10px;
+    font-size: 13px;
     gap: 25px;
-    width: 100%;
+    width: 96.5%;
   }
 
   .robowarHeader img {
-    width: 17rem;
+    width: 23rem;
     max-width: 100%;
-    /* display: block; */
+    display: block;
   }
 
   .RoboTitle {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .robowar-btn {
-    width: 7.5rem;
+    width: 9.2rem;
   }
 
   .robowar-buttons {
@@ -418,4 +399,235 @@
     width: 155px;
   }
 
+
+}
+
+@media(max-width:375px) {
+  .robowar-left {
+    margin-top: 0.5rem;
+    gap: 1.8rem;
+  }
+
+  .robowar-container {
+    min-height: 78px;
+  }
+
+  .robowar-content {
+    font-size: 13px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .robowarHeader img {
+    width: 20rem;
+    max-width: 100%;
+    /* display: block; */
+  }
+
+  .RoboTitle {
+    font-size: 20px;
+  }
+
+  .robowar-btn {
+    width: 8.0rem;
+  }
+
+  .robowar-buttons {
+    gap: 10px;
+    gap: 20px;
+  }
+
+  .robowar-carousel {
+    scale: 1;
+  }
+
+
+}
+
+/* =========================================================
+COMMON EVENT SECTION STYLES
+========================================================= */
+
+.event-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* SAME VECTOR FOR BOTH SECTIONS */
+.event-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767183513/Group_514617201_xvcho3.png");
+
+  /* KEY FIX */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.event-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0 24px;
+}
+
+
+/* CARDS */
+.event-cards {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.event-card {
+  width: 340px;
+  height: 460px;
+  border-radius: 22px;
+  background: linear-gradient(180deg,
+      rgba(20, 20, 20, 0.88),
+      rgba(0, 0, 0, 0.9));
+  border: 1px solid rgba(81, 212, 255, 0.22);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 30px rgba(81, 212, 255, 0.15),
+    inset 0 0 25px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: 'Aldrich', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   DIFFERENT BACKGROUND PER SECTION
+   ========================================================= */
+
+.bg-section-2 {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767030143/image_576_htrjvc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-section-3 {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767181357/mount-kalaga-national-park-01_1_2_lqtauf.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= RESPONSIVE ================= */
+
+
+
+
+@media (max-width: 1024px) {
+  .event-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+    background-color: #000;
+  }
+
+
+}
+
+@media (max-width: 992px) {
+  .event-container {
+    flex-direction: column;
+    gap: 112px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .event-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 18px;
+    margin-top: 0vh;
+  }
+
+  .event-section::before {
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767288809/Group_514617203_nvyplz.png");
+  }
+
+
+  .event-section::before {
+    z-index: 1;
+  }
+
+}
+
+
+
+@media (max-width: 425px) {
+
+  .event-section {
+    position: relative;
+    width: 100%;
+    min-height: 118vh;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .event-section::before {
+
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .event-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 10px;
+    margin-top: 0vh;
+  }
 }

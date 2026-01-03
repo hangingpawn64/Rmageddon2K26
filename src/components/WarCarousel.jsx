@@ -1,78 +1,47 @@
+// HorizontalSlider.jsx
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import "./WarCarousel.css";
+import "./WarCarousel.css"; // namespaced CSS shown below
 
 const HorizontalSlider = ({ className = "" }) => {
-  const originalSlides = [
-    {
-      image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
-      text: "",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
-      text: "",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
-      text: "",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg",
-      text: "",
-    },
-
+  const slides = [
+    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
+    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
+    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
+    { image: "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766921651/download_v1dt8z.jpg" },
   ];
 
-  // Duplicate slides for smooth looping
-  const slides = [...originalSlides, ...originalSlides, ...originalSlides];
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className={`imagesSliderContainer ${className}`}>
+    <div className={`war-images-slider ${className}`}>
       <Swiper
-        direction="horizontal"
-        slidesPerView={1}
-        spaceBetween={20}
         loop={true}
-        loopAdditionalSlides={2}
         centeredSlides={true}
-        autoplay={{
-          delay: 1300,
-          disableOnInteraction: false,
-        }}
-        onSlideChange={(swiper) =>
-          setActiveIndex(swiper.realIndex % originalSlides.length)
-        }
+        spaceBetween={20}
+        slidesPerView={1}                 // you said you want only 1 per view
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        observer={true}
+        observeParents={true}
+        nested={true}
         modules={[Autoplay]}
-        className="horizontal-swiper"
+        className="war-horizontal-swiper"
         breakpoints={{
-          0: { slidesPerView: 1, centeredSlides: false },
-          480: { slidesPerView: 1, centeredSlides: false },
-          900: { slidesPerView: 1, centeredSlides: false },
-          901: { slidesPerView: 1, centeredSlides: true },
+          0:   { slidesPerView: 1, centeredSlides: false },
+          425: { slidesPerView: 1, centeredSlides: true },
+          769: { slidesPerView: 1, centeredSlides: true },
         }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`hori-slide-custom ${
-              activeIndex === index % originalSlides.length
-                ? "active-slide"
-                : ""
-            }`}
+            className={`war-slide ${activeIndex === index ? "war-active" : ""}`}
           >
-            <img
-              src={slide.image}
-              alt={`Slide ${(index % originalSlides.length) + 1}`}
-            />
-            {slide.text && <div className="slide-text">{slide.text}</div>}
+            <img src={slide.image} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>

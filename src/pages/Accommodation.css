@@ -30,20 +30,18 @@ body {
   text-align: center;
   font-family: "Ethnocentric", sans-serif;
 }
-
 .soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4.5rem;
-  color: white;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
-  text-align: center;
-  font-family: "Ethnocentric", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    font-family: "Ethnocentric", sans-serif;
 }
-
 .left {
   width: 350px;
   height: 300px;
@@ -91,22 +89,43 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   .accommodation {
-    font-size: 2rem;
+    font-size: 3rem;
     top: 30%;
   }
-
   .soon {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     top: 55%;
   }
-
   .left {
-    width: 190px;
-    height: 170px;
+    width: 270px;
+    height: 230px;
   }
-
   .right {
-    width: 150px;
-    height: 200px;
+    width: 210px;
+    height: 280px;
   }
 }
+
+
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .accommodation {
+    font-size: 1.55rem;
+    top: 30%;
+  }
+  .soon {
+    font-size: 2rem;
+    top: 50%;
+  }
+  .left {
+    width: 200px;
+    height: 150px;
+  }
+  .right {
+    width: 140px;
+    height: 190px;
+  }
+}
+

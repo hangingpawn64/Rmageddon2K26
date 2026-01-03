@@ -1,5 +1,16 @@
-/* ================= MAIN SWIPER CONTAINER ================= */
-.horizontal-swiper {
+/* WarCarousel.css - namespaced to avoid collisions */
+
+/* container */
+.war-images-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* remove small fixed max-width to avoid clipping other swipers */
+}
+
+/* main swiper */
+.war-horizontal-swiper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -7,104 +18,58 @@
   align-items: center;
 }
 
-/* ================= CAROUSEL WRAPPER ================= */
-
-
-.imagesSliderContainer {
-    /* width: min-content; */
-    max-width: 312px;
-    /* height: 246px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-/* ================= SINGLE SLIDE ================= */
-.hori-slide-custom {
+/* slide wrapper */
+.war-slide {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-/* ================= SLIDE IMAGE ================= */
-.hori-slide-custom img {
-width: 279px;
-    height: 194px;
-    max-width: 100%;
-    object-fit: cover;
-    overflow: hidden;
+/* image */
+.war-slide img {
+  width: 279px;
+  height: 194px;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0.85;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
 }
 
-/* ================= ACTIVE SLIDE EFFECT ================= */
-.hori-slide-custom.active-slide img {
+/* active effect */
+.war-slide.war-active img {
   transform: scale(1.12);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  opacity: 1;
 }
 
-/* ================= SLIDE TEXT ================= */
-.slide-text {
-  margin-top: 8px;
-  text-align: center;
-  font-size: 14px;
-  color: #ffffff;
-  width: 100%;
-}
-
-/* ================= PAGINATION ================= */
-.swiper-pagination-bullet {
+/* pagination bullets (still generic class names required by Swiper) */
+.war-horizontal-swiper .swiper-pagination-bullet {
   background-color: #ccc;
   width: 10px;
   height: 10px;
   opacity: 0.7;
 }
-
-.swiper-pagination-bullet-active {
+.war-horizontal-swiper .swiper-pagination-bullet-active {
   background-color: #ffd700;
   opacity: 1;
 }
 
-
-/* ================= RESPONSIVE ================= */
-/* @media (max-width: 900px) {
-  .imagesSliderContainer {
-    max-width: 432px;
-    height: 250px;
-  }
-
-  .hori-slide-custom img {
-    width: 360px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .hori-slide-custom img {
-    width: 300px;
-    height: 160px;
-  }
-} */
-
+/* responsive tweaks */
 @media (max-width: 400px) {
-  .hori-slide-custom img {
+  .war-slide img {
     width: 240px;
     height: 140px;
   }
 }
 
-@media(max-width: 425px) {
-    .imagesSliderContainer {
-        max-width: 361px;
-        height: 207px;
-    }
-  }
+@media (max-width: 425px) {
+  .war-images-slider { max-width: 361px; height: 207px; }
+}
 
-  @media (max-width: 375px) {
-    .imagesSliderContainer {
-        max-width: 294px !important;
-        max-height: 185px;
-    }
-  }
+@media (max-width: 375px) {
+  .war-images-slider { max-width: 294px !important; max-height: 185px; }
+}

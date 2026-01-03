@@ -1,991 +1,320 @@
-
 /* ========================= */
-/* DRIFT ANIMATION */
+/* DRIFT ANIMATION VARIABLES */
 /* ========================= */
-/* CAR — ~1/3 SCREEN */
-/* RIGHT-SIDE STATIC CAR (FINAL STATE) */
-
-
-/* DRIFTING + STATIC CAR — SAME SIZE */
-/* BIGGER CAR — MATCHES RIGHT-SIDE VISUAL WEIGHT */
-
-/* CAR — SAME SIZE DURING & AFTER DRIFT */
-.drift-car,
-.hero-car-static {
-  width: clamp(720px, 50vw, 900px);
-}
-
-/* SMOKE — PROPORTIONAL */
-.drift-smoke {
-  width: clamp(950px, 65vw, 1200px);
-}
-
-.drift-car,
-.hero-car-static {
-  width: clamp(680px, 48vw, 820px);
-}
-
-
-.hero__right {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.hero-car-static {
-  width: clamp(420px, 33vw, 520px); /* ~1/3 screen */
-  opacity: 0;
-  transform: translateX(40px);
-  will-change: transform, opacity;
-}
-
-/* STATIC CAR — PART OF PAGE */
-/* .hero-car-static {
-  width: clamp(420px, 33vw, 520px);
-  opacity: 0;
-  transform: translateX(40px);
-} */
-
-/* DRIFTING CAR (FLOATING) */
-.drift-car {
-  width: clamp(520px, 40vw, 650px); /* ⬅ BIGGER */
-}
-
-/* STATIC CAR (PAGE-BOUND) */
-.hero-car-static {
-  width: clamp(520px, 40vw, 650px); /* ⬅ MATCH DRIFT CAR */
-}
-
-
-/* SMOKE — ALWAYS BIGGER THAN CAR */
-.drift-smoke {
-  width: clamp(900px, 65vw, 1100px);
-}
-
-
-.drift-car,
-.drift-smoke {
-  animation-play-state: paused;
-}
-
-/* Start animation ONLY when class is added */
-.drift-start .drift-car {
-  animation-play-state: running;
-}
-
-.drift-start .drift-smoke {
-  animation-play-state: running;
+.hero-section-container {
+  --hero-car-size: clamp(400px, 35vw, 580px);
+  --hero-smoke-size: clamp(720px, 55vw, 900px);
+  --hero-neon-cyan: #32ffff;
+  --hero-neon-pink: #ff3fd8;
+  --hero-car-width: clamp(300px, 30vw, 500px);
+  --hero-smoke-width: clamp(820px, 60vw, 1100px);
+  --hero-car-right-gap: 6vw;
+  --hero-road-level: 10vh;
 }
 
 /* ========================= */
-/* DRIFT LAYER (GSAP) */
+/* HERO CONTAINER */
 /* ========================= */
-
-.drift-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* ========================= */
-/* CAR */
-/* ========================= */
-
-.drift-car {
-  position: absolute;
-  bottom: 9vh;
-  left: 0;
- transform: translateX(0);
-  /* 🎯 ~1/3 screen @ 1440px */
-  width: clamp(420px, 33vw, 520px);
-
-  z-index: 2;
-  will-change: transform;
-}
-
-/* ========================= */
-/* SMOKE */
-/* ========================= */
-
-.drift-smoke {
-  position: absolute;
-  bottom: 7vh;
-  left: 0;
-
-  /* Bigger than car for realism */
-  width: clamp(520px, 42vw, 680px);
-
-  filter: blur(6px);
-  opacity: 0;
-
-  z-index: 1;
-  will-change: transform, opacity;
-}
-
-/* ========================= */
-/* HERO CONTENT (GSAP REVEAL) */
-/* ========================= */
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  opacity: 0; /* GSAP controls reveal */
-}
-
-/* ========================= */
-/* RESPONSIVE SAFETY */
-/* ========================= */
-
-@media (max-width: 1024px) {
-  .drift-car {
-    width: clamp(320px, 40vw, 420px);
-  }
-
-  .drift-smoke {
-    width: clamp(420px, 55vw, 560px);
-  }
-}
-
-@media (max-width: 768px) {
-  .drift-layer {
-    display: none; /* optional: disable on mobile */
-  }
-}
-
-
-/* CAR */
-.drift-car {
-  position: absolute;
-  bottom: 9vh;
-  left: -35%;
-  width: clamp(360px, 38vw, 560px); /* 🔥 BIGGER */
-  z-index: 4;
-
-  animation: carDrift 3.6s cubic-bezier(.25,.9,.3,1) forwards;
-}
-
-
-/* SMOKE */
-.drift-smoke {
-  position: absolute;
-  bottom: 7vh;
-  left: -38%;
-  width: clamp(420px, 45vw, 680px);
-  opacity: 0;
-  filter: blur(6px);
-  z-index: 3;
-
-  animation: smokeDrift 3.6s cubic-bezier(.25,.9,.3,1) forwards;
-}
-
-
-/* CAR DRIFT PATH */
-@keyframes carDrift {
-  0% {
-    transform: translateX(0) rotate(0deg) scale(1);
-  }
-
-  65% {
-    transform: translateX(60vw) rotate(-14deg) scale(1.08);
-  }
-
-  100% {
-    transform: translateX(62vw) rotate(0deg) scale(1.08);
-  }
-}
-
-
-/* SMOKE TRAIL */
-@keyframes smokeDrift {
-  0% {
-    opacity: 0;
-    transform: translateX(0) scale(0.9);
-  }
-
-  20% {
-    opacity: 0.9;
-  }
-
-  65% {
-    opacity: 0.6;
-    transform: translateX(58vw) scale(1.15);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(60vw) scale(1.35);
-  }
-}
-
-
-
-/* ========================= */
-/* HERO BASE */
-/* ========================= */
-.hero-content.hidden {
-  opacity: 0;
-}
-
-.hero-content.reveal {
-  animation: revealPage 0.8s ease forwards;
-}
-
-@keyframes revealPage {
-  from {
-    opacity: 0;
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-/* Final car position */
-.hero-car-final {
-  width: clamp(280px, 32vw, 420px);
-  animation: settleCar 0.6s ease forwards;
-}
-
-@keyframes settleCar {
-  from {
-    transform: translateX(40px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-/* DRIFT LAYER */
-.drift-layer {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 20;
-  overflow: hidden;
-}
-
-.drift-car {
-  position: absolute;
-  bottom: 8vh;
-  left: 0;
-  width: 420px; /* 🔥 adjust size here */
-  z-index: 21;
-}
-
-.drift-smoke {
-  position: absolute;
-  bottom: 6vh;
-  left: 0;
-  width: 500px;
-  opacity: 0;
-  filter: blur(4px);
-  z-index: 20;
-}
-
-/* CONTENT */
-.hero-content {
-  position: relative;
-  z-index: 5;
-}
-
-.hidden {
-  opacity: 0;
-  transform: translateY(24px);
-}
-
-.reveal {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.hero-content.hidden {
-  opacity: 0;
-}
-
-.hero-content.reveal {
-  animation: revealContent 0.8s ease forwards;
-}
-
-@keyframes revealContent {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Final car resting spot */
-.car-final-slot {
-  width: 520px;
-  height: 300px;
-  background: url("../assets/drift-car.png") no-repeat center / contain;
-}
-
-.car-settled {
-  width: clamp(260px, 32vw, 600px);
-  height: auto;
-  background: url("../assets/car-drift.png") center / contain no-repeat;
-  animation: settle 0.8s ease forwards;
-}
-
-@keyframes settle {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.fade-in {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-.fade-in-delay {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero {
+.hero-section-container {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  padding-top: 70px; /* reduced empty space */
-
+  padding-top: 70px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.hero::before {
+.hero-section-container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0.25) 30%,
-    rgba(0, 0, 0, 0.9) 95%
-  );
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.25) 30%,
+      rgba(0, 0, 0, 0.9) 95%);
   z-index: 0;
 }
 
 /* ========================= */
-/* HEADING FADE-IN */
+/* DRIFT LAYER */
 /* ========================= */
-
-@keyframes fadeSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-drift-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.hud-fade-in {
-  animation: fadeSlideDown 0.9s ease-out forwards;
+/* DRIFTING CAR */
+.hero-drift-car {
+  position: absolute;
+  bottom: 9vh;
+  left: 0;
+  width: var(--hero-car-size);
+  z-index: 2;
+  will-change: transform, opacity;
+  /* neon car glow */
+  filter:
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 22px rgba(0, 255, 255, 0.35));
+}
+
+/* SMOKE */
+.hero-drift-smoke {
+  position: absolute;
+  bottom: 7vh;
+  left: 0;
+  width: var(--hero-smoke-size);
+  opacity: 0;
+  filter: blur(6px);
+  z-index: 1;
+  will-change: transform, opacity;
 }
 
 /* ========================= */
-/* HUD CONTAINER */
+/* STATIC CAR (AFTER DRIFT) */
 /* ========================= */
+.hero-static-car {
+  position: absolute;
+  right: 0;
+  bottom: 8vh;
+  width: var(--hero-car-size);
+  opacity: 0;
+  z-index: 5;
+  transform: none !important;
+  will-change: opacity;
+  /* neon car glow */
+  filter:
+    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+}
 
-.hud-container {
+/* ========================= */
+/* HERO CONTENT WRAPPER */
+/* ========================= */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 5;
+  opacity: 0;
+}
+
+/* ========================= */
+/* HUD TITLE SECTION */
+/* ========================= */
+.hero-hud-container {
   position: relative;
   z-index: 2;
   width: fit-content;
   margin: 0 auto 2rem;
 }
 
-/* ========================= */
-/* HUD TITLE */
-/* ========================= */
-
-.hud-title {
+.hero-hud-title {
   font-family: "Ethnocentric", "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-
   position: relative;
 }
 
-/* Line 1 */
-.hud-line-1 {
+.hero-hud-line-1 {
   font-size: clamp(1.3rem, 2.1vw, 2rem);
   color: #7ffcff;
   white-space: nowrap;
 }
 
-/* Line 2 */
-.hud-line-2 {
+.hero-hud-line-2 {
   font-size: clamp(2.4rem, 3.6vw, 3.8rem);
   color: #7ffcff;
   line-height: 1.1;
   white-space: nowrap;
 }
 
-/* ========================= */
-/* HUD SVGs (RESPONSIVE + VISIBLE) */
-/* ========================= */
-
-.hud-svg {
+.hero-hud-svg {
   position: absolute;
   height: auto;
   pointer-events: none;
   opacity: 0;
-  animation: hudFadeIn 0.9s ease forwards;
+  animation: heroHudFadeIn 0.9s ease forwards;
 }
 
-@keyframes hudFadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* LEFT SVG — smaller */
-.hud-svg-left {
+.hero-hud-svg-left {
   width: clamp(55px, 9vw, 120px);
   top: 10px;
   left: clamp(-130px, -16vw, -160px);
 }
 
-/* RIGHT SVG — larger */
-.hud-svg-right {
+.hero-hud-svg-right {
   width: clamp(150px, 34vw, 500px);
   bottom: -38px;
   right: clamp(-220px, -28vw, -300px);
 }
 
-/* ========================= */
-/* MAIN GRID */
-/* ========================= */
+@keyframes heroHudFadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
-.hero__overlay {
+/* ========================= */
+/* MAIN GRID OVERLAY */
+/* ========================= */
+.hero-overlay {
   position: relative;
   z-index: 1;
-
   display: grid;
   grid-template-columns: 58% 42%;
   align-items: stretch;
-
   padding: 0 5rem 4rem;
   gap: 3rem;
 }
 
-/* LEFT SIDE */
-.hero__left {
+.hero-left {
   max-width: 680px;
 }
 
-.hero__cards {
+.hero-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem; /* slightly increased */
+  gap: 1.6rem;
 }
 
-/* RIGHT SIDE */
-.hero__right {
+.hero-right {
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: auto;
+  position: relative;
+  overflow: visible;
 }
 
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+@keyframes heroFadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
 /* TABLET */
-/* ========================= */
+@media (max-width: 1180px) {
+  .hero-section-container {
+    --hero-car-size: clamp(420px, 55vw, 620px);
+  }
+
+  .hero-overlay {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-static-car {
+    position: relative;
+    margin-top: 1rem;
+    right: auto;
+    bottom: auto;
+  }
+}
 
 @media (max-width: 1024px) {
-  .hero__overlay {
+  .hero-overlay {
     padding: 0 3rem 3rem;
   }
 
-
+  /* On smaller screens where drift is disabled, hide drift layer */
+  .hero-drift-layer {
+    display: none;
+  }
 }
 
-/* ========================= */
 /* MOBILE */
-/* ========================= */
-
 @media (max-width: 900px) {
-  .hero__overlay {
+  .hero-overlay {
     grid-template-columns: 1fr;
   }
 
-  .hero__right {
+  .hero-right {
     margin-top: 2rem;
   }
 
-  
-
-  /* SVGs shrink but remain visible */
-  .hud-svg-left {
+  .hero-hud-svg-left {
     width: 50px;
     left: -60px;
     top: -4px;
   }
 
-  .hud-svg-right {
+  .hero-hud-svg-right {
     width: 180px;
     right: -90px;
     bottom: -18px;
   }
 }
 
-/* ========================= */
-/* SMALL PHONES */
-/* ========================= */
+@media (max-width: 768px) {
+  .hero-drift-layer {
+    display: none;
+  }
 
+  .hero-static-car {
+    position: relative;
+    opacity: 1;
+    transform: none !important;
+    margin: 2rem auto 0;
+    display: block;
+    right: auto;
+    bottom: auto;
+  }
+
+  .hero-section-container {
+    --hero-car-size: clamp(350px, 80vw, 400px);
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* SMALL PHONES */
 @media (max-width: 480px) {
-  .hud-line-1 {
+  .hero-hud-line-1 {
     font-size: 1.1rem;
     white-space: normal;
   }
 
-  .hud-line-2 {
+  .hero-hud-line-2 {
     font-size: 1.7rem;
     white-space: normal;
   }
 
-  /* SVGs still visible, just smaller */
-  .hud-svg-left {
+  .hero-hud-svg-left {
     width: 42px;
     left: -28px;
   }
 
-  .hud-svg-right {
+  .hero-hud-svg-right {
     width: 130px;
     right: -55px;
     bottom: -12px;
-  }
-}
-
-
-/* ========================= */
-/* 🔥 DRIFT SIZE CONTROLS (EDIT ONLY THIS) */
-/* ========================= */
-
-:root {
-  --car-size: clamp(400px, 35vw, 580px);   /* 🚗 car size */
-  --smoke-size: clamp(720px, 55vw, 900px); /* 💨 smoke size */
-
-  --neon-cyan: #32ffff;
-  --neon-pink: #ff3fd8;
-}
-
-/* DRIFTING CAR */
-.drift-car {
-  position: absolute;
-  bottom: 9vh;
-  left: 0;
-  width: var(--car-size);
-  z-index: 2;
-  will-change: transform, opacity;
-}
-
-/* STATIC CAR (AFTER DRIFT) */
-.hero-car-static {
-  position: relative;     /* 🔑 KEY FIX */
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  opacity: 0;
-
-  margin-left: auto;      /* push to right */
-  transform: none !important;
-}
-
-
-/* SMOKE */
-.drift-smoke {
-  position: absolute;
-  bottom: 7vh;
-  left: 0;
-  width: var(--smoke-size);
-  opacity: 0;
-  filter: blur(6px);
-  z-index: 1;
-  will-change: transform, opacity;
-}
-
-/* FINAL RESTING CONTAINER */
-.hero__right {
-  position: relative;
-  overflow: visible;
-}
-
-/* STATIC CAR */
-.hero-car-static {
-  right: 0;
-  bottom: 8vh;
-}
-
-/* ===================================================== */
-/* 📱 TABLET FIX (iPad / iPad Air / Small Laptops) */
-/* ===================================================== */
-
-@media (max-width: 1180px) {
-  .hero__overlay {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .hero__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Resize car for tablet */
-  :root {
-    --car-size: clamp(420px, 55vw, 620px);
-  }
-
-  .hero-car-static {
-    position: relative;
-    margin-top: 1rem;
-  }
-}
-
-
-/* ===================================================== */
-/* 📱 MOBILE MODE — NO ANIMATION */
-/* ===================================================== */
-
-@media (max-width: 768px) {
-  /* ❌ Disable floating drift */
-  .drift-layer {
-    display: none;
-  }
-
-  /* ✅ Show static car only */
-  .hero-car-static {
-    position: relative;
-    opacity: 1;
-    transform: none !important;
-    margin: 2rem auto 0;
-    display: block;
-  }
-
-  /* 📐 Resize car for mobile */
-  :root {
-    --car-size: clamp(350px, 80vw, 400px);
-  }
-
-  /* Optional: center right column */
-  .hero__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.hero__right {
-  position: relative;
-  overflow: visible;
-}
-
-/* FINAL STATIC CAR POSITION */
-.hero-car-static {
-  position: absolute;
-  right: 0;            /* 🔥 anchor to right */
-  bottom: 8vh;         /* road alignment */
-  width: var(--car-size);
-  opacity: 0;
-  z-index: 5;
-}
-
-.drift-unit {
-  position: fixed;
-  left: 0;
-  bottom: 9vh;
-  width: var(--car-size);
-  will-change: transform;
-}
-
-/* ========================================= */
-/* 🔥 GLOBAL DRIFT CONTROLS (EDIT ONLY THIS) */
-/* ========================================= */
-
-:root {
-  --car-width: clamp(300px, 30vw, 500px);
-  --smoke-width: clamp(820px, 60vw, 1100px);
-
-  /* 🔥 distance from right edge where car stops */
-  --car-right-gap: 6vw;
-
-  /* vertical alignment */
-  --road-level: 10vh;
-}
-
-/* ========================================= */
-/* DRIFT LAYER */
-/* ========================================= */
-
-.drift-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 20;
-}
-
-/* ========================================= */
-/* DRIFT UNIT (CAR + SMOKE MOVE TOGETHER) */
-/* ========================================= */
-
-.drift-unit {
-  position: absolute;
-  left: 0;
-  bottom: var(--road-level);
-  will-change: transform;
-}
-
-/* ========================================= */
-/* CAR */
-/* ========================================= */
-
-.drift-car {
-  width: var(--car-width);
-  display: block;
-  z-index: 3;
-
-  /* neon car glow */
-  filter:
-    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6))
-    drop-shadow(0 0 22px rgba(0, 255, 255, 0.35));
-}
-
-/* ========================================= */
-/* SMOKE */
-/* ========================================= */
-
-.drift-smoke {
-  position: absolute;
-  left: -18%;
-  bottom: -10%;
-  width: var(--smoke-width);
-  opacity: 0;
-  z-index: 2;
-
-  filter: blur(6px);
-}
-
-/* ========================================= */
-/* STATIC CAR (AFTER DRIFT) */
-/* ========================================= */
-
-.hero__right {
-  position: relative;
-  overflow: visible;
-}
-
-.hero-car-static {
-  position: relative;
-  right: var(--car-right-gap);
-  bottom: var(--road-level);
-  width: var(--car-width);
-  opacity: 0;
-  z-index: 5;
-
-  filter:
-    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.65))
-    drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
-}
-
-/* ========================================= */
-/* CONTENT */
-/* ========================================= */
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-}
-
-/* ========================================= */
-/* 📱 TABLET (iPad / Small Laptop) */
-/* ========================================= */
-
-@media (max-width: 1180px) {
-  :root {
-    --car-width: clamp(420px, 55vw, 620px);
-    --smoke-width: clamp(650px, 80vw, 900px);
-    --car-right-gap: 4vw;
-  }
-
-  .hero__overlay {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-car-static {
-    position: relative;
-    margin: 2rem auto 0;
-  }
-}
-/* 
-/* ========================================= */
-/* 📱 MOBILE — NO DRIFT */
-/* ========================================= */
-
-@media (max-width: 768px) {
-  .drift-layer {
-    display: none;
-  }
-
-  .hero-car-static {
-    position: relative;
-    opacity: 1;
-    margin: 2rem auto 0;
-    display: block;
-  }
-
-  :root {
-    --car-width: clamp(300px, 80vw, 360px);
-  }
-}
-
-/* DRIFTING CAR */
-.drift-car {
-  position: absolute;
-  bottom: var(--road-level);
-  left: 0;
-  width: var(--car-width);
-  z-index: 20;
-  will-change: transform;
-}
-
-/* FINAL PAGE-BOUND CAR */
-.hero-car-static {
-  position: absolute;
-  width: var(--car-width);
-  opacity: 0;
-  z-index: 5;
-}
-
-/* 📱 iPad / Tablet */
-@media (max-width: 1024px) {
-  .hero-car-static {
-    width: clamp(420px, 55vw, 620px);
-    margin: 2rem auto 0;
-    display: block;
-  }
-
-  .drift-layer {
-    display: none; /* disable floating animation */
-  }
-} */
-
-
-
-
-/* =============================== */
-/* 📱 MOBILE + TABLET STATIC CAR */
-/* =============================== */
-
-@media (max-width: 1024px) {
-  .hero-car-static {
-    position: relative;
-    display: block;
-    opacity: 1;
-    margin: 2rem auto 0;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
-    width: clamp(280px, 80vw, 420px);
-  }
-
-  .drift-layer {
-    display: none;
-  }
-}
-
-
-/* ======================================= */
-/* 📱 iPad Pro & Tablets (Portrait + Land) */
-/* ======================================= */
-
-@media (max-width: 1366px) and (min-width: 769px) {
-
-  /* Disable drift animation layer */
-  .drift-layer {
-    display: none;
-  }
-
-  /* Switch to vertical layout */
-  .hero__overlay {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  /* Cards take full width */
-  .hero__left {
-    max-width: 100%;
-  }
-
-  .hero__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-  }
-
-  /* Car goes BELOW cards */
-  .hero__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-car-static {
-    position: relative;
-    opacity: 1;
-    width: clamp(420px, 55vw, 600px);
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .drift-layer {
-    display: none;
-  }
-
-  .hero-car-static {
-    position: relative;
-    margin: 2rem auto 0;
-    display: block;
   }
 }
