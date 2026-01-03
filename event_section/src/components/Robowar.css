@@ -27,9 +27,9 @@
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766428880/ChatGPT_Image_Dec_16_2025_10_58_11_PM_1_3_heyhec.png");
   width: 100%;
   background-color: #000000;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 12px 40px;
   color: #ffffff;
@@ -210,7 +210,7 @@
     flex-direction: column;
     padding: 20px 10px;
     gap: 60px;
-    min-height: 100vh;
+    min-height: 100svh;
   }
 
 
@@ -268,7 +268,7 @@
         flex-direction: column;
         padding: 20px 10px;
         gap: 39px;
-        min-height: 100vh;
+        min-height: 90svh;
     }
 
   .robowar-left {
@@ -307,7 +307,7 @@
 @media(max-width:440px) {
   .event-section {
     min-height: auto;
-    padding: 100px 10px 80px;
+    /* padding: 100px 10px 80px; */
   }
 
   .event-section::before {
@@ -324,12 +324,6 @@
     margin-top: 0;
   }
 
-  /* .robowar-container {
-      min-height: 88vh;
-      flex-direction: column;
-      padding: 20px 10px;
-      gap: 40px;
-    } */
 
   /* FORCE SLIDER ABOVE VECTOR */
   .event-cards,
@@ -446,11 +440,15 @@ COMMON EVENT SECTION STYLES
 .event-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  padding: 130px 0px 0px 0px;
+  min-height: 100svh;
   overflow: hidden;
   background-color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 
 /* SAME VECTOR FOR BOTH SECTIONS */
@@ -470,18 +468,21 @@ COMMON EVENT SECTION STYLES
 }
 
 
-/* CONTENT ABOVE VECTOR */
 .event-container {
   position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 60px;
+  z-index: 2;
+
+  max-width: 1200px;
+  width: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 80px;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0 24px;
 }
+
 
 /* CARDS */
 .event-cards {
@@ -534,12 +535,12 @@ COMMON EVENT SECTION STYLES
 
 @media (max-width: 1024px) {
   .event-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 135px 0px 0px 0px;
-    overflow: hidden;
-    background-color: #000;
+           position: relative;
+        width: 100%;
+        min-height: 100svh;
+     
+        overflow: hidden;
+        background-color: #000;
   }
 
 
@@ -556,7 +557,7 @@ COMMON EVENT SECTION STYLES
   .event-section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100svh;
     padding: 0px;
     overflow: hidden;
     background-color: #000;
@@ -570,7 +571,7 @@ COMMON EVENT SECTION STYLES
     padding: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 18px;
     margin-top: 0vh;
   }
@@ -593,7 +594,7 @@ COMMON EVENT SECTION STYLES
   .event-section {
     position: relative;
     width: 100%;
-    min-height: 135vh;
+    min-height: 118svh;
     padding: 5px;
     overflow: hidden;
     background-color: #000;
@@ -614,7 +615,7 @@ COMMON EVENT SECTION STYLES
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 10px;
     margin-top: 0vh;
   }
