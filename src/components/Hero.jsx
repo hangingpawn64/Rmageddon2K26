@@ -76,47 +76,45 @@ export default function Hero() {
 
       tl
         /* 🚗 DRIFT */
-        .to(driftCar, {
-          x: END_X,
-          rotation: -14,
-          duration: 1.6,
-          ease: "power3.out",
-        })
-        .to(
-          smoke,
-          {
-            x: END_X,
-            opacity: 0.6,
-            duration: 1.6,
-            ease: "power3.out",
-          },
-          "<"
-        )
+       /* 🚗 DRIFT */
+.to(driftCar, {
+  x: END_X,
+  rotation: -14,
+  duration: 2.6,
+  ease: "power3.out",
+})
+.to(
+  smoke,
+  {
+    x: END_X,
+    opacity: 0.6,
+    duration: 2.6,
+    ease: "power3.out",
+  },
+  "<"
+)
 
-        /* 💨 REMOVE SMOKE BEFORE STOP */
-        .to(
-          smoke,
-          {
-            opacity: 0,
-            duration: 0.25,
-            ease: "power2.out",
-          },
-          "-=0.4"
-        )
+/* 🛑 BRAKE / SETTLE */
+.to(driftCar, {
+  x: END_X + 12,
+  rotation: -4,
+  duration: 0.18,
+  ease: "power2.out",
+})
+.to(driftCar, {
+  x: END_X,
+  rotation: 0,
+  duration: 0.22,
+  ease: "power2.inOut",
+})
 
-        /* 🛑 BRAKE */
-        .to(driftCar, {
-          x: END_X + 12,
-          rotation: -4,
-          duration: 0.18,
-          ease: "power2.out",
-        })
-        .to(driftCar, {
-          x: END_X,
-          rotation: 0,
-          duration: 0.22,
-          ease: "power2.inOut",
-        })
+/* 💨 NOW fade smoke AFTER drift is fully complete */
+.to(smoke, {
+  opacity: 0,
+  duration: 0.8,   // 👈 smooth disappear
+  ease: "power2.out",
+})
+
 
         /* ⏸ REST */
         .to({}, { duration: 0.5 })
@@ -159,7 +157,7 @@ export default function Hero() {
       <div className="drift-layer">
         <img
           ref={driftCarRef}
-          src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767528844/drift-car3_1_ffswzx.png"}
+          src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767531265/drift-car3_1_krzame.png"}
           className="drift-car"
           alt="drift car"
         />
@@ -174,7 +172,7 @@ export default function Hero() {
       {/* STATIC CAR (ALL DEVICES) */}
       <img
         ref={staticCarRef}
-        src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767528844/drift-car3_1_ffswzx.png"}
+        src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767531265/drift-car3_1_krzame.png"}
         className="hero-car-static"
         alt="RMAGEDDON car"
       />

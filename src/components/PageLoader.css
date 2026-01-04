@@ -93,3 +93,27 @@ nav a{
   font-weight:900;
   font-size:10vw;
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 2;
+}
+
+.bar {
+  flex: 1;                /* normal bar = 1 unit */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bar-double {
+  flex: 2;                /* double-width bar = 2 units */
+}
+
+.bar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}

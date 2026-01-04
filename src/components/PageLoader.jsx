@@ -64,14 +64,33 @@ export default function PageLoader({ onComplete }) {
     <>
       <h1 className="counter">0</h1>
 
-      <div className="overlay">
-        {["1.jpg", "3.jpg", "5.jpg", "6.jpg", "7.jpg", "9.png"].map((img, i) => (
-          <div className="bar" key={i}>
-            {/* ✅ Vite public path */}
-            <img src={`/public/images/${img}`} alt="" />
-          </div>
-        ))}
-      </div>
+     <div className="overlay">
+  {/* Bar 1 */}
+  <div className="bar">
+    <img src="/images/1.jpg" alt="" />
+  </div>
+
+  {/* Bar 2 */}
+  <div className="bar">
+    <img src="/images/3.jpg" alt="" />
+  </div>
+
+  {/* Bar 3 (DOUBLE WIDTH) */}
+  <div className="bar bar-double">
+    <img src="/images/middle2.png" alt="" />
+  </div>
+
+  {/* Bar 4 */}
+  <div className="bar">
+    <img src="/images/7.jpg" alt="" />
+  </div>
+
+  {/* Bar 5 */}
+  <div className="bar">
+    <img src="/images/9.png" alt="" />
+  </div>
+</div>
+
     </>
   );
 }
