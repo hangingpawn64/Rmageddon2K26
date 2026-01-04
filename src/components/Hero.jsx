@@ -35,6 +35,7 @@ export default function Hero() {
         left: "auto",
         top: "auto",
         transform: "none",
+        display:"none",
       });
 
       gsap.set(contentRef.current, {
@@ -152,19 +153,19 @@ export default function Hero() {
     <section
       ref={heroRef}
       className="hero"
-      style={{ backgroundImage: "url(./Images/bg-2.png)" }}
+      style={{ backgroundImage: "url(https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767522231/bg-2_pnpmsf.png)" }}
     >
       {/* DRIFT LAYER (DESKTOP ONLY) */}
       <div className="drift-layer">
         <img
           ref={driftCarRef}
-          src={"/Images/drift-car3.png"}
+          src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767528844/drift-car3_1_ffswzx.png"}
           className="drift-car"
           alt="drift car"
         />
         <img
           ref={smokeRef}
-          src={"/Images/smoke.png"}
+          src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767522192/smoke_acjrc5.png"}
           className="drift-smoke"
           alt="drift smoke"
         />
@@ -173,7 +174,7 @@ export default function Hero() {
       {/* STATIC CAR (ALL DEVICES) */}
       <img
         ref={staticCarRef}
-        src={"/Images/drift-car3.png"}
+        src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767528844/drift-car3_1_ffswzx.png"}
         className="hero-car-static"
         alt="RMAGEDDON car"
       />

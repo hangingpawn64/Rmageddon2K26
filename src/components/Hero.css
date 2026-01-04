@@ -919,7 +919,7 @@
 @media (max-width: 1024px) {
   .hero-car-static {
     position: relative;
-    display: block;
+    display: none;
     opacity: 1;
     margin: 2rem auto 0;
     left: auto !important;

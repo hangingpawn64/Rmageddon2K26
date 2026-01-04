@@ -23,7 +23,7 @@
   border-radius: 0px;
 
   /* frosted white glass */
-  background: rgba(255, 255, 255, 0.06);
+  background: #00000066;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(16px);
 
