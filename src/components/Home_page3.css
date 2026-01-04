@@ -1,0 +1,472 @@
+/* ================= ROOT ================= */
+.home3 {
+  min-height: 100vh;
+  background: url("/page3_bg.png") center / cover no-repeat;
+  position: relative;
+  padding: 4rem 6%;
+  overflow: hidden;
+}
+
+.home3-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ================= TITLE ================= */
+.home3-title {
+  position: relative;
+  z-index: 2;
+  font-family: "Ethnocentric", sans-serif;
+  color: #51d4ff;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: 3rem;
+}
+
+/* ================= GRID ================= */
+.home3-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;   /* 🔥 important */
+
+
+}
+
+/* ================= LEFT ================= */
+.left-svg-wrap {
+  position: relative;
+  width: 90%;
+  max-width: 640px;
+}
+
+.left-svg-wrap img {
+  width: 100%;
+  display: block;
+}
+
+/* TEXT INSIDE UPPER SVG — FINAL FIX */
+.left-content {
+  position: absolute;
+  inset: 12%; /* IMPORTANT: creates padding inside SVG */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: "Aldrich", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: white;
+
+  text-shadow: 2px 2px 4px #000;
+}
+
+.left-content li {
+  margin-bottom: 0.9rem;
+}
+
+
+/* ================= CHARACTERS ================= */
+.left-character-wrap,
+.right-character-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.left-character {
+  width: 55%;
+  transition: transform 0.4s ease;
+}
+
+.left-character:hover {
+  transform: translate(15px, -15px);
+}
+
+.right-character-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  mrgin-top:0;
+}
+
+.right-hero {
+  width: 85%;
+}
+
+/* ================= RIGHT HUD ================= */
+.home3-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HUD STACK */
+.hud-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* SINGLE HUD FRAME */
+.hud-frame {
+  position: relative;
+  width: 100%;
+}
+
+.hud-frame img {
+  width: 100%;
+  display: block;
+}
+
+/* TEXT INSIDE FRAME */
+.hud-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Ethnocentric", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #7fe8ff;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ================= ANIMATIONS ================= */
+.hud-text::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #51D4FF, transparent);
+}
+
+.hud-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: #51D4FF;
+  opacity: 0.7;
+}
+
+.hud-frame:hover .hud-text {
+  animation: glitchText 0.5s steps(2, end);
+}
+
+.hud-frame:hover .hud-text::before {
+  animation: scan 0.6s linear;
+}
+
+.hud-frame:hover .hud-text::after {
+  animation: glitchLayer 0.6s steps(2, end);
+}
+
+/* ================= KEYFRAMES ================= */
+@keyframes glitchText {
+  0% { opacity: 1; clip-path: inset(0 0 0 0); }
+  20% { opacity: 0.85; clip-path: inset(10% 0 60% 0); }
+  40% { opacity: 1; clip-path: inset(40% 0 20% 0); }
+  60% { opacity: 0.9; clip-path: inset(20% 0 40% 0); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+@keyframes scan {
+  from { left: -100%; }
+  to { left: 100%; }
+}
+
+@keyframes glitchLayer {
+  0% { clip-path: inset(0 0 80% 0); }
+  50% { clip-path: inset(20% 0 20% 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .home3-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-character{
+    display: none;
+  }
+   .right-hero {
+    display: none;
+  }
+
+  .hud-frame {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .hud-text {
+    font-size: 0.95rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ================= MOBILE SVG TEXT FIX ================= */
+@media (max-width: 768px) {
+
+  .home3-right {
+    align-items: center;
+  }
+
+  .hud-stack {
+    width: 100%;
+    gap: 4rem;
+  }
+
+  .hud-frame {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  .hud-frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hud-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 0.9rem;
+    line-height: 1.2;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-svg-wrap {
+    width: 100%;
+  }
+
+  .left-content {
+    inset: 14%;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .left-content {
+    inset: 16%;
+    font-size: 0.9rem;
+  }
+}
+
+/* ================= iPad Pro / Tablet (1024px) FINAL FILL FIX ================= */
+@media (max-width: 1024px) and (min-width: 900px) {
+
+  /* PAGE HEIGHT UTILIZATION */
+  .home3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* GRID: stronger balance */
+  .home3-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  /* LEFT SVG PARAGRAPH */
+  .left-svg-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 320px;          /* 🔥 THIS EXTENDS THE SVG AREA */
+  display: flex;
+  align-items: stretch;
+}
+
+
+  .left-content {
+    inset: 12%;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* LEFT CHARACTER — MAKE IT FILL SPACE */
+  .left-character-wrap {
+    margin-top: 2rem;
+  }
+
+  .left-character {
+    width: 80%;
+  }
+
+  /* RIGHT SIDE — PULL CONTENT DOWN */
+  .home3-right {
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  /* RIGHT CHARACTER — BIGGER & MORE DOMINANT */
+  .right-character-wrap {
+    margin-bottom: 3rem;
+     padding-top: 0;
+  }
+
+  .right-hero {
+    width: 88%;
+  }
+
+  /* HUD STACK — USE VERTICAL SPACE */
+  .hud-stack {
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  .hud-frame {
+    width: 100%;
+  }
+
+  .hud-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* ================= iPad Air (820px) FIX ================= */
+@media (max-width: 900px) and (min-width: 768px) {
+
+  /* REMOVE CHARACTER PNGs */
+  .left-character-wrap,
+  .right-character-wrap {
+    display: none;
+  }
+
+  /* FILL PAGE VERTICALLY */
+  .home3 {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* SINGLE COLUMN BUT DENSE */
+  .home3-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* LEFT SVG PARAGRAPH — BIGGER */
+  .left-svg-wrap {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .left-content {
+    inset: 12%;
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  /* HUD STACK — PULL UP */
+  .home3-right {
+    margin-top: 0;
+  }
+
+  .hud-stack {
+    gap: 3.5rem;
+  }
+
+  /* HUD FRAMES — BIGGER */
+  .hud-frame {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .hud-text {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ================= MOBILE TEXTFRAME ALIGNMENT FIX ================= */
+/* ================= MOBILE: EXPAND TEXTFRAME SVG ================= */
+@media (max-width: 768px) {
+
+  /* SVG FRAME CONTAINER */
+  .left-svg-wrap {
+    min-height: 460px;        /* 🔥 makes the frame taller */
+    width: 107vh;
+  }
+
+  /* SVG IMAGE ITSELF */
+  .left-svg-wrap img {
+    height: 80vh;             /* 🔥 allow vertical growth */
+    object-fit: fill;         /* HUD-style stretch (correct here) */
+  }
+
+  /* TEXT INSIDE SVG — KEEP IT CENTERED & SAFE */
+  .left-content {
+    inset: 1% 1%;         
+    font-size:16px;
+    line-height:2;
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left-content-fix{
+    width:120%;
+  }
+
+  .left-content li {
+    margin-bottom: 0.8rem;
+  }
+}
+
+
+/* ================= SMALL MOBILE (320px) FIX ================= */
+@media (max-width: 360px) {
+
+  /* TITLE — prevent overlap */
+  .home3-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 4.5rem;   /* 🔥 critical spacing */
+  }
+
+  /* SVG FRAME — give more height */
+  .left-svg-wrap {
+    min-height: 420px;       /* 🔥 frame grows DOWN */
+    margin-top: 0;
+  }
+
+  /* TEXT INSIDE SVG — SAFE INSET */
+  .left-content {
+    /* inset: 20% 10%;   */
+    font-size: 16px;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-content li {
+    margin-bottom: 0.75rem;
+  }
+
+  /* REMOVE EXTRA CROWDING */
+  .home3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
