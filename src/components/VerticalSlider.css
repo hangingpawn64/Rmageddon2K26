@@ -1,7 +1,7 @@
 /* ================= CONTAINER ================= */
 .vertical-slider-container {
   width: 100%;
-  height: 550px; /* 🔥 controls total slider height */
+  height: 560px; /* 🔥 controls total slider height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
 .vertical-swiper {
   width: 100%;
   height: 100%;
-  transform: scale(1.15);   /* 🔥 overall scale */
+  transform: scale(1.13);   /* 🔥 overall scale */
   transform-origin: center;
 }
 
@@ -124,3 +124,5 @@
 }
 
 }
+
+

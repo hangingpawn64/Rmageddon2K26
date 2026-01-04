@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #000000; */
+  background-color: #000000;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -86,4 +86,14 @@
     align-items: center;
     height: 90%;
   }
+}
+
+@media (max-width: 480px) {
+  
+.hori-slide-custom img {
+  width: 18rem;
+  height: 80%;
+  border: 1px white solid;
+}
+
 }

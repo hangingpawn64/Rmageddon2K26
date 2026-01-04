@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import "./Slider.css";
-
 const HorizontalSlider = ({ className }) => {
   const originalSlides = [
     {

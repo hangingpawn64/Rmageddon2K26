@@ -17,7 +17,7 @@ const SponsorSection = () => {
 
             <a href="#explore" className="exploreBtn">
               <img
-                src="/Images/exploreBtn.svg"
+                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"
                 alt="Explore"
               />
             </a>
@@ -39,7 +39,7 @@ const SponsorSection = () => {
         <div className="left-down">
           <div className="down-head">
             <div className="title">
-              <p>OUR SPONSORS</p>
+              <p>OUR SPONSOR</p>
               <span className="Spon-underline"></span>
             </div>
           </div>
@@ -57,7 +57,7 @@ const SponsorSection = () => {
 
           <div className="arrow">
             <img
-              src="/Images/arrow.png"
+              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png"
               alt="arrow"
             />
           </div>
@@ -67,7 +67,7 @@ const SponsorSection = () => {
       {/* RIGHT SIDE */}
       <div className="sponsors-right">
         <img
-          src="/Images/lineVectors.svg"
+          src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182940/Group_514617163_1_z4f8qx.png"
           alt=""
           aria-hidden="true"
           className="vector-line"
