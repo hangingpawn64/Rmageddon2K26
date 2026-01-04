@@ -117,3 +117,37 @@ nav a{
   object-fit: cover;
   opacity: 0;
 }
+
+/* ============================= */
+/* 📱 MOBILE LOADER (≤ 425px) */
+/* ============================= */
+
+@media (max-width: 425px) {
+
+  .overlay {
+    gap: 0; /* tight fit */
+  }
+
+  /* Hide extra bars */
+  .overlay .bar:nth-child(1),
+  .overlay .bar:nth-child(5) {
+    display: none;
+  }
+
+  /* Remaining 3 bars */
+  .overlay .bar {
+    flex: 1;
+  }
+
+  /* Middle bar stays dominant */
+  .overlay .bar-double {
+    flex: 2.5;
+  }
+
+  /* Counter adjustment */
+  .counter {
+    font-size: 14vw;
+    padding: 0.5em;
+  }
+
+}
