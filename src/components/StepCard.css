@@ -93,7 +93,7 @@
   height: 20px;
   margin-right: 4px;
 
-  background: url("../assets/star1 (2).png")
+  background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329714/star1_2_u2j1ck.png")
     center / contain no-repeat;
 
   transform: scale(1);
@@ -118,7 +118,7 @@
 
 /* animated fill on CARD hover */
 .step:hover .step__star {
-  background-image: url("../assets/star_activated1.png");
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329729/star_activated1_nj0pc1.png");
   transform: scale(1.15);
   filter: drop-shadow(0 0 6px rgba(255, 200, 60, 0.85));
 }
