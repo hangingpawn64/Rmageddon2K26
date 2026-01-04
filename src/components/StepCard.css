@@ -1,13 +1,28 @@
-/* ========================= */
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aldrich';
+  src: url('../assets/fonts/Aldrich\ Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* CARD ENTRY ANIMATION */
 /* ========================= */
 
-@keyframes heroCardFadeUp {
+@keyframes cardFadeUp {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -15,15 +30,14 @@
 }
 
 /* STEP CARD BASE */
-.hero-step {
+.step {
   position: relative;
   padding: 1.4rem 1.8rem;
   border-radius: 0px;
-
-  /* frosted white glass */
-  background: rgba(255, 255, 255, 0.06);
+  background: #00000066;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(16px);
+  font-family: 'Aldrich', sans-serif;
 
   /* subtle gold frame (no glow by default) */
   border: 2px solid rgba(255, 255, 255, 0.45);
@@ -34,22 +48,21 @@
     transform 0.35s ease,
     border-color 0.35s ease;
 
-  opacity: 0;
-  /* start hidden */
+      opacity: 0; /* start hidden */
 
-  animation: heroCardFadeUp 0.8s ease forwards
+  animation: cardFadeUp 0.8s ease forwards
 }
 
-/* animation on visiting */
-.hero-step:nth-child(1) {
+
+.step:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-.hero-step:nth-child(2) {
+.step:nth-child(2) {
   animation-delay: 0.4s;
 }
 
-.hero-step:nth-child(3) {
+.step:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -57,7 +70,7 @@
 /* HOVER – GOLDEN GLOW */
 /* ========================= */
 
-.hero-step:hover {
+.step:hover {
   border-color: rgba(64, 244, 255, 0.75);
 
   box-shadow:
@@ -72,7 +85,7 @@
 /* HEADER */
 /* ========================= */
 
-.hero-step-header {
+.step__header {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -83,16 +96,17 @@
 /* STARS */
 /* ========================= */
 
-.hero-step-stars {
+.step__stars {
   display: flex;
 }
 
-.hero-step-star {
+.step__star {
   width: 20px;
   height: 20px;
   margin-right: 4px;
 
-  background: url("/Images/star1 (2).png") center / contain no-repeat;
+  background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329714/star1_2_u2j1ck.png")
+    center / contain no-repeat;
 
   transform: scale(1);
   filter: brightness(0.85);
@@ -103,23 +117,32 @@
     background-image 0.25s ease;
 }
 
+.step:hover {
+  border-color: rgba(64, 244, 255, 0.75);
+
+  box-shadow:
+    0 0 6px rgba(64, 244, 255, 0.35),
+    0 0 14px rgba(64, 244, 255, 0.25);
+
+  transform: translateY(-2px);
+}
+
+
 /* animated fill on CARD hover */
-.hero-step:hover .hero-step-star {
-  background-image: url("/Images/star_activated1.png");
+.step:hover .step__star {
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329729/star_activated1_nj0pc1.png");
   transform: scale(1.15);
   filter: drop-shadow(0 0 6px rgba(255, 200, 60, 0.85));
 }
 
 /* stagger animation */
-.hero-step:hover .hero-step-star:nth-child(1) {
+.step:hover .step__star:nth-child(1) {
   transition-delay: 0s;
 }
-
-.hero-step:hover .hero-step-star:nth-child(2) {
+.step:hover .step__star:nth-child(2) {
   transition-delay: 0.12s;
 }
-
-.hero-step:hover .hero-step-star:nth-child(3) {
+.step:hover .step__star:nth-child(3) {
   transition-delay: 0.24s;
 }
 
@@ -127,17 +150,17 @@
 /* TITLE */
 /* ========================= */
 
-.hero-step-title {
+.step__title {
   font-size: 1.1rem;
   font-weight: 700;
-  font-family: "science gothic";
+  font-family: 'Aldrich', sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-
+  display:flex;
+  justify-content:center;
+  text-align:center;
+ 
+  
   color: #40F4FF;
 }
 
@@ -145,14 +168,13 @@
 /* BODY TEXT */
 /* ========================= */
 
-.hero-step-text {
-
+.step__text {
+  
   margin: 0;
   font-size: 0.85rem;
   line-height: 1.6;
-  font-family: "science gothic";
-  color: #ffffffff;
-  /* readable on white glass */
+   font-family: 'Aldrich', sans-serif;
+  color: #ffffffff; /* readable on white glass */
 }
 
 /* ========================= */
@@ -160,29 +182,32 @@
 /* ========================= */
 
 @media (max-width: 768px) {
-  .hero-hud-title {
-    gap: 0.8rem;
+  .hud-title {
+    gap: 0.8rem; /* 👈 more vertical breathing space */
   }
-
-  .hero-cards {
-    gap: 2.2rem;
+   .hero__cards {
+    gap: 2.2rem; /* 👈 increase space between cards */
   }
-
-  .hero-step {
+  .step {
     padding: 1.1rem 1.4rem;
   }
 
-  .hero-step-title {
+  .step__title {
     font-size: 0.8rem;
   }
 
-  .hero-step-text {
+  .step__text {
     font-size: 0.78rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-cards {
+  .hero__cards {
     gap: 2.6rem;
   }
+    .step__text {
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
 }
