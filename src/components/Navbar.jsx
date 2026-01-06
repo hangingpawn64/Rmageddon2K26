@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="navbar-content">
           {/* LEFT LOGO (FIXED) */}
           <img
-            src="/src/assets/LeftLogo.png"
+            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/LeftLogo_v7tgve.png"
             className="left-logo"
             alt="logo"
           />
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact-us" onClick={closeMenu}>
+                <NavLink to="/contact" onClick={closeMenu}>
                   CONTACT
                 </NavLink>
               </li>
@@ -125,7 +125,7 @@ const Navbar = () => {
 
   <li>
     <NavLink
-      to="/contact-us"
+      to="/contact"
       className={({ isActive }) => (isActive ? "active" : "")}
       onClick={closeMenu}
     >

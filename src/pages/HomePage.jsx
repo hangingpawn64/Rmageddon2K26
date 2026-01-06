@@ -95,8 +95,7 @@ export default function HomePage() {
                     <h1 className='heading'>RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
-                    <div className="w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
-
+                    <div className="main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
 
                         {/* Left: Countdown */}
                         <div className="countdown-container glass-panel">
@@ -156,7 +155,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Bottom Section */}
-                    <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                    <div className="bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
                         {/* Map */}
                         <div className="map-wrapper">
                             <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">

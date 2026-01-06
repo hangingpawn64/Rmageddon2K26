@@ -292,16 +292,18 @@
 /* Responsive */
 @media (max-width: 1200px) {
     .heading {
-        font-size: clamp(48px, 6vw, 72px);
+        font-size: clamp(36px, 5vw, 60px);
+        margin-bottom: 2rem;
+        padding-top: 6rem;
     }
 
     .center-content {
-        width: 300px;
-        height: 300px;
+        display: none;
     }
 
-    .center-logo {
-        width: 180px;
+    .content-wrapper {
+        padding-top: 60px;
+        gap: 20px;
     }
 }
 
@@ -321,6 +323,12 @@
         font-size: clamp(24px, 5vw, 40px);
         padding-top: 0;
         margin-bottom: -1rem;
+        order: 1;
+    }
+
+    .main-content-grid,
+    .bottom-section-grid {
+        display: contents;
     }
 
     .character-img {
@@ -332,8 +340,23 @@
     }
 
     .mission-container {
-        display: none;
-        /* Based on user's requested order: navbar -> heading -> countdown -> info -> map -> footer */
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+        flex: none;
+    }
+
+    .mission-title {
+        font-size: clamp(20px, 4vw, 32px);
+        margin-bottom: 15px;
+    }
+
+    .mission-desc {
+        font-size: clamp(16px, 2vw, 24px);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     }
 
     .content-wrapper {
@@ -346,6 +369,14 @@
         max-width: 90%;
     }
 
+    .countdown-container {
+        order: 3;
+    }
+
+    .info-container {
+        order: 4;
+    }
+
     .info-value {
         font-size: clamp(20px, 3vw, 26px);
     }
@@ -355,12 +386,8 @@
         border-radius: 30px;
     }
 
-
-
     .map-wrapper {
-        width: clamp(150px, 40vw, 200px);
-        height: clamp(150px, 40vw, 200px);
-        margin: 0 auto;
+        display: none;
     }
 }
 
@@ -373,8 +400,6 @@
         width: 4px;
         height: 4px;
     }
-
-
 
     .info-value {
         font-size: clamp(16px, 3vw, 22px);
