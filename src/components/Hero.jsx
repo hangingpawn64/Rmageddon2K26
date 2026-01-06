@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import driftCar from "../assets/drift-car3.png";
 // import driftSmoke from "../assets/smoke.png";
 
-import StepCard from "./StepCard";
+import StepCard from "./Stepcard";
 import { steps } from "./StepsData";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -69,7 +69,7 @@ export default function Hero() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: hero,
-          start: "bottom bottom",
+          start: "top 70%",
           once: true,
         },
       });
@@ -117,7 +117,7 @@ export default function Hero() {
 
 
         /* ⏸ REST */
-        .to({}, { duration: 0.0 })
+        .to({}, { duration: 0.5 })
 
         /* 📌 PLACE STATIC CAR */
         .add(() => {
@@ -139,7 +139,7 @@ export default function Hero() {
         .to(contentRef.current, {
           opacity: 1,
           y: 0,
-          duration: 0.3,
+          duration: 0.6,
           ease: "power2.out",
         });
     }, heroRef);
@@ -192,7 +192,7 @@ export default function Hero() {
           <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group2_mxivzu.png"} className="hud-svg hud-svg-right" alt="" />
         </div>
 
-        <div className="hero__overlay1">
+        <div className="hero__overlay">
           <div className="hero__left">
             <div className="hero__cards">
               {steps.map(step => (

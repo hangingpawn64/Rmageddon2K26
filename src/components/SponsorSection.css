@@ -22,7 +22,8 @@
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767520876/illustration-rain-futuristic-city_2_mpel26.png");
+  background-image: url("../assets/sponsersbg1.jpeg");
+  opacity: 0.8;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
