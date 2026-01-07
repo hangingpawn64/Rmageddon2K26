@@ -1,5 +1,5 @@
 .team-card-wrapper {
-    perspective: 1000px;
+    perspective: 500px;
     margin: 20px;
 }
 
@@ -7,13 +7,13 @@
     position: relative;
     width: 300px;
     height: 403px;
-    transition: transform 0.8s;
+    transition: transform 1500ms;
     transform-style: preserve-3d;
     cursor: pointer;
 }
 
 .team-card-wrapper:hover .team-card {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) rotateZ(180deg);
 }
 
 /* Front and Back faces */
@@ -62,7 +62,7 @@
 .card-back {
     background: rgba(20, 30, 40, 0.9);
     backdrop-filter: blur(10px);
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) rotateZ(180deg);
     overflow: hidden;
     padding: 20px;
     position: relative;

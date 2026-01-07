@@ -27,8 +27,8 @@ const Robowar = () => {
 
             <div className="content-bottom">
               <p>
-                Last year, RoboWars made history as Marathwada’s first RoboWars
-                event. This year, the battlefield opens again—your chance to test
+                Last year, RoboWars made history as Marathwada's first RoboWars
+                event. This year, the battlefield opens again your chance to test
                 your robot, prove your skills, and make your mark.
               </p>
             </div>

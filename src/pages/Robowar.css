@@ -14,7 +14,6 @@
   font-display: swap;
 }
 
-
 /* ================= MAIN CONTAINER ================= */
 .robowar-container {
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766428880/ChatGPT_Image_Dec_16_2025_10_58_11_PM_1_3_heyhec.png");
@@ -24,7 +23,7 @@
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  padding: 12px 40px;
+  padding: 0px 40px 0px 40px;
   color: #ffffff;
   overflow: hidden;
   /* font-family: "Arial", sans-serif; */
@@ -40,7 +39,7 @@
   flex-direction: column;
   gap: 74px;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 0rem;
 }
 
 .robowarHeader {
@@ -68,15 +67,15 @@
 }
 
 .robowar-content {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #ffffff;
-    align-items: center;
-    width: 80%;
-    font-family: 'Aldrich', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #ffffff;
+  align-items: center;
+  width: 80%;
+  font-family: 'Aldrich', sans-serif;
 }
 
 
@@ -113,11 +112,11 @@
 
 /* ================= RIGHT SECTION ================= */
 .robowar-right {
-flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 73vh;
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 73vh;
 }
 
 
@@ -128,10 +127,10 @@ flex: 1.2;
 }
 
 .robowar-character img {
-    margin-top: 62px;
-    width: 256px;
-    max-width: 100%;
-    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  margin-top: 62px;
+  width: 256px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
 }
 
 .robowar-carousel {
@@ -146,24 +145,24 @@ flex: 1.2;
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-.robowar-right {
+  .robowar-right {
     flex: 1.2;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 69vh;
-}
+  }
 
   .robowar-container {
-    padding: 40px 20px;
+    padding: 96px 20px 0px 20px;
 
   }
 
-    .robowar-left {
-        margin-top: 2rem;
-        gap: 3.2rem;
-        /* height: 57vh; */
-    }
+  .robowar-left {
+    gap: 3.2rem;
+    /* height: 57vh; */
+  }
+
   .robowar-content {
     font-size: 16px;
     gap: 40px;
@@ -185,12 +184,13 @@ flex: 1.2;
   .RoboTitle {
     font-size: 34px;
   }
-    .robowar-character img {
-        margin-top: 30px;
-        width: 227px;
-        max-width: 100%;
-        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-    }
+
+  .robowar-character img {
+    margin-top: 30px;
+    width: 227px;
+    max-width: 100%;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  }
 
   .robowar-character {
     height: 19rem;
@@ -217,7 +217,7 @@ flex: 1.2;
 
 
   .robowar-left {
-    margin-top: 6.5rem;
+    margin-top: 2rem;
     gap: 2.9rem;
   }
 
@@ -269,13 +269,13 @@ flex: 1.2;
 
   .robowar-container {
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 96px 10px 20px 10px;
     gap: 39px;
-    min-height: 90vh;
+    min-height: 100vh;
   }
 
   .robowar-left {
-    margin-top: 7rem;
+    margin-top: 2rem;
     gap: 3rem;
   }
 
@@ -340,7 +340,7 @@ flex: 1.2;
 
   .robowar-left {
     flex: 0.1;
-    margin-top: 7rem;
+    margin-top: 2rem;
     gap: 2.8rem;
     padding: 0px 6px;
   }
@@ -402,7 +402,7 @@ flex: 1.2;
   }
 
   .robowar-container {
-    min-height: 78px;
+    min-height: 100vh;
   }
 
   .robowar-content {
@@ -555,7 +555,7 @@ COMMON EVENT SECTION STYLES
   .event-container {
     flex-direction: column;
     gap: 52px;
-     padding: 58px 24px;
+    padding: 58px 24px;
   }
 
 }
