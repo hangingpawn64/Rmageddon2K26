@@ -77,9 +77,9 @@ export default function Home_page3() {
                 />
                 <div className="right-text">
                   <div className="innertext2"><p>CERTIFICATE OF PARTICIPATION</p></div>
-                  {/* <div className="subtext cash">
+                  <div className="subtext cash">
                     <p>Certificate to all participants</p>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
