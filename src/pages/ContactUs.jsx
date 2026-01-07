@@ -21,7 +21,7 @@ const ContactUs = () => {
   return (
     <>
       <div className='contact-us'>
-        <div className="absolute top-0 left-0 w-full z-50 flex justify-center">
+        <div className=" top-0 left-0 w-full z-50 flex justify-center">
           <Navbar />
         </div>
         <div className='contact-content'>

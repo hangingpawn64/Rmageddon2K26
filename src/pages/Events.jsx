@@ -8,15 +8,13 @@ const Events = () => {
     return (
         <>
             <div className="events">
-                <div className="absolute top-0 left-0 w-full z-50 flex justify-center events-navbar">
+                <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar">
                     <Navbar />
                 </div>
-               <div className="robowarpage"><Robowar/></div> 
+                <div className="robowarpage"><Robowar /></div>
             </div>
             <Footer />
         </>
     )
 }
-
-
 export default Events

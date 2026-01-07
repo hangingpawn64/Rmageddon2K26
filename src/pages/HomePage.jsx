@@ -46,8 +46,8 @@ export default function HomePage() {
 
     const handleMouseMove = (e) => {
         const { clientX, clientY } = e;
-        const moveX = (clientX - window.innerWidth / 2) / 75;
-        const moveY = (clientY - window.innerHeight / 2) / 75;
+        const moveX = (clientX - window.innerWidth / 2) / 60;
+        const moveY = (clientY - window.innerHeight / 2) / 60;
         setMousePos({ x: moveX, y: moveY });
     };
 
