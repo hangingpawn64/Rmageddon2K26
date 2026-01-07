@@ -28,7 +28,7 @@
 .hori-slide-custom img {
   width: 12rem;
   height: 80%;
-  border: 1px white solid;
+  border: 8px white solid;
 }
 
 .hori-slide-custom.active-slide {
@@ -36,6 +36,7 @@
   transform: scale(1.5);
   z-index: 9;
 }
+
 .swiper-pagination-bullet {
   background-color: #ccc;
   width: 12px;
@@ -52,9 +53,10 @@
 
 .hori-slide-custom {
   width: 25%;
-  height: 81%; /* Ensure it takes full height */
+  height: 81%;
+  /* Ensure it takes full height */
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
@@ -68,7 +70,7 @@
   text-align: center;
   font-size: 14px;
   color: white;
-  margin-top: 5px; 
+  margin-top: 5px;
   width: 50%;
 }
 
@@ -89,11 +91,11 @@
 }
 
 @media (max-width: 480px) {
-  
-.hori-slide-custom img {
-  width: 18rem;
-  height: 80%;
-  border: 1px white solid;
-}
+
+  .hori-slide-custom img {
+    width: 18rem;
+    height: 80%;
+    border: 1px white solid;
+  }
 
 }
