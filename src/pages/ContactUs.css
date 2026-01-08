@@ -1,4 +1,4 @@
-.contact-us {
+.contact-container {
     /* Image + fallback */
     background-image: url("../assets/mapbg.png");
     background-size: cover;
@@ -14,7 +14,7 @@
     padding: 0px 20px;
 }
 
-.contact-content {
+.contact-content-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     gap: 40px;
 }
 
-.contact-heading {
+.contact-heading-text {
     font-size: 64px;
     font-weight: 800;
     text-align: center;
@@ -37,13 +37,13 @@
 
 
 @media (max-width: 768px) {
-    .contact-heading {
+    .contact-heading-text {
         font-size: 40px;
         letter-spacing: 2px;
     }
 }
 
-.cards-container {
+.contact-cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -10,7 +10,7 @@ export default function PageLoader({ onComplete }) {
     if (hasStarted.current) return;
     hasStarted.current = true;
 
-    const counter = document.querySelector(".counter");
+    const counter = document.querySelector(".loader-counter");
 
     /* =============================
        PERFECT ORDERED COUNTER
@@ -37,20 +37,20 @@ export default function PageLoader({ onComplete }) {
        GSAP ANIMATIONS (UNCHANGED)
     ============================== */
 
-    gsap.to(".counter", {
+    gsap.to(".loader-counter", {
       delay: 3.5,
       opacity: 0,
       duration: 0.25,
     });
 
-    gsap.to(".bar img", {
+    gsap.to(".loader-bar img", {
       opacity: 1,
       duration: 0.8,
       stagger: 0.4,
       ease: "power2.inOut",
     });
 
-    gsap.to(".overlay2", {
+    gsap.to(".loader-overlay", {
       delay: 3.5,
       opacity: 0,
       duration: 0.8,
@@ -62,34 +62,34 @@ export default function PageLoader({ onComplete }) {
 
   return (
     <>
-      <h1 className="counter">0</h1>
+      <h1 className="loader-counter">0</h1>
 
-     <div className="overlay2">
-  {/* Bar 1 */}
-  <div className="bar">
-    <img src="/Images/1.jpg" alt="" />
-  </div>
+      <div className="loader-overlay">
+        {/* Bar 1 */}
+        <div className="loader-bar">
+          <img src="/Images/1.jpg" alt="" />
+        </div>
 
-  {/* Bar 2 */}
-  <div className="bar">
-    <img src="/Images/3.jpg" alt="" />
-  </div>
+        {/* Bar 2 */}
+        <div className="loader-bar">
+          <img src="/Images/3.jpg" alt="" />
+        </div>
 
-  {/* Bar 3 (DOUBLE WIDTH) */}
-  <div className="bar bar-double">
-    <img src="/Images/5.jpg" alt="" />
-  </div>
+        {/* Bar 3 (DOUBLE WIDTH) */}
+        <div className="loader-bar loader-bar-double">
+          <img src="/Images/5.jpg" alt="" />
+        </div>
 
-  {/* Bar 4 */}
-  <div className="bar">
-    <img src="/Images/7.jpg" alt="" />
-  </div>
+        {/* Bar 4 */}
+        <div className="loader-bar">
+          <img src="/Images/7.jpg" alt="" />
+        </div>
 
-  {/* Bar 5 */}
-  <div className="bar">
-    <img src="/Images/9.png" alt="" />
-  </div>
-</div>
+        {/* Bar 5 */}
+        <div className="loader-bar">
+          <img src="/Images/9.png" alt="" />
+        </div>
+      </div>
 
     </>
   );

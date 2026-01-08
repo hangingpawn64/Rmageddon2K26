@@ -5,17 +5,17 @@ import Slider from "./Slider";
 
 const SponsorSection = () => {
   return (
-    <section className="sponsors-section">
+    <section className="sponsor-section-container">
       {/* LEFT SIDE */}
-      <div className="sponsors-left">
-        <div className="left-upper">
-          <div className="upper-head">
-            <div className="title">
+      <div className="sponsor-section-left">
+        <div className="sponsor-section-left-upper">
+          <div className="sponsor-section-upper-head">
+            <div className="sponsor-section-title">
               <p>RNXG</p>
-              <span className="Rnxg-underline"></span>
+              <span className="sponsor-section-rnxg-underline"></span>
             </div>
 
-            <a href="#explore" className="exploreBtn">
+            <a href="#explore" className="sponsor-section-exploreBtn">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"
                 alt="Explore"
@@ -23,8 +23,8 @@ const SponsorSection = () => {
             </a>
           </div>
 
-          <div className="glass">
-            <div className="desc">
+          <div className="sponsor-section-glass">
+            <div className="sponsor-section-desc">
               <p>
                 Members of the RNXG, regardless of their fields, collaborate as a
                 team to generate multidisciplinary technical expertise.
@@ -36,16 +36,16 @@ const SponsorSection = () => {
           </div>
         </div>
 
-        <div className="left-down">
-          <div className="down-head">
-            <div className="title">
+        <div className="sponsor-section-left-down">
+          <div className="sponsor-section-down-head">
+            <div className="sponsor-section-title">
               <p>OUR SPONSOR</p>
-              <span className="Spon-underline"></span>
+              <span className="sponsor-section-spon-underline"></span>
             </div>
           </div>
 
-          <div className="glass">
-            <div className="desc">
+          <div className="sponsor-section-glass">
+            <div className="sponsor-section-desc">
               <p>
                 Powered by our sponsors fueling innovation, robotic excellence,
                 and the future of technology. for Next Generation, or RNXG, is
@@ -55,7 +55,7 @@ const SponsorSection = () => {
             </div>
           </div>
 
-          <div className="arrow">
+          <div className="sponsor-section-arrow">
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png"
               alt="arrow"
@@ -65,21 +65,21 @@ const SponsorSection = () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="sponsors-right">
+      <div className="sponsor-section-right">
         <img
           src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182940/Group_514617163_1_z4f8qx.png"
           alt=""
           aria-hidden="true"
-          className="vector-line"
+          className="sponsor-section-vector-line"
         />
 
         {/* Desktop */}
-        <div className="slider-vertical">
+        <div className="sponsor-section-slider-vertical">
           <VerticalSlider />
         </div>
 
         {/* Mobile */}
-        <div className="slider-horizontal">
+        <div className="sponsor-section-slider-horizontal">
           <Slider />
         </div>
       </div>

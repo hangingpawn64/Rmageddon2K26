@@ -7,11 +7,11 @@ const sumobg = "/sumobg.png";
 const Events = () => {
     return (
         <>
-            <div className="events">
-                <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar">
+            <div className="events-container">
+                <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper">
                     <Navbar />
                 </div>
-                <div className="robowarpage"><Robowar /></div>
+                <div className="events-robowar-wrapper"><Robowar /></div>
             </div>
             <Footer />
         </>

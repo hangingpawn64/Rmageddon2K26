@@ -1,8 +1,8 @@
-.hero-section {
+.home-hero-section {
     background-color: #000;
 }
 
-.heading {
+.home-heading {
     position: relative;
     padding-top: 8rem;
     z-index: 10;
@@ -16,7 +16,7 @@
     font-family: 'Ethnocentric';
 }
 
-.glass-panel {
+.home-glass-panel {
     position: relative;
     border-radius: 40px;
     padding: 20px 20px;
@@ -30,7 +30,7 @@
 }
 
 /* Gradient Border */
-.glass-panel::before {
+.home-glass-panel::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -52,13 +52,13 @@
 }
 
 /* Countdown */
-.countdown-container {
+.home-countdown-container {
     width: 100%;
     max-width: 450px;
     min-height: 210px;
 }
 
-.panel-title {
+.home-panel-title {
     font-family: 'Ethnocentric';
     color: #fff;
     font-size: clamp(20px, 4vw, 32px);
@@ -68,7 +68,7 @@
     text-transform: uppercase;
 }
 
-.timer-grid {
+.home-timer-grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -76,7 +76,7 @@
     gap: 5px;
 }
 
-.time-unit {
+.home-time-unit {
     flex: 1;
     min-width: 0;
     display: flex;
@@ -85,7 +85,7 @@
     gap: clamp(8px, 2vw, 15px);
 }
 
-.time-value {
+.home-time-value {
     position: relative;
     font-family: "Orbitron", sans-serif;
     font-size: clamp(20px, 4vw, 32px);
@@ -101,7 +101,7 @@
     overflow: hidden;
 }
 
-.time-value::after {
+.home-time-value::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -112,13 +112,13 @@
     z-index: 0;
 }
 
-.time-value span {
+.home-time-value span {
     position: relative;
     z-index: 1;
 }
 
 /* Gradient Border */
-.time-value::before {
+.home-time-value::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -139,7 +139,7 @@
     z-index: -1;
 }
 
-.time-label {
+.home-time-label {
     font-family: "Orbitron", sans-serif;
     font-size: clamp(10px, 2vw, 14px);
     font-weight: 600;
@@ -151,7 +151,7 @@
     width: 100%;
 }
 
-.time-separator {
+.home-time-separator {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -159,7 +159,7 @@
     margin-top: clamp(20px, 4vw, 28px);
 }
 
-.time-separator span {
+.home-time-separator span {
     width: 8px;
     height: 8px;
     background: #fff;
@@ -169,7 +169,7 @@
 }
 
 /* Center Content */
-.center-content {
+.home-center-content {
     width: 500px;
     height: 500px;
     display: flex;
@@ -177,7 +177,7 @@
     justify-content: center;
 }
 
-.character-img {
+.home-character-img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -192,7 +192,7 @@
     pointer-events: none;
 }
 
-.center-logo {
+.home-center-logo {
     position: relative;
     z-index: 2;
     width: 350px;
@@ -201,7 +201,7 @@
 }
 
 /* Info Box */
-.info-container {
+.home-info-container {
     width: 100%;
     max-width: 460px;
     min-height: 210px;
@@ -210,7 +210,7 @@
     gap: 12px;
 }
 
-.info-row {
+.home-info-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,11 +219,11 @@
     padding-bottom: 10px;
 }
 
-.info-row:last-child {
+.home-info-row:last-child {
     border-bottom: none;
 }
 
-.info-label {
+.home-info-label {
     color: #fff;
     font-family: 'Ethnocentric';
     font-size: clamp(16px, 3vw, 24px);
@@ -231,44 +231,44 @@
     text-transform: uppercase;
 }
 
-.info-value {
+.home-info-value {
     font-size: clamp(18px, 3vw, 24px);
     font-weight: 800;
     font-family: "Orbitron", sans-serif;
 }
 
-.text-cyan {
+.home-text-cyan {
     color: #51D4FF;
     text-shadow: 0 0 10px rgba(81, 212, 255, 0.04), 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.text-red {
+.home-text-red {
     color: #E32525;
 
 }
 
 /* Bottom Section */
-.map-wrapper {
+.home-map-wrapper {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     margin-left: 5%;
 }
 
-.map-img {
+.home-map-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.4));
 }
 
-.mission-container {
+.home-mission-container {
     flex: 1;
     align-items: center;
     margin-right: 10%;
 }
 
-.mission-title {
+.home-mission-title {
     font-family: "Ethnocentric";
     font-weight: 800;
     font-size: clamp(24px, 4vw, 40px);
@@ -278,7 +278,7 @@
     filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.8));
 }
 
-.mission-desc {
+.home-mission-desc {
     font-family: "Saira Semi Condensed";
     color: rgba(255, 255, 255);
     font-size: clamp(16px, 1.8vw, 22px);
@@ -291,55 +291,55 @@
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .heading {
+    .home-heading {
         font-size: clamp(36px, 5vw, 60px);
         margin-bottom: 2rem;
         padding-top: 6rem;
     }
 
-    .center-content {
+    .home-center-content {
         display: none;
     }
 
-    .content-wrapper {
+    .home-content-wrapper {
         padding-top: 60px;
         gap: 20px;
     }
 }
 
 @media (max-width: 900px) {
-    .hero-section video {
+    .home-hero-section video {
         display: none;
     }
 
-    .hero-section {
+    .home-hero-section {
         background-image: url('/mobile-bg.png');
         /* Placeholder for static background */
         background-size: cover;
         background-position: center;
     }
 
-    .heading {
+    .home-heading {
         font-size: clamp(24px, 5vw, 40px);
         padding-top: 0;
         margin-bottom: -1rem;
         order: 1;
     }
 
-    .main-content-grid,
-    .bottom-section-grid {
+    .home-main-content-grid,
+    .home-bottom-section-grid {
         display: contents;
     }
 
-    .character-img {
+    .home-character-img {
         display: none;
     }
 
-    .center-content {
+    .home-center-content {
         display: none;
     }
 
-    .mission-container {
+    .home-mission-container {
         display: flex;
         flex-direction: column;
         order: 2;
@@ -349,59 +349,59 @@
         flex: none;
     }
 
-    .mission-title {
+    .home-mission-title {
         font-size: clamp(20px, 4vw, 32px);
         margin-bottom: 15px;
     }
 
-    .mission-desc {
+    .home-mission-desc {
         font-size: clamp(16px, 2vw, 24px);
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     }
 
-    .content-wrapper {
+    .home-content-wrapper {
         padding: 100px 20px 40px;
         gap: 40px;
     }
 
-    .countdown-container,
-    .info-container {
+    .home-countdown-container,
+    .home-info-container {
         max-width: 90%;
     }
 
-    .countdown-container {
+    .home-countdown-container {
         order: 3;
     }
 
-    .info-container {
+    .home-info-container {
         order: 4;
     }
 
-    .info-value {
+    .home-info-value {
         font-size: clamp(20px, 3vw, 26px);
     }
 
-    .glass-panel {
+    .home-glass-panel {
         padding: 10px 25px;
         border-radius: 30px;
     }
 
-    .map-wrapper {
+    .home-map-wrapper {
         display: none;
     }
 }
 
 @media (max-width: 600px) {
-    .heading {
+    .home-heading {
         font-size: clamp(28px, 8vw, 36px);
     }
 
-    .time-separator span {
+    .home-time-separator span {
         width: 4px;
         height: 4px;
     }
 
-    .info-value {
+    .home-info-value {
         font-size: clamp(16px, 3vw, 22px);
     }
 }

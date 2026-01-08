@@ -23,7 +23,7 @@ export default function Hero() {
   useEffect(() => {
     const width = window.innerWidth;
 
-    
+
     /* 📱 MOBILE + iPAD — STATIC ONLY */
     if (width <= 1024) {
       gsap.set(driftCarRef.current, { display: "none" });
@@ -35,7 +35,7 @@ export default function Hero() {
         left: "auto",
         top: "auto",
         transform: "none",
-        display:"none",
+        display: "none",
       });
 
       gsap.set(contentRef.current, {
@@ -76,44 +76,44 @@ export default function Hero() {
 
       tl
         /* 🚗 DRIFT */
-       /* 🚗 DRIFT */
-.to(driftCar, {
-  x: END_X,
-  rotation: -14,
-  duration: 2.0,
-  ease: "power3.out",
-})
-.to(
-  smoke,
-  {
-    x: END_X,
-    opacity: 0.6,
-    duration: 2.0,
-    ease: "power3.out",
-  },
-  "<"
-)
+        /* 🚗 DRIFT */
+        .to(driftCar, {
+          x: END_X,
+          rotation: -14,
+          duration: 2.0,
+          ease: "power3.out",
+        })
+        .to(
+          smoke,
+          {
+            x: END_X,
+            opacity: 0.6,
+            duration: 2.0,
+            ease: "power3.out",
+          },
+          "<"
+        )
 
-/* 🛑 BRAKE / SETTLE */
-.to(driftCar, {
-  x: END_X + 12,
-  rotation: -4,
-  duration: 0.18,
-  ease: "power2.out",
-})
-.to(driftCar, {
-  x: END_X,
-  rotation: 0,
-  duration: 0.22,
-  ease: "power2.inOut",
-})
+        /* 🛑 BRAKE / SETTLE */
+        .to(driftCar, {
+          x: END_X + 12,
+          rotation: -4,
+          duration: 0.18,
+          ease: "power2.out",
+        })
+        .to(driftCar, {
+          x: END_X,
+          rotation: 0,
+          duration: 0.22,
+          ease: "power2.inOut",
+        })
 
-/* 💨 NOW fade smoke AFTER drift is fully complete */
-.to(smoke, {
-  opacity: 0,
-  duration: 0.8,   // 👈 smooth disappear
-  ease: "power2.out",
-})
+        /* 💨 NOW fade smoke AFTER drift is fully complete */
+        .to(smoke, {
+          opacity: 0,
+          duration: 0.8,   // 👈 smooth disappear
+          ease: "power2.out",
+        })
 
 
         /* ⏸ REST */
@@ -150,21 +150,21 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="hero"
+      className="hero-section"
       style={{ backgroundImage: "url(https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767522231/bg-2_pnpmsf.png)" }}
     >
       {/* DRIFT LAYER (DESKTOP ONLY) */}
-      <div className="drift-layer">
+      <div className="hero-drift-layer">
         <img
           ref={driftCarRef}
           src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767531265/drift-car3_1_krzame.png"}
-          className="drift-car"
+          className="hero-drift-car"
           alt="drift car"
         />
         <img
           ref={smokeRef}
           src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767522192/smoke_acjrc5.png"}
-          className="drift-smoke"
+          className="hero-drift-smoke"
           alt="drift smoke"
         />
       </div>
@@ -173,28 +173,28 @@ export default function Hero() {
       <img
         ref={staticCarRef}
         src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767531265/drift-car3_1_krzame.png"}
-        className="hero-car-static"
+        className="hero-static-car"
         alt="RMAGEDDON car"
       />
 
       {/* CONTENT */}
-      <div ref={contentRef} className="hero-content">
-        <div className="hud-container">
-          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group1_govmkw.png"} className="hud-svg hud-svg-left" alt="" />
-          <h1 className="hud-title">
-            <span className="hud-line-1">
+      <div ref={contentRef} className="hero-section-content">
+        <div className="hero-hud-container">
+          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group1_govmkw.png"} className="hero-hud-svg hero-hud-svg-left" alt="" />
+          <h1 className="hero-hud-title">
+            <span className="hero-hud-line-1">
               Steps to confirm your seat in
             </span>
-            <span className="hud-line-2">
+            <span className="hero-hud-line-2">
               RMAGEDDON 2026
             </span>
           </h1>
-          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group2_mxivzu.png"} className="hud-svg hud-svg-right" alt="" />
+          <img src={"https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/Group2_mxivzu.png"} className="hero-hud-svg hero-hud-svg-right" alt="" />
         </div>
 
-        <div className="hero__overlay">
-          <div className="hero__left">
-            <div className="hero__cards">
+        <div className="hero-overlay">
+          <div className="hero-left">
+            <div className="hero-cards">
               {steps.map(step => (
                 <StepCard key={step.title} {...step} />
               ))}

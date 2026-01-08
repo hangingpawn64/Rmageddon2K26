@@ -41,12 +41,20 @@ const Layout = () => {
 /* ===============================
    HOME WRAPPER (LOADER ONLY HERE)
 ================================ */
+// Track if loader has run this session (resets on refresh)
+let hasAppLoaded = false;
+
 const HomeWithLoader = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!hasAppLoaded);
+
+  const handleLoaderComplete = () => {
+    setLoading(false);
+    hasAppLoaded = true;
+  };
 
   return (
     <>
-      {loading && <PageLoader onComplete={() => setLoading(false)} />}
+      {loading && <PageLoader onComplete={handleLoaderComplete} />}
       {!loading && <HomePage />}
     </>
   );

@@ -20,13 +20,13 @@ const getImagePath = (path) => {
 const ContactUs = () => {
   return (
     <>
-      <div className='contact-us'>
+      <div className='contact-container'>
         <div className=" top-0 left-0 w-full z-50 flex justify-center">
           <Navbar />
         </div>
-        <div className='contact-content'>
-          <h1 className='contact-heading'>CONTACT US</h1>
-          <div className='cards-container'>
+        <div className='contact-content-wrapper'>
+          <h1 className='contact-heading-text'>CONTACT US</h1>
+          <div className='contact-cards-container'>
             {teamData.teamMembers.map((member) => (
               <Card3D
                 key={member.id}

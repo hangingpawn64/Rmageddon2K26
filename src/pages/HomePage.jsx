@@ -54,7 +54,7 @@ export default function HomePage() {
     return (
         <>
             <section
-                className="relative min-h-screen w-full hero-section"
+                className="relative min-h-screen w-full home-hero-section"
                 onMouseMove={handleMouseMove}
             >
                 {/* Background Video */}
@@ -82,92 +82,92 @@ export default function HomePage() {
                 <img
                     src="/character.png"
                     alt="character"
-                    className="character-img"
+                    className="home-character-img"
                     style={{
                         transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)`
                     }}
                 />
 
                 {/* Content Wrapper */}
-                <div className="content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-4 px-10 gap-y-2">
+                <div className="home-content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-4 px-10 gap-y-2">
 
                     {/* Heading */}
-                    <h1 className='heading'>RMAGEDDON 2026</h1>
+                    <h1 className='home-heading'>RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
-                    <div className="main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
+                    <div className="home-main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
 
                         {/* Left: Countdown */}
-                        <div className="countdown-container glass-panel">
-                            <h3 className="panel-title">TIME REMAINING</h3>
-                            <div className="timer-grid">
-                                <div className="time-unit">
-                                    <div className="time-value"><span>{String(timeLeft.days).padStart(2, '0')}</span></div>
-                                    <div className="time-label">DAYS</div>
+                        <div className="home-countdown-container home-glass-panel">
+                            <h3 className="home-panel-title">TIME REMAINING</h3>
+                            <div className="home-timer-grid">
+                                <div className="home-time-unit">
+                                    <div className="home-time-value"><span>{String(timeLeft.days).padStart(2, '0')}</span></div>
+                                    <div className="home-time-label">DAYS</div>
                                 </div>
-                                <div className="time-separator">
+                                <div className="home-time-separator">
                                     <span>.</span>
                                     <span>.</span>
                                 </div>
-                                <div className="time-unit">
-                                    <div className="time-value"><span>{String(timeLeft.hours).padStart(2, '0')}</span></div>
-                                    <div className="time-label">HOURS</div>
+                                <div className="home-time-unit">
+                                    <div className="home-time-value"><span>{String(timeLeft.hours).padStart(2, '0')}</span></div>
+                                    <div className="home-time-label">HOURS</div>
                                 </div>
-                                <div className="time-separator">
+                                <div className="home-time-separator">
                                     <span>.</span>
                                     <span>.</span>
                                 </div>
-                                <div className="time-unit">
-                                    <div className="time-value"><span>{String(timeLeft.minutes).padStart(2, '0')}</span></div>
-                                    <div className="time-label">MINUTES</div>
+                                <div className="home-time-unit">
+                                    <div className="home-time-value"><span>{String(timeLeft.minutes).padStart(2, '0')}</span></div>
+                                    <div className="home-time-label">MINUTES</div>
                                 </div>
-                                <div className="time-separator">
+                                <div className="home-time-separator">
                                     <span>.</span>
                                     <span>.</span>
                                 </div>
-                                <div className="time-unit">
-                                    <div className="time-value"><span>{String(timeLeft.seconds).padStart(2, '0')}</span></div>
-                                    <div className="time-label">SECONDS</div>
+                                <div className="home-time-unit">
+                                    <div className="home-time-value"><span>{String(timeLeft.seconds).padStart(2, '0')}</span></div>
+                                    <div className="home-time-label">SECONDS</div>
                                 </div>
                             </div>
                         </div>
                         {/* Center: Logo & Character */}
-                        <div className="center-content relative">
-                            <img src="/logo.png" alt="logo" className="center-logo" />
+                        <div className="home-center-content relative">
+                            <img src="/logo.png" alt="logo" className="home-center-logo" />
                         </div>
 
                         {/* Right: Info Box */}
-                        <div className="info-container glass-panel">
-                            <div className="info-row">
-                                <span className="info-label">GAMES:</span>
-                                <span className="info-value text-cyan">4+</span>
+                        <div className="home-info-container home-glass-panel">
+                            <div className="home-info-row">
+                                <span className="home-info-label">GAMES:</span>
+                                <span className="home-info-value home-text-cyan">4+</span>
                             </div>
-                            <div className="info-row">
-                                <span className="info-label">DATES:</span>
-                                <span className="info-value text-cyan">27FEB - 1MAR</span>
+                            <div className="home-info-row">
+                                <span className="home-info-label">DATES:</span>
+                                <span className="home-info-value home-text-cyan">27FEB - 1MAR</span>
                             </div>
-                            <div className="info-row">
-                                <span className="info-label">PRIZE POOL:</span>
-                                <span className="info-value text-cyan">Rs.2,00,000+</span>
+                            <div className="home-info-row">
+                                <span className="home-info-label">PRIZE POOL:</span>
+                                <span className="home-info-value home-text-cyan">Rs.2,00,000+</span>
                             </div>
                         </div>
 
                     </div>
 
                     {/* Bottom Section */}
-                    <div className="bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                    <div className="home-bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
                         {/* Map */}
-                        <div className="map-wrapper">
+                        <div className="home-map-wrapper">
                             <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
-                                <img src="/map.png" alt="map" className="map-img" />
+                                <img src="/map.png" alt="map" className="home-map-img" />
                             </a>
                         </div>
                         {/* Mission Text */}
-                        <div className="mission-container">
-                            <h2 className="mission-title">
-                                <span className="text-red">Mission Start :</span> Build, Battle, Dominate
+                        <div className="home-mission-container">
+                            <h2 className="home-mission-title">
+                                <span className="home-text-red">Mission Start :</span> Build, Battle, Dominate
                             </h2>
-                            <p className="mission-desc">
+                            <p className="home-mission-desc">
                                 Gear Up, Crew! RMAGEDDON 2025 Drops You Right Into A High-Stakes Robotics Showdown.
                                 Assemble Your Squad, Upgrade Your Bot, And Rise Through The Ranks Of Los Bot-Santos.
                                 Earn Respect, Claim Titles, And Rule The Streets With Engineering Mastery.

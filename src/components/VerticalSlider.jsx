@@ -47,17 +47,16 @@ const VerticalSlider = () => {
           setActiveIndex(swiper.realIndex % baseSlides.length)
         }
         modules={[Autoplay]}
-        className="vertical-swiper"
+        className="vertical-slider-swiper"
       >
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`vertical-slide ${
-              activeIndex === index % baseSlides.length ? "active-slide" : ""
-            }`}
+            className={`vertical-slider-item ${activeIndex === index % baseSlides.length ? "vertical-slider-active" : ""
+              }`}
           >
             <img src={slide.image} alt={slide.text} />
-            <div className="slide-text">{slide.text}</div>
+            <div className="vertical-slider-text">{slide.text}</div>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -42,18 +42,18 @@
   margin-top: 0rem;
 }
 
-.robowarHeader {
+.robowar-header {
   position: relative;
   display: inline-block;
 }
 
-.robowarHeader img {
+.robowar-header img {
   width: 37rem;
   max-width: 100%;
   display: block;
 }
 
-.RoboTitle {
+.robowar-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -80,11 +80,11 @@
 
 
 
-.content-bottom p {
+.robowar-content-bottom p {
   text-align: center;
 }
 
-.content-top p {
+.robowar-content-top p {
   text-align: center;
 }
 
@@ -176,12 +176,12 @@
     width: 12.4rem;
   }
 
-  .robowarHeader img {
+  .robowar-header img {
     width: 32rem;
     max-width: 100%;
   }
 
-  .RoboTitle {
+  .robowar-title {
     font-size: 34px;
   }
 
@@ -230,7 +230,7 @@
     width: 47%;
   }
 
-  .robowarHeader img {
+  .robowar-header img {
     width: 34rem;
     max-width: 100%;
     display: block;
@@ -284,7 +284,7 @@
     flex: 0.1;
   }
 
-  .robowarHeader img {
+  .robowar-header img {
     width: 23.2rem;
     max-width: 100%;
     display: block;
@@ -297,7 +297,7 @@
   }
 
 
-  .RoboTitle {
+  .robowar-title {
     font-size: 25px;
   }
 
@@ -308,18 +308,18 @@
 
 
 @media(max-width:440px) {
-  .event-section {
+  .robowar-event-section {
     min-height: auto;
     /* padding: 100px 10px 80px; */
   }
 
-  .event-section::before {
+  .robowar-event-section::before {
     background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
     background-size: 100% 100%;
     z-index: 0;
   }
 
-  .event-container {
+  .robowar-event-container {
     position: relative;
     z-index: 2;
     flex-direction: column;
@@ -329,8 +329,8 @@
 
 
   /* FORCE SLIDER ABOVE VECTOR */
-  .event-cards,
-  .event-card,
+  .robowar-event-cards,
+  .robowar-event-card,
   .swiper,
   .swiper-wrapper,
   .swiper-slide {
@@ -360,13 +360,13 @@
     width: 96.5%;
   }
 
-  .robowarHeader img {
+  .robowar-header img {
     width: 23rem;
     max-width: 100%;
     display: block;
   }
 
-  .RoboTitle {
+  .robowar-title {
     font-size: 24px;
   }
 
@@ -411,13 +411,13 @@
     width: 100%;
   }
 
-  .robowarHeader img {
+  .robowar-header img {
     width: 20rem;
     max-width: 100%;
     /* display: block; */
   }
 
-  .RoboTitle {
+  .robowar-title {
     font-size: 20px;
   }
 
@@ -441,7 +441,7 @@
 COMMON EVENT SECTION STYLES
 ========================================================= */
 
-.event-section {
+.robowar-event-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -456,7 +456,7 @@ COMMON EVENT SECTION STYLES
 
 
 /* SAME VECTOR FOR BOTH SECTIONS */
-.event-section::before {
+.robowar-event-section::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -472,7 +472,7 @@ COMMON EVENT SECTION STYLES
 }
 
 
-.event-container {
+.robowar-event-container {
   position: relative;
   z-index: 2;
 
@@ -489,13 +489,13 @@ COMMON EVENT SECTION STYLES
 
 
 /* CARDS */
-.event-cards {
+.robowar-event-cards {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.event-card {
+.robowar-event-card {
   width: 340px;
   height: 460px;
   border-radius: 22px;
@@ -518,14 +518,14 @@ COMMON EVENT SECTION STYLES
    DIFFERENT BACKGROUND PER SECTION
    ========================================================= */
 
-.bg-section-2 {
+.robowar-bg-section-2 {
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767030143/image_576_htrjvc.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bg-section-3 {
+.robowar-bg-section-3 {
   background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767181357/mount-kalaga-national-park-01_1_2_lqtauf.png");
   background-size: cover;
   background-position: center;
@@ -538,7 +538,7 @@ COMMON EVENT SECTION STYLES
 
 
 @media (max-width: 1024px) {
-  .event-section {
+  .robowar-event-section {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -552,7 +552,7 @@ COMMON EVENT SECTION STYLES
 
 @media (max-width: 992px) {
 
-  .event-container {
+  .robowar-event-container {
     flex-direction: column;
     gap: 52px;
     padding: 58px 24px;
@@ -561,7 +561,7 @@ COMMON EVENT SECTION STYLES
 }
 
 @media (max-width: 768px) {
-  .event-section {
+  .robowar-event-section {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -570,7 +570,7 @@ COMMON EVENT SECTION STYLES
     background-color: #000;
   }
 
-  .event-container {
+  .robowar-event-container {
     position: relative;
     z-index: 2;
     max-width: 1400px;
@@ -583,12 +583,12 @@ COMMON EVENT SECTION STYLES
     margin-top: 0vh;
   }
 
-  .event-section::before {
+  .robowar-event-section::before {
     background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767288809/Group_514617203_nvyplz.png");
   }
 
 
-  .event-section::before {
+  .robowar-event-section::before {
     z-index: 1;
   }
 
@@ -598,7 +598,7 @@ COMMON EVENT SECTION STYLES
 
 @media (max-width: 425px) {
 
-  .event-section {
+  .robowar-event-section {
     position: relative;
     width: 100%;
     min-height: 118vh;
@@ -607,14 +607,14 @@ COMMON EVENT SECTION STYLES
     background-color: #000;
   }
 
-  .event-section::before {
+  .robowar-event-section::before {
 
     background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
     z-index: 1;
     pointer-events: none;
   }
 
-  .event-container {
+  .robowar-event-container {
     position: relative;
     z-index: 2;
     max-width: 1400px;

@@ -5,19 +5,19 @@ export default function Home_page3() {
   return (
     <div className="home3-bg">
       <div className="home3-overlay">
-        <div className="title">
+        <div className="home3-title">
           Discover Your Potential with Rmageddon
         </div>
-        <div className="container">
-          <div className="leftside">
+        <div className="home3-container">
+          <div className="home3-leftside">
             {/* TEXT + BG IMAGE */}
-            <div className="textbg">
+            <div className="home3-textbg">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766336885/Group_514617188_pvktop.png"
                 alt="Rmageddon"
               />
 
-              <div className="content">
+              <div className="home3-content">
                 <ul>
                   <li>Develop teamwork and creativity through GTA.</li>
                   <li>
@@ -35,7 +35,7 @@ export default function Home_page3() {
             </div>
 
             {/* MAIN IMAGE */}
-            <div className="leftimg">
+            <div className="home3-leftimg">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766339444/31-312191_grand-theft-auto-v-game-free-png-gta_2_urzmnt.png"
                 alt="GTA"
@@ -45,8 +45,8 @@ export default function Home_page3() {
           </div>
 
 
-          <div className="rightside">
-            <div className="right-up">
+          <div className="home3-rightside">
+            <div className="home3-right-up">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766933652/ChatGPT_Image_Dec_28_2025_07_01_20_PM_1_u3hcr7.png"
                 alt=""
@@ -54,30 +54,30 @@ export default function Home_page3() {
             </div>
 
 
-            <div className="right-low">
+            <div className="home3-right-low">
               {/* CERTIFICATE */}
-              <div className="rightimg1">
+              <div className="home3-rightimg1">
                 <img
                   src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338254/Group_514617172_fkwsyk.png"
                   alt=""
                 />
-                <div className="right-text">
-                  <div className="innertext"><p>CASH PRIZES</p></div>
-                  <div className="subtext certificate">
+                <div className="home3-right-text">
+                  <div className="home3-innertext"><p>CASH PRIZES</p></div>
+                  <div className="home3-subtext certificate">
                     <p>  Cash prize up to x lakh</p>
                   </div>
                 </div>
               </div>
 
               {/* CASH PRIZE */}
-              <div className="rightimg2">
+              <div className="home3-rightimg2">
                 <img
                   src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338254/Group_514617172_fkwsyk.png"
                   alt=""
                 />
-                <div className="right-text">
-                  <div className="innertext2"><p>CERTIFICATE OF PARTICIPATION</p></div>
-                  <div className="subtext cash">
+                <div className="home3-right-text">
+                  <div className="home3-innertext2"><p>CERTIFICATE OF PARTICIPATION</p></div>
+                  <div className="home3-subtext cash">
                     <p>Certificate to all participants</p>
                   </div>
                 </div>

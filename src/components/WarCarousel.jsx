@@ -17,7 +17,7 @@ const HorizontalSlider = ({ className = "" }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className={`war-images-slider ${className}`}>
+    <div className={`war-carousel-images-slider ${className}`}>
       <Swiper
         loop={true}
         centeredSlides={true}
@@ -29,9 +29,9 @@ const HorizontalSlider = ({ className = "" }) => {
         observeParents={true}
         nested={true}
         modules={[Autoplay]}
-        className="war-horizontal-swiper"
+        className="war-carousel-horizontal-swiper"
         breakpoints={{
-          0:   { slidesPerView: 1, centeredSlides: false },
+          0: { slidesPerView: 1, centeredSlides: false },
           425: { slidesPerView: 1, centeredSlides: true },
           769: { slidesPerView: 1, centeredSlides: true },
         }}
@@ -39,7 +39,7 @@ const HorizontalSlider = ({ className = "" }) => {
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`war-slide ${activeIndex === index ? "war-active" : ""}`}
+            className={`war-carousel-slide ${activeIndex === index ? "war-carousel-active" : ""}`}
           >
             <img src={slide.image} alt={`Slide ${index + 1}`} />
           </SwiperSlide>

@@ -2,18 +2,18 @@ import "./StepCard.css";
 
 export default function StepCard({ stars, title, text }) {
   return (
-    <div className="step">
-      <div className="step__header">
-        <div className="step__stars">
+    <div className="step-card-item">
+      <div className="step-card-header">
+        <div className="step-card-stars">
           {Array.from({ length: stars.length }).map((_, i) => (
-            <span key={i} className="step__star" />
+            <span key={i} className="step-card-star" />
           ))}
         </div>
 
-        <span className="step__title">{title}</span>
+        <span className="step-card-title">{title}</span>
       </div>
 
-      <p className="step__text">{text}</p>
+      <p className="step-card-text">{text}</p>
     </div>
   );
 }

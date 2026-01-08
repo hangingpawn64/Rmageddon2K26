@@ -18,53 +18,51 @@ const Navbar = () => {
 
   /* ✅ SCROLL LOCK WHEN MENU OPEN */
   useEffect(() => {
-    document.body.classList.toggle("nav-scroll-locked", menuOpen);
-    return () => document.body.classList.remove("nav-scroll-locked");
+    document.body.classList.toggle("navbar-scroll-locked", menuOpen);
+    return () => document.body.classList.remove("navbar-scroll-locked");
   }, [menuOpen]);
 
   return (
     <>
-      <nav className={`navbar ${isEventsPage ? "events-mode" : ""}`}>
+      <nav className={`navbar-container ${isEventsPage ? "navbar-events-mode" : ""}`}>
         {/* SVG BACKGROUNDS */}
         <div className="navbar-svg-wrapper">
           <div
-            className={`navbar-svg default-svg ${
-              isEventsPage ? "hidden" : "visible"
-            }`}
+            className={`navbar-bg-svg navbar-default-bg ${isEventsPage ? "navbar-hidden" : "navbar-visible"
+              }`}
           />
           <div
-            className={`navbar-svg events1-svg ${
-              isEventsPage ? "visible" : "hidden"
-            }`}
+            className={`navbar-bg-svg navbar-events-bg ${isEventsPage ? "navbar-visible" : "navbar-hidden"
+              }`}
           />
         </div>
 
         {/* CONTENT */}
-        <div className="navbar-content">
+        <div className="navbar-content-wrapper">
           <img
             src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/LeftLogo_v7tgve.png"
-            className="left-logo"
+            className="navbar-logo"
             alt="logo"
           />
 
-          <div className="nav-left">
-            <ul className="nav-links">
+          <div className="navbar-links-left">
+            <ul className="navbar-links-list">
               <li><NavLink to="/" end>HOME</NavLink></li>
               <li><NavLink to="/events">EVENTS</NavLink></li>
             </ul>
           </div>
 
-          <div className="nav-center" />
+          <div className="navbar-center" />
 
-          <div className="nav-right">
-            <ul className="nav-links">
+          <div className="navbar-links-right">
+            <ul className="navbar-links-list">
               <li><NavLink to="/accommodation">ACCOMODATION</NavLink></li>
               <li><NavLink to="/contact">CONTACT</NavLink></li>
             </ul>
           </div>
 
           {/* HAMBURGER */}
-          <div className="hamburger-wrapper">
+          <div className="navbar-hamburger-wrapper">
             <Hamburger
               toggled={menuOpen}
               toggle={setMenuOpen}
@@ -79,13 +77,13 @@ const Navbar = () => {
 
       {/* MOBILE MENU OVERLAY */}
       {menuOpen && (
-        <div className="mobile-menu-overlay" onClick={closeMenu}>
+        <div className="navbar-mobile-menu-overlay" onClick={closeMenu}>
           <ul
-            className="mobile-menu show"
+            className="navbar-mobile-menu navbar-show"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="mobile-menu-close"
+              className="navbar-mobile-close"
               onClick={closeMenu}
               aria-label="Close menu"
             >

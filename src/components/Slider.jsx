@@ -21,7 +21,7 @@ const HorizontalSlider = ({ className }) => {
         "https://res.cloudinary.com/dmbmdfmhl/image/upload/v1765978972/sponsors.jpg",
       text: "",
     },
-   
+
   ];
 
   // Duplicate slides for smooth looping
@@ -45,7 +45,7 @@ const HorizontalSlider = ({ className }) => {
           setActiveIndex(swiper.realIndex % originalSlides.length)
         }
         modules={[Autoplay]}
-        className="horizontal-swiper"
+        className="slider-horizontal-swiper"
         breakpoints={{
           901: { slidesPerView: 3, centeredSlides: true },
           900: { slidesPerView: 2, centeredSlides: false },
@@ -56,15 +56,14 @@ const HorizontalSlider = ({ className }) => {
         {slides.map((slide, index) => (
           <SwiperSlide
             key={index}
-            className={`hori-slide-custom ${
-              activeIndex === index % originalSlides.length ? "active-slide" : ""
-            }`}
+            className={`slider-item-custom ${activeIndex === index % originalSlides.length ? "slider-active-slide" : ""
+              }`}
           >
             <img
               src={slide.image}
               alt={`Slide ${(index % originalSlides.length) + 1}`}
             />
-            <div className="slide-text">{slide.text}</div>
+            <div className="slider-text">{slide.text}</div>
           </SwiperSlide>
         ))}
       </Swiper>

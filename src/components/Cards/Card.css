@@ -13,191 +13,183 @@
   font-style: normal;
   font-display: swap;
 }
-.card {
+
+.card-item {
   scale: 1.1;
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
+  background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
   width: 300px;
-  clip-path: polygon(
-    0 0,
-    200px 0,
-    210px 10px,
-    280px 10px,
-    290px 0,
-    100% 0,
-    100% 150px,
-    290px 160px,
-    290px 300px,
-    100% 310px,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0 400px,
-    10px 390px,
-    10px 100px,
-    0 90px
-  );
+  clip-path: polygon(0 0,
+      200px 0,
+      210px 10px,
+      280px 10px,
+      290px 0,
+      100% 0,
+      100% 150px,
+      290px 160px,
+      290px 300px,
+      100% 310px,
+      100% calc(100% - 30px),
+      calc(100% - 30px) 100%,
+      0 100%,
+      0 400px,
+      10px 390px,
+      10px 100px,
+      0 90px);
   transition: all 0.2s linear;
   filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
   font-family: "";
 }
 
-.card:hover {
+.card-item:hover {
   transform: scale(1.1);
 }
 
-.card-img-shadow {
+.card-item-img-shadow {
   filter: drop-shadow(rgb(43, 216, 255) 0px 0px 10px);
 }
 
-.card-img-shadow img {
+.card-item-img-shadow img {
   width: 100%;
   height: 170px;
   object-fit: cover;
   margin-bottom: 30px;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    30px 100%,
-    0 calc(100% - 30px)
-  );
+  clip-path: polygon(0 0,
+      100% 0,
+      100% 100%,
+      30px 100%,
+      0 calc(100% - 30px));
 }
 
-.card-content {
+.card-item-content {
   margin: 0px 30px;
   color: rgb(211, 211, 211);
 }
 
-.card-content h2 {
+.card-item-content h2 {
   font-size: 23px;
   color: #51D4FF;
   text-align: center;
-  font-family: 'Ethnocentric', sans-serif;;
+  font-family: 'Ethnocentric', sans-serif;
+  ;
 }
 
-.card-content p {
+.card-item-content p {
   margin: 10px 0px;
   letter-spacing: 2px;
   font-family: 'Aldrich', sans-serif;
   text-align: center;
 }
 
-.button-shadow {
+.card-item-button-shadow {
   filter: drop-shadow(rgba(0, 204, 255, 0.767) 0px 0px 5px);
   transition: all 0.2s ease-in;
 }
 
-.button-shadow:hover {
+.card-item-button-shadow:hover {
   filter: drop-shadow(rgb(0, 195, 255) 0px 0px 10px);
 }
 
-.card-button {
-text-align: center;
-    margin: 20px 0px;
-    padding: 10px 0px;
-    background: linear-gradient(45deg, rgb(127 242 255) 0%, rgb(0 117 158) 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
+.card-item-button {
+  text-align: center;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  background: linear-gradient(45deg, rgb(127 242 255) 0%, rgb(0 117 158) 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
 }
 
-.card-button:hover {
+.card-item-button:hover {
   color: white;
 }
 
 
 @media (max-width: 1024px) {
- 
-.card {
-  scale: 0.95;
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
-  width: 300px;
-  clip-path: polygon(
-    0 0,
-    200px 0,
-    210px 10px,
-    280px 10px,
-    290px 0,
-    100% 0,
-    100% 150px,
-    290px 160px,
-    290px 300px,
-    100% 310px,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0 400px,
-    10px 390px,
-    10px 100px,
-    0 90px
-  );
-  transition: all 0.2s linear;
-  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
-  font-family: "Jost", sans-serif;
-}
+
+  .card-item {
+    scale: 0.95;
+    background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
+    width: 300px;
+    clip-path: polygon(0 0,
+        200px 0,
+        210px 10px,
+        280px 10px,
+        290px 0,
+        100% 0,
+        100% 150px,
+        290px 160px,
+        290px 300px,
+        100% 310px,
+        100% calc(100% - 30px),
+        calc(100% - 30px) 100%,
+        0 100%,
+        0 400px,
+        10px 390px,
+        10px 100px,
+        0 90px);
+    transition: all 0.2s linear;
+    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    font-family: "Jost", sans-serif;
+  }
 }
 
 @media (max-width: 993px) {
- 
-.card {
-  scale: 0.9;
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
-  width: 300px;
-  clip-path: polygon(
-    0 0,
-    200px 0,
-    210px 10px,
-    280px 10px,
-    290px 0,
-    100% 0,
-    100% 150px,
-    290px 160px,
-    290px 300px,
-    100% 310px,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0 400px,
-    10px 390px,
-    10px 100px,
-    0 90px
-  );
-  transition: all 0.2s linear;
-  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
-  font-family: "Jost", sans-serif;
-}
+
+  .card-item {
+    scale: 0.9;
+    background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
+    width: 300px;
+    clip-path: polygon(0 0,
+        200px 0,
+        210px 10px,
+        280px 10px,
+        290px 0,
+        100% 0,
+        100% 150px,
+        290px 160px,
+        290px 300px,
+        100% 310px,
+        100% calc(100% - 30px),
+        calc(100% - 30px) 100%,
+        0 100%,
+        0 400px,
+        10px 390px,
+        10px 100px,
+        0 90px);
+    transition: all 0.2s linear;
+    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    font-family: "Jost", sans-serif;
+  }
 
 }
 
 @media (max-width: 425px) {
- 
-.card {
-  scale: 0.74;
-  background: linear-gradient(240deg, rgba(0,0,0,1) 0%, rgba(36,36,36,1) 100%);
-  width: 300px;
-  clip-path: polygon(
-    0 0,
-    200px 0,
-    210px 10px,
-    280px 10px,
-    290px 0,
-    100% 0,
-    100% 150px,
-    290px 160px,
-    290px 300px,
-    100% 310px,
-    100% calc(100% - 30px),
-    calc(100% - 30px) 100%,
-    0 100%,
-    0 400px,
-    10px 390px,
-    10px 100px,
-    0 90px
-  );
-  transition: all 0.2s linear;
-  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
-  font-family: "Jost", sans-serif;
-}
+
+  .card-item {
+    scale: 0.74;
+    background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(36, 36, 36, 1) 100%);
+    width: 300px;
+    clip-path: polygon(0 0,
+        200px 0,
+        210px 10px,
+        280px 10px,
+        290px 0,
+        100% 0,
+        100% 150px,
+        290px 160px,
+        290px 300px,
+        100% 310px,
+        100% calc(100% - 30px),
+        calc(100% - 30px) 100%,
+        0 100%,
+        0 400px,
+        10px 390px,
+        10px 100px,
+        0 90px);
+    transition: all 0.2s linear;
+    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    font-family: "Jost", sans-serif;
+  }
 }

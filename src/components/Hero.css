@@ -16,7 +16,7 @@
 /* HERO BASE */
 /* ========================================= */
 
-.hero {
+.hero-section {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -27,15 +27,13 @@
   overflow: hidden;
 }
 
-.hero::before {
+.hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0.25) 30%,
-    rgba(0, 0, 0, 0.9) 95%
-  );
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.25) 30%,
+      rgba(0, 0, 0, 0.9) 95%);
   z-index: 0;
 }
 
@@ -43,7 +41,7 @@
 /* DRIFT LAYER (DESKTOP ONLY) */
 /* ========================================= */
 
-.drift-layer {
+.hero-drift-layer {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -55,7 +53,7 @@
 /* DRIFT UNIT */
 /* ========================================= */
 
-.drift-car {
+.hero-drift-car {
   position: absolute;
   bottom: var(--road-level);
   left: 0;
@@ -64,11 +62,10 @@
   will-change: transform;
 
   filter:
-    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6))
-    drop-shadow(0 0 22px rgba(0, 255, 255, 0.35));
+    drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 22px rgba(0, 255, 255, 0.35));
 }
 
-.drift-smoke {
+.hero-drift-smoke {
   position: absolute;
   left: -18%;
   bottom: -10%;
@@ -83,12 +80,12 @@
 /* STATIC CAR (FINAL POSITION) */
 /* ========================================= */
 
-.hero__right {
+.hero-right {
   position: relative;
   overflow: visible;
 }
 
-.hero-car-static {
+.hero-static-car {
   position: absolute;
   right: var(--car-right-gap);
   bottom: var(--road-level);
@@ -97,25 +94,24 @@
   z-index: 5;
 
   filter:
-    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.65))
-    drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
+    drop-shadow(0 16px 28px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
 }
 
 /* ========================================= */
 /* CONTENT */
 /* ========================================= */
 
-.hero-content {
+.hero-section-content {
   position: relative;
   z-index: 10;
   opacity: 0;
 }
 
-.hidden {
+.hero-hidden {
   opacity: 0;
 }
 
-.reveal {
+.hero-reveal {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -125,14 +121,14 @@
 /* HUD */
 /* ========================================= */
 
-.hud-container {
+.hero-hud-container {
   position: relative;
   z-index: 2;
   width: fit-content;
   margin: 0 auto 2rem;
 }
 
-.hud-title {
+.hero-hud-title {
   font-family: "Ethnocentric", "Orbitron", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -144,37 +140,39 @@
   gap: 0.25rem;
 }
 
-.hud-line-1 {
+.hero-hud-line-1 {
   font-size: clamp(1.3rem, 2.1vw, 2rem);
   color: #7ffcff;
   white-space: nowrap;
 }
 
-.hud-line-2 {
+.hero-hud-line-2 {
   font-size: clamp(2.4rem, 3.6vw, 3.8rem);
   color: #7ffcff;
   line-height: 1.1;
   white-space: nowrap;
 }
 
-.hud-svg {
+.hero-hud-svg {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  animation: hudFadeIn 0.9s ease forwards;
+  animation: heroHudFadeIn 0.9s ease forwards;
 }
 
-@keyframes hudFadeIn {
-  to { opacity: 1; }
+@keyframes heroHudFadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-.hud-svg-left {
+.hero-hud-svg-left {
   width: clamp(55px, 9vw, 120px);
   top: 10px;
   left: clamp(-130px, -16vw, -160px);
 }
 
-.hud-svg-right {
+.hero-hud-svg-right {
   width: clamp(150px, 34vw, 500px);
   bottom: -38px;
   right: clamp(-220px, -28vw, -300px);
@@ -184,7 +182,7 @@
 /* MAIN GRID */
 /* ========================================= */
 
-.hero__overlay {
+.hero-overlay {
   position: relative;
   z-index: 1;
   display: grid;
@@ -194,11 +192,11 @@
   gap: 3rem;
 }
 
-.hero__left {
+.hero-left {
   max-width: 680px;
 }
 
-.hero__cards {
+.hero-cards {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -215,18 +213,18 @@
     --car-right-gap: 4vw;
   }
 
-  .hero__overlay {
+  .hero-overlay {
     grid-template-columns: 1fr;
     padding: 0 3rem 3rem;
   }
 
-  .hero-car-static {
+  .hero-static-car {
     position: relative;
     margin: 2rem auto 0;
     opacity: 1;
   }
 
-  .drift-layer {
+  .hero-drift-layer {
     display: none;
   }
 }
@@ -236,7 +234,7 @@
 /* ========================================= */
 
 @media (max-width: 768px) {
-  .drift-layer {
+  .hero-drift-layer {
     display: none;
   }
 
@@ -244,14 +242,14 @@
     --car-width: clamp(300px, 80vw, 360px);
   }
 
-  .hero-car-static {
+  .hero-static-car {
     position: relative;
     margin: 2rem auto 0;
     display: block;
     opacity: 1;
   }
 
-  .hero__overlay {
+  .hero-overlay {
     grid-template-columns: 1fr;
   }
 }
@@ -261,22 +259,22 @@
 /* ========================================= */
 
 @media (max-width: 480px) {
-  .hud-line-1 {
+  .hero-hud-line-1 {
     font-size: 1.1rem;
     white-space: normal;
   }
 
-  .hud-line-2 {
+  .hero-hud-line-2 {
     font-size: 1.7rem;
     white-space: normal;
   }
 
-  .hud-svg-left {
+  .hero-hud-svg-left {
     width: 42px;
     left: -28px;
   }
 
-  .hud-svg-right {
+  .hero-hud-svg-right {
     width: 130px;
     right: -55px;
     bottom: -12px;

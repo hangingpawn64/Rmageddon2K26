@@ -1,12 +1,13 @@
 /* ======================================================
    GLOBAL & RESET
 ====================================================== */
-html, body {
+html,
+body {
   width: 100%;
   min-height: 100%;
 }
 
-body.nav-scroll-locked {
+body.navbar-scroll-locked {
   overflow: hidden !important;
   height: 100vh;
   touch-action: none;
@@ -36,7 +37,7 @@ body.nav-scroll-locked {
 /* ======================================================
    NAVBAR BASE
 ====================================================== */
-.navbar {
+.navbar-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,6 +45,7 @@ body.nav-scroll-locked {
   height: var(--navbar-height-desktop);
   z-index: 50;
   background: transparent;
+  overflow: hidden;
 }
 
 /* ======================================================
@@ -56,7 +58,7 @@ body.nav-scroll-locked {
   pointer-events: none;
 }
 
-.navbar-svg {
+.navbar-bg-svg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -70,25 +72,42 @@ body.nav-scroll-locked {
   transition: opacity 0.4s ease;
 }
 
-.default-svg { background-image: url("/public/Images/mainnav.png"); }
-.events1-svg { background-image: url("/public/Images/eventnav1.png"); }
+.navbar-default-bg {
+  background-image: url("/public/Images/mainnav.png");
+}
 
-.visible { opacity: 1; }
-.hidden  { opacity: 0; }
+.navbar-events-bg {
+  background-image: url("/public/Images/eventnav1.png");
+}
+
+.navbar-visible {
+  opacity: 1;
+}
+
+.navbar-hidden {
+  opacity: 0;
+}
 
 /* ======================================================
    NAVBAR CONTENT (REFERENCE FRAME)
 ====================================================== */
-.navbar-content {
-  position: relative; /* 🔥 CRITICAL */
+.navbar-content-wrapper {
+  position: relative;
+  /* 🔥 CRITICAL */
   width: 100%;
   height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15vw;
+  /* Responsive gap */
 }
 
 /* ======================================================
    LEFT LOGO (HARD-LOCKED)
 ====================================================== */
-.left-logo {
+.navbar-logo {
   position: absolute;
   left: var(--logo-left-gap-desktop);
   top: 50%;
@@ -100,25 +119,30 @@ body.nav-scroll-locked {
 /* ======================================================
    DESKTOP NAV LINKS
 ====================================================== */
-.nav-left,
-.nav-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.navbar-links-left,
+.navbar-links-right {
+  position: relative;
+  display: block;
 }
 
-.nav-left { left: 50%; transform: translate(-100%, -50%); }
-.nav-right { right: 50%; transform: translate(100%, -50%); }
+.navbar-center {
+  display: none;
+}
 
-.nav-links {
+.navbar-links-right {
+  margin-left: 30px;
+}
+
+.navbar-links-list {
   list-style: none;
   display: flex;
   gap: 80px;
   margin: 0;
   padding: 0;
+  margin-left: 18vh;
 }
 
-.nav-links a {
+.navbar-links-list a {
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
@@ -128,7 +152,7 @@ body.nav-scroll-locked {
 /* ======================================================
    HAMBURGER (HARD-LOCKED RIGHT)
 ====================================================== */
-.hamburger-wrapper {
+.navbar-hamburger-wrapper {
   position: absolute;
   right: var(--hamburger-right-desktop);
   top: 50%;
@@ -142,10 +166,10 @@ body.nav-scroll-locked {
 /* ======================================================
    MOBILE MENU
 ====================================================== */
-.mobile-menu {
+.navbar-mobile-menu {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(14px);
   padding-top: 120px;
   text-align: center;
@@ -156,16 +180,24 @@ body.nav-scroll-locked {
   z-index: 1000;
 }
 
-.mobile-menu.show {
+.navbar-mobile-menu.navbar-show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.mobile-menu li { list-style: none; margin: 18px 0; }
-.mobile-menu a { color: #fff; font-size: 18px; font-weight: 600; }
+.navbar-mobile-menu li {
+  list-style: none;
+  margin: 18px 0;
+}
 
-.mobile-menu-close {
+.navbar-mobile-menu a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar-mobile-close {
   position: absolute;
   top: 28px;
   right: 24px;
@@ -180,17 +212,17 @@ body.nav-scroll-locked {
 ====================================================== */
 @media (max-width: 1024px) {
 
-  .nav-left,
-  .nav-right {
+  .navbar-links-left,
+  .navbar-links-right {
     display: none !important;
   }
 
-  .hamburger-wrapper {
+  .navbar-hamburger-wrapper {
     display: flex;
     right: var(--hamburger-right-tablet);
   }
 
-  .left-logo {
+  .navbar-logo {
     width: var(--logo-size-tablet);
   }
 }
@@ -200,16 +232,16 @@ body.nav-scroll-locked {
 ====================================================== */
 @media (max-width: 425px) {
 
-  .navbar {
+  .navbar-container {
     height: var(--navbar-height-mobile);
   }
 
-  .left-logo {
+  .navbar-logo {
     left: var(--logo-left-gap-mobile);
     width: var(--logo-size-mobile);
   }
 
-  .hamburger-wrapper {
+  .navbar-hamburger-wrapper {
     right: var(--hamburger-right-mobile);
   }
 
@@ -217,11 +249,11 @@ body.nav-scroll-locked {
     display: none;
   }
 
-  .navbar:not(.events-mode) {
+  .navbar-container:not(.navbar-events-mode) {
     background: url("/public/Images/mainnav_mobile.png") center/cover no-repeat;
   }
 
-  .navbar.events-mode {
+  .navbar-container.navbar-events-mode {
     background: url("/public/Images/eventnav_mobile.png") center/cover no-repeat;
   }
 }
@@ -231,11 +263,11 @@ body.nav-scroll-locked {
 ====================================================== */
 @media (max-width: 320px) {
 
-  .navbar {
+  .navbar-container {
     height: var(--navbar-height-xs);
   }
 
-  .left-logo {
+  .navbar-logo {
     width: var(--logo-size-xs);
   }
 }

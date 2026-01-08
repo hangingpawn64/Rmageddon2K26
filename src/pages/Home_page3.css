@@ -16,7 +16,7 @@
 
 
 /* ===== FULLSCREEN / RESIZE FIX ===== */
-img {
+.home3-bg img {
   max-width: 100%;
   height: auto;
 }
@@ -39,14 +39,16 @@ img {
   padding: 20px;
 }
 
-subtext{
-    margin-top: 0px;
+subtext {
+  margin-top: 0px;
 }
-subtext cash{
-    margin-top: 0px;
+
+subtext cash {
+  margin-top: 0px;
 }
+
 /* ===================== CONTAINER ===================== */
-.container {
+.home3-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 5px 0px;
@@ -55,13 +57,14 @@ subtext cash{
   min-height: 87vh;
   justify-content: space-evenly;
 }
-.right-text p {
+
+.home3-right-text p {
   margin: 0;
 }
 
 
 /* ===================== TITLE ===================== */
-.title {
+.home3-title {
   width: 100%;
   height: 93px;
   text-align: center;
@@ -74,7 +77,7 @@ subtext cash{
 }
 
 /* ===================== LEFT SIDE ===================== */
-.leftimg {
+.home3-leftimg {
   position: absolute;
   top: 43vh;
   left: 50%;
@@ -84,7 +87,7 @@ subtext cash{
 }
 
 
-.leftside {
+.home3-leftside {
   position: relative;
   flex: 1;
   display: flex;
@@ -96,19 +99,19 @@ subtext cash{
 }
 
 /* TEXT BG */
-.textbg {
+.home3-textbg {
   /* width: 100%;
   max-width: 570px; */
   position: relative;
 }
 
-.textbg img {
+.home3-textbg img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.textbg .content {
+.home3-textbg .home3-content {
   position: absolute;
   inset: 0;
   padding: 16px;
@@ -122,31 +125,31 @@ subtext cash{
 }
 
 /* LEFT IMAGE */
-.leftimg img {
+.home3-leftimg img {
   /* width: 100%; */
   max-width: 420px;
   height: auto;
 }
 
-.textbg .content ul {
+.home3-textbg .home3-content ul {
   list-style: disc;
   list-style-position: inside;
   padding-left: 0;
   margin: 0;
 }
 
-.textbg .content li {
+.home3-textbg .home3-content li {
   margin-bottom: 8px;
 }
 
 
 /* ===================== RIGHT SIDE ===================== */
-.rightside,
-.rightside * {
+.home3-rightside,
+.home3-rightside * {
   box-sizing: border-box;
 }
 
-.rightside {
+.home3-rightside {
   flex: 0.8;
   display: flex;
   flex-direction: column;
@@ -157,7 +160,7 @@ subtext cash{
 
 }
 
-.right-up img {
+.home3-right-up img {
   width: 100%;
   max-width: 322px;
   height: auto;
@@ -171,28 +174,28 @@ subtext cash{
 
 
 /* CARD SECTION */
-.right-low {
+.home3-right-low {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 /* CARD */
-.rightimg1,
-.rightimg2 {
+.home3-rightimg1,
+.home3-rightimg2 {
   position: relative;
   width: 100%;
   max-width: 65vh;
 }
 
-.rightimg1 img,
-.rightimg2 img {
+.home3-rightimg1 img,
+.home3-rightimg2 img {
   width: 100%;
   height: auto;
 }
 
 /* ===================== CARD TEXT ===================== */
-.right-text {
+.home3-right-text {
   position: absolute;
   inset: 0;
   display: flex;
@@ -203,8 +206,8 @@ subtext cash{
   text-align: center;
 }
 
-.innertext,
-.innertext2 {
+.home3-innertext,
+.home3-innertext2 {
   font-family: 'Ethnocentric', sans-serif;
   font-size: 0.85rem;
   color: #fff;
@@ -212,7 +215,7 @@ subtext cash{
   position: relative;
 }
 
-.subtext {
+.home3-subtext {
   font-family: 'Aldrich', sans-serif;
   font-size: 0.75rem;
   margin-top: 6px;
@@ -220,8 +223,8 @@ subtext cash{
 }
 
 /* ===================== GLITCH EFFECT ===================== */
-.innertext::before,
-.innertext2::before {
+.home3-innertext::before,
+.home3-innertext2::before {
   content: '';
   position: absolute;
   left: -100%;
@@ -231,8 +234,8 @@ subtext cash{
   /* background: linear-gradient(90deg, transparent, #51D4FF, transparent); */
 }
 
-.innertext::after,
-.innertext2::after {
+.home3-innertext::after,
+.home3-innertext2::after {
   content: attr(data-text);
   position: absolute;
   inset: 0;
@@ -240,13 +243,13 @@ subtext cash{
   opacity: 0.6;
 }
 
-.innertext:hover,
-.innertext2:hover {
+.home3-innertext:hover,
+.home3-innertext2:hover {
   color: #51D4FF;
   animation: glitchText 0.4s steps(2);
 }
 
-.innertext:hover::before {
+.home3-innertext:hover::before {
   animation: scan 0.6s linear;
 }
 
@@ -281,18 +284,18 @@ subtext cash{
 
 /* ===================== LAPTOP (≤1024px) ===================== */
 @media (max-width: 1024px) {
-  .container {
+  .home3-container {
     gap: 0px;
     padding: 30px 0px;
     min-height: 90%;
   }
 
-  .textbg img {
+  .home3-textbg img {
     height: 40vh;
     width: 55vh;
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     position: absolute;
     inset: 0;
     padding: 02px;
@@ -306,7 +309,7 @@ subtext cash{
     width: 52vh;
   }
 
-  .rightside {
+  .home3-rightside {
 
     flex: 0.7;
     height: auto;
@@ -317,12 +320,12 @@ subtext cash{
   }
 
 
-  .right-up {
+  .home3-right-up {
     width: 40vh;
     max-width: 100%;
   }
 
-  .leftside {
+  .home3-leftside {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -333,12 +336,12 @@ subtext cash{
     /* padding-bottom: 40px; */
   }
 
-  .rightimg1 img,
-  .rightimg2 img {
+  .home3-rightimg1 img,
+  .home3-rightimg2 img {
     max-width: 60vh;
   }
 
-  .leftimg {
+  .home3-leftimg {
     margin-top: auto;
     width: 100%;
     display: flex;
@@ -347,7 +350,7 @@ subtext cash{
     /* ✅ critical */
   }
 
-  .leftimg img {
+  .home3-leftimg img {
     width: 100%;
     max-width: 420px;
     /* height: auto; */
@@ -358,7 +361,7 @@ subtext cash{
   }
 
 
-  .textbg {
+  .home3-textbg {
 
     font-size: 17px;
     /* width: 61vh; */
@@ -366,44 +369,44 @@ subtext cash{
 
   }
 
-  .right-low {
+  .home3-right-low {
     width: 100%;
     max-width: 520px;
     /* or 90% */
   }
 
-  .rightimg1,
-  .rightimg2 {
+  .home3-rightimg1,
+  .home3-rightimg2 {
     width: 100%;
     max-width: 520px;
   }
 
 
 
-  .innertext,
-  .innertext2 {
+  .home3-innertext,
+  .home3-innertext2 {
     font-size: 0.8rem;
   }
 }
 
 
 @media (max-width: 900px) {
-  .leftside {
+  .home3-leftside {
     flex: 0.8;
   }
 
-  .textbg img {
+  .home3-textbg img {
     height: 40vh;
     width: 50vh;
   }
 
-  .leftimg img {
+  .home3-leftimg img {
     width: 88%;
     max-width: 378px;
     height: auto;
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     position: absolute;
     inset: 0;
     padding: 02px;
@@ -420,7 +423,7 @@ subtext cash{
 
 @media (max-width: 768px) {
 
-  .container {
+  .home3-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -432,40 +435,40 @@ subtext cash{
     padding: 20px;
   }
 
-  .leftside {
+  .home3-leftside {
     width: 86%;
     flex: unset;
     height: auto;
   }
 
-  .rightside {
+  .home3-rightside {
 
     min-height: 57vh;
   }
 
-  .leftimg,
-  .right-up {
+  .home3-leftimg,
+  .home3-right-up {
     display: none;
   }
 
-  .textbg {
+  .home3-textbg {
     width: 93%;
     max-width: 640px;
   }
 
-  .textbg img {
+  .home3-textbg img {
     width: 100%;
     height: auto;
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     width: 100%;
     font-size: 15px;
     line-height: 1.6;
   }
 
   /* RIGHT SIDE CARDS */
-  .right-low {
+  .home3-right-low {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -475,15 +478,15 @@ subtext cash{
     gap: 34px;
   }
 
-  .rightimg1,
-  .rightimg2 {
+  .home3-rightimg1,
+  .home3-rightimg2 {
     flex-shrink: 0;
     width: 90%;
     max-width: 100%;
   }
 
-  .rightimg1 img,
-  .rightimg2 img {
+  .home3-rightimg1 img,
+  .home3-rightimg2 img {
     width: 103%;
     height: 11vh;
   }
@@ -491,7 +494,7 @@ subtext cash{
 
 @media (max-width: 600px) {
 
-  .container {
+  .home3-container {
     padding: 12px;
     gap: 0px;
     display: flex;
@@ -499,25 +502,25 @@ subtext cash{
     min-height: 87vh;
   }
 
-  .title {
+  .home3-title {
     font-size: clamp(1.3rem, 5vw, 1.5rem);
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     font-size: clamp(0.9rem, 3vw, 1rem);
     line-height: 1.8;
     font-size: 14px;
     line-height: 1.9;
   }
 
-  .textbg img {
+  .home3-textbg img {
     height: 40vh;
 
 
   }
 
-  .innertext,
-  .innertext2 {
+  .home3-innertext,
+  .home3-innertext2 {
     font-size: clamp(0.7rem, 2.8vw, 0.8rem);
   }
 }
@@ -528,33 +531,33 @@ subtext cash{
     padding: 22px 5px 5px;
   }
 
-  .container {
+  .home3-container {
     padding: 12px;
     gap: 0px;
   }
 
-  .title {
+  .home3-title {
     font-size: 23.8px;
     line-height: 1.3;
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     font-size: 12.6px;
     line-height: 2.25;
     padding: 10px;
   }
 
-  .innertext,
-  .innertext2 {
+  .home3-innertext,
+  .home3-innertext2 {
     font-size: 0.65rem;
     letter-spacing: 0.8px;
   }
 
-  .subtext {
+  .home3-subtext {
     font-size: 0.6rem;
   }
 
-  .leftside {
+  .home3-leftside {
     width: 100%;
     flex: unset;
     height: auto;
@@ -562,14 +565,14 @@ subtext cash{
     margin-top: 25px;
   }
 
-  .rightside {
+  .home3-rightside {
     /* justify-content: space-evenly; */
     min-height: 63vh;
   }
 }
 
 @media (max-width: 375px) {
-  .container {
+  .home3-container {
     padding: 0px;
     gap: 0px;
     display: flex;
@@ -577,26 +580,26 @@ subtext cash{
     min-height: 87vh;
   }
 
-  .textbg img {
+  .home3-textbg img {
     height: 35vh;
   }
 
-  .rightside {
+  .home3-rightside {
     /* justify-content: space-evenly; */
     min-height: 41vh;
   }
 
-  .textbg .content {
+  .home3-textbg .home3-content {
     font-size: 11.3px;
     line-height: 2.25;
     /* padding: 10px; */
   }
 
-  .textbg img {
+  .home3-textbg img {
     height: 36vh;
   }
 
-  .right-low {
+  .home3-right-low {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -606,29 +609,29 @@ subtext cash{
     gap: 50px;
   }
 
-  .innertext {
+  .home3-innertext {
     font-size: 17px;
     letter-spacing: 0.8px;
   }
 
-  .innertext2 {
+  .home3-innertext2 {
     font-size: 10px;
     letter-spacing: 0.8px;
   }
 
-  .subtext {
+  .home3-subtext {
     font-size: 13px;
   }
 }
 
 @media (max-width: 320px) {
-  .textbg .content {
+  .home3-textbg .home3-content {
     font-size: 13.6px;
     line-height: 1.2;
     padding-left: 20px;
   }
 
-  /* .subtext cash{
+  /* .home3-subtext cash{
     margin-top: 0;
   } */
 }
