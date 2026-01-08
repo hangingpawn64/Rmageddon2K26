@@ -10,10 +10,10 @@ import {
   Outlet,
 } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
-import Events from "./pages/Events";
-import Accommodation from "./pages/Accommodation";
-import ContactUs from "./pages/ContactUs";
+import HomePage from "./pages/Homepage/HomePage";
+import Events from "./pages/Events/Events";
+import Accommodation from "./pages/Accommodation/Accommodation";
+import ContactUs from "./pages/Contact/ContactUs";
 
 /* ===============================
    LAYOUT (SAFE, NO LOADER)

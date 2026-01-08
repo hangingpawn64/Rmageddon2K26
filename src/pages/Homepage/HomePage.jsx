@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import bgVideo from '../assets/videos/bgvideo.mp4';
+import bgVideo from '../../assets/videos/bgvideo.mp4';
 import "./HomePage.css";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import SponsorSection from '../components/SponsorSection';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import SponsorSection from './SponsorSection';
 import Home_page3 from './Home_page3';
-import Hero from '../components/Hero';
+import Hero from './Hero';
 
 // need to use Date.now() for proper timer.
 export default function HomePage() {

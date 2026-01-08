@@ -1,9 +1,9 @@
 import React from 'react'
 import './ContactUs.css'
-import Card3D from '../components/Cards'
-import teamData from '../data/teamData.json'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Card3D from '../../components/Cards'
+import teamData from '../../data/teamData.json'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 // Helper function to dynamically import images
 const getImagePath = (path) => {
@@ -11,7 +11,7 @@ const getImagePath = (path) => {
   // Extract filename from path like "/src/assets/image.png"
   const filename = path.split('/').pop();
   try {
-    return new URL(`../assets/${filename}`, import.meta.url).href;
+    return new URL(`../../assets/${filename}`, import.meta.url).href;
   } catch (e) {
     console.error('Error loading image:', path, e);
     return null;

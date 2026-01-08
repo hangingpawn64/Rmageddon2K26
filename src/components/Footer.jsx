@@ -79,7 +79,7 @@ const Footer = () => {
               <p className="m-0">Designed and Developed by Team RNXG.</p>
             </div>
             <div className="flex-1 text-center lg:text-right">
-              <a href="mailto:info@rmageddon2025.tech" className="text-white/90 underline hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-300">
+              <a href="mailto:info@rmageddon2026.tech" className="text-white/90 underline hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-300">
                 info@rmageddon2026.tech
               </a>
             </div>

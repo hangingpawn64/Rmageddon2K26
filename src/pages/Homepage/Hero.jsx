@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import driftCar from "../assets/drift-car3.png";
 // import driftSmoke from "../assets/smoke.png";
 
-import StepCard from "./Stepcard";
-import { steps } from "./StepsData";
+import StepCard from "../../components/Stepcard";
+import { steps } from "../../components/StepsData";
 
 gsap.registerPlugin(ScrollTrigger);
 

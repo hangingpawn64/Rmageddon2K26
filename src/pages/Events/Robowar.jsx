@@ -1,7 +1,7 @@
 import React from "react";
 import "./Robowar.css";
-import WarCarousel from "../components/WarCarousel.jsx"
-import Card from "../components/Cards/Card";
+import WarCarousel from "../../components/WarCarousel.jsx"
+import GameCard from "../../components/Cards/GameCard";
 
 const Robowar = () => {
   return (
@@ -67,7 +67,7 @@ const Robowar = () => {
         <div className="robowar-event-container">
 
           <div className="robowar-event-cards">
-            <Card
+            <GameCard
               title="Robo Soccer"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
@@ -75,7 +75,7 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-event-cards">
-            <Card
+            <GameCard
               title="Robo Race"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
@@ -88,7 +88,7 @@ const Robowar = () => {
       <section className="robowar-event-section robowar-bg-section-3">
         <div className="robowar-event-container">
           <div className="robowar-event-cards">
-            <Card
+            <GameCard
               title="Line Follower"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"
@@ -96,7 +96,7 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-event-cards">
-            <Card
+            <GameCard
               title="Robo Sumo"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"
               image="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767184498/images_fuqlhk.jpg"

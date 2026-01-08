@@ -1,7 +1,7 @@
 import React from "react";
 import "./SponsorSection.css"; // keep styles same
-import VerticalSlider from "./VerticalSlider";
-import Slider from "./Slider";
+import VerticalSlider from "../../components/VerticalSlider";
+import Slider from "../../components/Slider";
 
 const SponsorSection = () => {
   return (

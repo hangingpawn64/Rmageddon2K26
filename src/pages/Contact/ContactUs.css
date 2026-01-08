@@ -1,6 +1,6 @@
 .contact-container {
     /* Image + fallback */
-    background-image: url("../assets/mapbg.png");
+    background-image: url("../../assets/mapbg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
