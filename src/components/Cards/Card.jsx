@@ -13,7 +13,20 @@ const Card = ({ title, description, image }) => {
         <p>{description}</p>
 
         <div className="card-item-button-shadow">
-          <div className="card-item-button">View More</div>
+          <div className="card-item-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+          </div>
+          <div className="card-item-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Rule Book
+          </div>
         </div>
       </div>
     </div>

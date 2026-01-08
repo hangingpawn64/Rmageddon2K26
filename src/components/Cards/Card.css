@@ -36,7 +36,7 @@
       10px 100px,
       0 90px);
   transition: all 0.2s linear;
-  filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+  filter: drop-shadow(0 0 2px #FF4B33) drop-shadow(0 0 10px #FF4B33);
   font-family: "";
 }
 
@@ -45,7 +45,7 @@
 }
 
 .card-item-img-shadow {
-  filter: drop-shadow(rgb(43, 216, 255) 0px 0px 10px);
+  filter: drop-shadow(#FF4B33 0px 0px 10px);
 }
 
 .card-item-img-shadow img {
@@ -67,7 +67,7 @@
 
 .card-item-content h2 {
   font-size: 23px;
-  color: #51D4FF;
+  color: #FF4B33;
   text-align: center;
   font-family: 'Ethnocentric', sans-serif;
   ;
@@ -81,28 +81,129 @@
 }
 
 .card-item-button-shadow {
-  filter: drop-shadow(rgba(0, 204, 255, 0.767) 0px 0px 5px);
+  filter: drop-shadow(rgba(255, 75, 51, 0.767) 0px 0px 5px);
   transition: all 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .card-item-button-shadow:hover {
-  filter: drop-shadow(rgb(0, 195, 255) 0px 0px 10px);
+  filter: drop-shadow(#FF4B33 0px 0px 4px);
 }
 
 .card-item-button {
-  text-align: center;
-  margin: 20px 0px;
-  padding: 10px 0px;
-  background: linear-gradient(45deg, rgb(127 242 255) 0%, rgb(0 117 158) 100%);
-  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
-  color: black;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  color: #FF4B33;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  overflow: hidden;
+  background: transparent;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease-in;
+  font-family: 'Aldrich', sans-serif;
+  text-align: center;
 }
 
 .card-item-button:hover {
-  color: white;
+  background: #ff4b33b2;
+  color: #050801;
+  box-shadow: 0 0 5px #FF4B33, 0 0 10px #FF4B33, 0 0 15px #FF4B33;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.card-item-button span {
+  position: absolute;
+  display: block;
+}
+
+.card-item-button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF4B33);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.card-item-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #FF4B33);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.card-item-button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #FF4B33);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.card-item-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #FF4B33);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
 
 
@@ -130,7 +231,7 @@
         10px 100px,
         0 90px);
     transition: all 0.2s linear;
-    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    filter: drop-shadow(0 0 2px #FF4B33) drop-shadow(0 0 10px #FF4B33);
     font-family: "Jost", sans-serif;
   }
 }
@@ -159,7 +260,7 @@
         10px 100px,
         0 90px);
     transition: all 0.2s linear;
-    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    filter: drop-shadow(0 0 2px #FF4B33) drop-shadow(0 0 10px #FF4B33);
     font-family: "Jost", sans-serif;
   }
 
@@ -189,7 +290,7 @@
         10px 100px,
         0 90px);
     transition: all 0.2s linear;
-    filter: drop-shadow(rgb(26, 234, 249) 0px 0px 10px);
+    filter: drop-shadow(0 0 2px #FF4B33) drop-shadow(0 0 10px #FF4B33);
     font-family: "Jost", sans-serif;
   }
 }
