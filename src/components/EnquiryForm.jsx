@@ -40,7 +40,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                         <label className="text-sm font-medium font-ethnocentric text-zinc-400">Name</label>
                         <input
                             type="text"
-                            placeholder="John Doe"
+                            placeholder="Micheal De Santa"
                             className="w-full bg-zinc-900 text-white border border-zinc-800 rounded-md px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-white focus:border-white transition-all placeholder-zinc-600 text-sm"
                         />
                     </div>
@@ -50,7 +50,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                         <label className="text-sm font-medium font-ethnocentric text-zinc-400">Email</label>
                         <input
                             type="email"
-                            placeholder="john@example.com"
+                            placeholder="Micheal@example.com"
                             className="w-full bg-zinc-900 text-white border border-zinc-800 rounded-md px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-white focus:border-white transition-all placeholder-zinc-600 text-sm"
                         />
                     </div>
