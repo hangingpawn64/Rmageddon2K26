@@ -12,7 +12,7 @@ const Robowar = () => {
           <div className="robowar-header">
             <p className="robowar-title">ROBOWAR</p>
             <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766426168/Group_514617166_x6dsaa.png"
+              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
               alt="Robowar Title"
             />
           </div>
