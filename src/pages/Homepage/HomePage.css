@@ -4,12 +4,11 @@
 
 .home-heading {
     position: relative;
-    padding-top: clamp(3rem, 6vh, 6rem);
     z-index: 10;
     font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 800;
     text-align: center;
-    margin: 4rem 0 -2.5rem 0;
+    margin: 8rem 0 -2.5rem 0;
     color: #51D4FF;
     letter-spacing: 4px;
     text-shadow: 0 5px 10px rgba(8, 72, 94, 0.5);
@@ -294,7 +293,7 @@
     .home-heading {
         font-size: clamp(2.25rem, 5vw, 3.75rem);
         margin-bottom: 2rem;
-        padding-top: 6rem;
+        padding-top: 3rem;
     }
 
     .home-center-content {
@@ -322,7 +321,7 @@
     .home-heading {
         font-size: clamp(1.5rem, 5vw, 2.5rem);
         padding-top: 0;
-        margin-bottom: -1rem;
+        margin-bottom: -2rem;
         order: 1;
     }
 
