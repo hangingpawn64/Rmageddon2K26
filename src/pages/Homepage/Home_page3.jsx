@@ -1,7 +1,17 @@
-import React from "react";
+import {React, useEffect }from "react";
 import "./Home_page3.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home_page3() {
+        // Initialize AOS
+        useEffect(() => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                easing: 'ease-in-out'
+            });
+        }, []);
   return (
     <div className="home3-bg">
       <div className="home3-overlay">
@@ -11,7 +21,7 @@ export default function Home_page3() {
         <div className="home3-container">
           <div className="home3-leftside">
             {/* TEXT + BG IMAGE */}
-            <div className="home3-textbg">
+            <div className="home3-textbg" data-aos="fade-right">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766336885/Group_514617188_pvktop.png"
                 alt="Rmageddon"
@@ -54,7 +64,7 @@ export default function Home_page3() {
             </div>
 
 
-            <div className="home3-right-low">
+            <div className="home3-right-low" data-aos="fade-left">
               {/* CERTIFICATE */}
               <div className="home3-rightimg1">
                 <img

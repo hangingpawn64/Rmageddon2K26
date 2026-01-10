@@ -2,12 +2,8 @@ import { useEffect, useRef } from "react";
 import "./Hero.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// import leftHUD from "../assets/Group1.svg";
-// import rightHUD from "../assets/Group2.svg";
-// import driftCar from "../assets/drift-car3.png";
-// import driftSmoke from "../assets/smoke.png";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import StepCard from "../../components/Stepcard";
 import { steps } from "../../components/StepsData";
 
@@ -19,6 +15,15 @@ export default function Hero() {
   const smokeRef = useRef(null);
   const staticCarRef = useRef(null);
   const contentRef = useRef(null);
+
+          // Initialize AOS
+          useEffect(() => {
+              AOS.init({
+                  duration: 1000,
+                  once: true,
+                  easing: 'ease-in-out'
+              });
+          }, []);
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -194,7 +199,7 @@ export default function Hero() {
 
         <div className="hero-overlay">
           <div className="hero-left">
-            <div className="hero-cards">
+            <div className="hero-cards" data-aos="fade-right">
               {steps.map(step => (
                 <StepCard key={step.title} {...step} />
               ))}

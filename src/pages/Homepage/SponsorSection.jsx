@@ -1,13 +1,26 @@
 import React from "react";
+import { useEffect } from "react";
 import "./SponsorSection.css"; // keep styles same
 import VerticalSlider from "../../components/VerticalSlider";
 import Slider from "../../components/Slider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SponsorSection = () => {
+
+      // Initialize AOS
+      useEffect(() => {
+          AOS.init({
+              duration: 1000,
+              once: true,
+              easing: 'ease-in-out'
+          });
+      }, []);
+
   return (
     <section className="sponsor-section-container">
       {/* LEFT SIDE */}
-      <div className="sponsor-section-left">
+      <div className="sponsor-section-left" data-aos="fade-right">
         <div className="sponsor-section-left-upper">
           <div className="sponsor-section-upper-head">
             <div className="sponsor-section-title">

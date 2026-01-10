@@ -1,9 +1,18 @@
-import React from "react";
+import { useEffect } from "react";
 import "./Robowar.css";
 import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Robowar = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  }, []);
   return (
     <>
       {/* ================= ROBOWAR SECTION ================= */}
@@ -66,7 +75,7 @@ const Robowar = () => {
       <section className="robowar-event-section robowar-bg-section-2">
         <div className="robowar-event-container">
 
-          <div className="robowar-event-cards">
+          <div className="robowar-event-cards" data-aos="fade-right">
             <GameCard
               title="Robo Soccer"
               description="Lead your robots to victory, score goals, and show off your skills in an action-packed Robo Soccer battle."
@@ -74,7 +83,7 @@ const Robowar = () => {
             />
           </div>
 
-          <div className="robowar-event-cards">
+          <div className="robowar-event-cards" data-aos="fade-left">
             <GameCard
               title="Robo Race"
               description="Unleash Speed, Strategy, and Skill! Push Your Robots to the Limit and Cross the Finish Line Victorious!"
@@ -87,7 +96,7 @@ const Robowar = () => {
       {/* ================= SECTION 3 ================= */}
       <section className="robowar-event-section robowar-bg-section-3">
         <div className="robowar-event-container">
-          <div className="robowar-event-cards">
+          <div className="robowar-event-cards" data-aos="fade-right">
             <GameCard
               title="Line Follower"
               description="Program Robot's to Follow the Path with Precision and Speed! Conquer the Line Following Challenge"
@@ -95,7 +104,7 @@ const Robowar = () => {
             />
           </div>
 
-          <div className="robowar-event-cards">
+          <div className="robowar-event-cards" data-aos="fade-left">
             <GameCard
               title="Robo Sumo"
               description="Unleash your robots, push opponents out, and dominate the arena in Robo Sumo showdown!"

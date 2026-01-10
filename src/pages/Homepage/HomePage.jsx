@@ -6,6 +6,8 @@ import Footer from '../../components/Footer';
 import SponsorSection from './SponsorSection';
 import Home_page3 from './Home_page3';
 import Hero from './Hero';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // need to use Date.now() for proper timer.
 export default function HomePage() {
@@ -31,6 +33,16 @@ export default function HomePage() {
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    }, []);
+
+    // Countdown timer
     useEffect(() => {
         const timer = setInterval(() => {
             const updatedTime = calculateTimeLeft();
@@ -98,7 +110,7 @@ export default function HomePage() {
                     <div className="home-main-content-grid w-full flex flex-row lg:flex-row justify-center items-center max-w-full gap-6 lg:gap-10">
 
                         {/* Left: Countdown */}
-                        <div className="home-countdown-container home-glass-panel">
+                        <div className="home-countdown-container home-glass-panel" data-aos="fade-right">
                             <h3 className="home-panel-title">TIME REMAINING</h3>
                             <div className="home-timer-grid">
                                 <div className="home-time-unit">
@@ -133,11 +145,11 @@ export default function HomePage() {
                         </div>
                         {/* Center: Logo & Character */}
                         <div className="home-center-content relative">
-                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" />
+                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in-up" />
                         </div>
 
                         {/* Right: Info Box */}
-                        <div className="home-info-container home-glass-panel">
+                        <div className="home-info-container home-glass-panel" data-aos="fade-left">
                             <div className="home-info-row">
                                 <span className="home-info-label">GAMES:</span>
                                 <span className="home-info-value home-text-cyan">4+</span>
