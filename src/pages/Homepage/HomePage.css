@@ -406,3 +406,9 @@
         font-size: clamp(1rem, 3vw, 1.375rem);
     }
 }
+
+@media (max-width: 425px)  {
+        .home-heading {
+        margin-top: 1rem;
+    }
+}
