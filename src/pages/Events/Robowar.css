@@ -314,7 +314,7 @@
   }
 
   .robowar-event-section::before {
-    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768068592/Group_514617206_etxuzq.png");
     background-size: 100% 100%;
     z-index: 0;
   }
@@ -460,7 +460,7 @@ COMMON EVENT SECTION STYLES
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767183513/Group_514617201_xvcho3.png");
+  background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768068603/Group_514617174_n9biwb.png");
 
   /* KEY FIX */
   background-size: 100% 100%;
@@ -584,7 +584,7 @@ COMMON EVENT SECTION STYLES
   }
 
   .robowar-event-section::before {
-    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767288809/Group_514617203_nvyplz.png");
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768070044/Group_514617176_ydgccq.png");
   }
 
 
@@ -609,7 +609,7 @@ COMMON EVENT SECTION STYLES
 
   .robowar-event-section::before {
 
-    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767373198/Group_514617206_oetkti.png");
+    background-image: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768068592/Group_514617206_etxuzq.png");
     z-index: 1;
     pointer-events: none;
   }
