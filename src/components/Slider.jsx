@@ -47,11 +47,20 @@ const HorizontalSlider = ({ className }) => {
         modules={[Autoplay]}
         className="slider-horizontal-swiper"
         breakpoints={{
-          901: { slidesPerView: 3, centeredSlides: true },
-          900: { slidesPerView: 2, centeredSlides: false },
-          480: { slidesPerView: 2, centeredSlides: false },
-          0: { slidesPerView: 1, centeredSlides: false },
+          0: {
+            slidesPerView: 1,
+            centeredSlides: false,
+          },
+          680: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          900: {
+            slidesPerView: 3,
+            centeredSlides: true,
+          },
         }}
+
       >
         {slides.map((slide, index) => (
           <SwiperSlide
