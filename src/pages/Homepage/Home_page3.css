@@ -548,7 +548,7 @@ position: relative;
 
   .home3-title {
     /* font-size: 23.8px; */
-    line-height: 1.3;
+    line-height: 1.1;
   }
 
 .home3-textbg .home3-content {
@@ -575,26 +575,26 @@ position: relative;
 
   .home3-rightside {
     min-height: auto;
-    padding: 20px 0;
+    padding: 1px 0;
   }
 }
 @media(max-width:425px){
     .home3-textbg .home3-content {
         font-size: 15px;
-        line-height: 1.55;
+        line-height: 1.1;
         padding: 0 0 0 20px;
     }
 }
 @media (max-width: 375px) {
     .home3-textbg .home3-content {
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1;
    
     }
 
-  .home3-textbg img {
+  /* .home3-textbg img {
     height: 35vh;
-  }
+  } */
 
   .home3-rightside {
     min-height: auto;
@@ -622,7 +622,7 @@ position: relative;
   }
     .home3-title {
         font-size: 23.8px;
-        line-height: 1.3;
+        line-height: 1;
     }
 
   .home3-subtext {
@@ -633,7 +633,7 @@ position: relative;
 @media (max-width: 320px) {
   .home3-textbg .home3-content {
     /* font-size: 13.6px; */
-    line-height: 1.2;
+    line-height: 1;
     padding-left: 20px;
   }
 
