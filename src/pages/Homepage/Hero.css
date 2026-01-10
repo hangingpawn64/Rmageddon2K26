@@ -186,10 +186,10 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 58% 42%;
+  grid-template-columns: 58fr 42fr;
   align-items: stretch;
-  padding: 0 5rem 4rem;
-  gap: 3rem;
+  padding: 0 4% 4rem;
+  gap: 2rem;
 }
 
 .hero-left {

@@ -89,13 +89,13 @@ export default function HomePage() {
                 />
 
                 {/* Content Wrapper */}
-                <div className="home-content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-4 px-10 gap-y-2">
+                <div className="home-content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-2 px-6 lg:px-10 gap-y-2">
 
                     {/* Heading */}
                     <h1 className='home-heading'>RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
-                    <div className="home-main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-8 lg:gap-16">
+                    <div className="home-main-content-grid w-full flex flex-col lg:flex-row justify-center items-center max-w-full gap-6 lg:gap-10">
 
                         {/* Left: Countdown */}
                         <div className="home-countdown-container home-glass-panel">
@@ -155,7 +155,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Bottom Section */}
-                    <div className="home-bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                    <div className="home-bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
                         {/* Map */}
                         <div className="home-map-wrapper">
                             <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
