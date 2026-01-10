@@ -133,7 +133,7 @@ export default function HomePage() {
                         </div>
                         {/* Center: Logo & Character */}
                         <div className="home-center-content relative">
-                            <img src="/logo.png" alt="logo" className="home-center-logo" />
+                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" />
                         </div>
 
                         {/* Right: Info Box */}

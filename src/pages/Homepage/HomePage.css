@@ -6,7 +6,7 @@
     position: relative;
     padding-top: 8rem;
     z-index: 10;
-    font-size: clamp(48px, 8vw, 96px);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 800;
     text-align: center;
     margin: 0 0 -5rem 0;
@@ -18,7 +18,7 @@
 
 .home-glass-panel {
     position: relative;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     padding: 20px 20px;
     background: rgba(8, 7, 7, 0.3);
     backdrop-filter: blur(4px);
@@ -36,7 +36,7 @@
     inset: 0;
     padding: 3px;
     /* border thickness */
-    border-radius: 40px;
+    border-radius: 2.5rem;
     background: linear-gradient(135deg,
             #2ea7cf 0%,
             #1ba6ad 20%,
@@ -54,14 +54,14 @@
 /* Countdown */
 .home-countdown-container {
     width: 100%;
-    max-width: 450px;
-    min-height: 210px;
+    max-width: 28rem;
+    min-height: 13rem;
 }
 
 .home-panel-title {
     font-family: 'Ethnocentric';
     color: #fff;
-    font-size: clamp(20px, 4vw, 32px);
+    font-size: clamp(1.25rem, 4vw, 2rem);
     text-align: center;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -88,16 +88,16 @@
 .home-time-value {
     position: relative;
     font-family: "Orbitron", sans-serif;
-    font-size: clamp(20px, 4vw, 32px);
+    font-size: clamp(1.25rem, 4vw, 2rem);
     font-weight: 700;
     color: #51D4FF;
     background: rgba(255, 255, 255, 0.08);
-    width: clamp(54px, 11vw, 64px);
-    height: clamp(60px, 12vw, 76px);
+    width: clamp(3.375rem, 11vw, 4rem);
+    height: clamp(3.75rem, 12vw, 4.75rem);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 16px;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
@@ -124,7 +124,7 @@
     inset: 0;
     padding: 1px;
     /* border thickness */
-    border-radius: 16px;
+    border-radius: 1rem;
     background: linear-gradient(135deg,
             #51D4FF 0%,
             #00f2fe 20%,
@@ -141,7 +141,7 @@
 
 .home-time-label {
     font-family: "Orbitron", sans-serif;
-    font-size: clamp(10px, 2vw, 14px);
+    font-size: clamp(0.625rem, 2vw, 0.875rem);
     font-weight: 600;
     color: #fff;
     letter-spacing: 1px;
@@ -156,22 +156,21 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-top: clamp(20px, 4vw, 28px);
+    margin-top: clamp(1.25rem, 4vw, 1.75rem);
 }
 
 .home-time-separator span {
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background: #fff;
     border-radius: 50%;
     display: block;
-
 }
 
 /* Center Content */
 .home-center-content {
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 29rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +194,7 @@
 .home-center-logo {
     position: relative;
     z-index: 2;
-    width: 350px;
+    width: 18rem;
     height: auto;
     filter: drop-shadow(0 0 30px rgba(31, 106, 131, 0.4));
 }
@@ -203,11 +202,11 @@
 /* Info Box */
 .home-info-container {
     width: 100%;
-    max-width: 460px;
-    min-height: 210px;
+    max-width: 28.75rem;
+    min-height: 13.125rem;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 .home-info-row {
@@ -216,7 +215,7 @@
     align-items: center;
     font-family: "Orbitron", sans-serif;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
 }
 
 .home-info-row:last-child {
@@ -226,13 +225,13 @@
 .home-info-label {
     color: #fff;
     font-family: 'Ethnocentric';
-    font-size: clamp(16px, 3vw, 24px);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .home-info-value {
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
     font-weight: 800;
     font-family: "Orbitron", sans-serif;
 }
@@ -249,8 +248,8 @@
 
 /* Bottom Section */
 .home-map-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     border-radius: 50%;
     margin-left: 5%;
 }
@@ -271,7 +270,7 @@
 .home-mission-title {
     font-family: "Ethnocentric";
     font-weight: 800;
-    font-size: clamp(24px, 4vw, 40px);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: #fff;
     margin-bottom: 2px;
     text-align: center;
@@ -281,18 +280,18 @@
 .home-mission-desc {
     font-family: "Saira Semi Condensed";
     color: rgba(255, 255, 255);
-    font-size: clamp(16px, 1.8vw, 22px);
+    font-size: clamp(1rem, 1.8vw, 1.375rem);
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
-    max-width: 850px;
+    max-width: 53.125rem;
     margin: 0 auto;
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
     .home-heading {
-        font-size: clamp(36px, 5vw, 60px);
+        font-size: clamp(2.25rem, 5vw, 3.75rem);
         margin-bottom: 2rem;
         padding-top: 6rem;
     }
@@ -302,8 +301,8 @@
     }
 
     .home-content-wrapper {
-        padding-top: 60px;
-        gap: 20px;
+        padding-top: 3.75rem;
+        gap: 1.25rem;
     }
 }
 
@@ -320,7 +319,7 @@
     }
 
     .home-heading {
-        font-size: clamp(24px, 5vw, 40px);
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
         padding-top: 0;
         margin-bottom: -1rem;
         order: 1;
@@ -350,18 +349,18 @@
     }
 
     .home-mission-title {
-        font-size: clamp(20px, 4vw, 32px);
-        margin-bottom: 15px;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 1rem;
     }
 
     .home-mission-desc {
-        font-size: clamp(16px, 2vw, 24px);
+        font-size: clamp(1rem, 2vw, 24px);
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     }
 
     .home-content-wrapper {
-        padding: 100px 20px 40px;
-        gap: 40px;
+        padding: 6.25rem 1.5rem 2.5rem;
+        gap: 2.5rem;
     }
 
     .home-countdown-container,
@@ -378,12 +377,12 @@
     }
 
     .home-info-value {
-        font-size: clamp(20px, 3vw, 26px);
+        font-size: clamp(1.25rem, 3vw, 1.625);
     }
 
     .home-glass-panel {
-        padding: 10px 25px;
-        border-radius: 30px;
+        padding: 0.625rem 1.56rem;
+        border-radius: 1.875rem;;
     }
 
     .home-map-wrapper {
@@ -393,15 +392,15 @@
 
 @media (max-width: 600px) {
     .home-heading {
-        font-size: clamp(28px, 8vw, 36px);
+        font-size: clamp(1.75rem, 8vw, 2.25rem);
     }
 
     .home-time-separator span {
-        width: 4px;
-        height: 4px;
+        width: 0.25rem;
+        height: 0.25rem;
     }
 
     .home-info-value {
-        font-size: clamp(16px, 3vw, 22px);
+        font-size: clamp(1rem, 3vw, 1.375rem);
     }
 }
