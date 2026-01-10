@@ -1,9 +1,11 @@
-import React from 'react'
+import { useEffect } from 'react'
 import './ContactUs.css'
 import Card3D from '../../components/Cards'
 import teamData from '../../data/teamData.json'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Helper function to dynamically import images
 const getImagePath = (path) => {
@@ -19,14 +21,23 @@ const getImagePath = (path) => {
 }
 
 const ContactUs = () => {
-  return (
+
+      // Initialize AOS
+      useEffect(() => {
+          AOS.init({
+              duration: 1000,
+              once: true,
+              easing: 'ease-in-out'
+          });
+      }, []);
+return (
     <>
       <div className='contact-container'>
         <div className=" top-0 left-0 w-full z-50 flex justify-center">
           <Navbar />
         </div>
         <div className='contact-content-wrapper'>
-          <h1 className='contact-heading-text'>CONTACT US</h1>
+          <h1 className='contact-heading-text' data-aos="fade-zoom-in">CONTACT US</h1>
           <div className='contact-cards-container'>
             {teamData.teamMembers.map((member) => (
               <Card3D
@@ -38,6 +49,7 @@ const ContactUs = () => {
                 linkedin={member.linkedin}
                 whatsapp={member.whatsapp}
                 characterImage={getImagePath(member.characterImage)}
+                data-aos="fade-up"
               />
             ))}
           </div>

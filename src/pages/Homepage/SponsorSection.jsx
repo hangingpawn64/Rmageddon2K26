@@ -8,14 +8,14 @@ import 'aos/dist/aos.css';
 
 const SponsorSection = () => {
 
-      // Initialize AOS
-      useEffect(() => {
-          AOS.init({
-              duration: 1000,
-              once: true,
-              easing: 'ease-in-out'
-          });
-      }, []);
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  }, []);
 
   return (
     <section className="sponsor-section-container">

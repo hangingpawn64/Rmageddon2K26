@@ -92,7 +92,7 @@ export default function HomePage() {
 
                 {/* Character - Positioned at bottom */}
                 <img
-                    src="/character.png"
+                    src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/character_s8jvg0.png"
                     alt="character"
                     className="home-character-img"
                     style={{

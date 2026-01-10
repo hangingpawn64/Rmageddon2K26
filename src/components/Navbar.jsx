@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* CONTENT */}
         <div className="navbar-content-wrapper">
           <img
-            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766329420/LeftLogo_v7tgve.png"
+            src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055060/rnxg_logo_oimsz0.png"
             className="navbar-logo"
             alt="logo"
           />

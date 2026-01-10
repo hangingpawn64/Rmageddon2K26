@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./Robowar.css";
 import WarCarousel from "../../components/WarCarousel.jsx"
 import GameCard from "../../components/Cards/GameCard";
+import AnimatedButton from "../../components/AnimatedButton";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -13,6 +14,17 @@ const Robowar = () => {
       easing: 'ease-in-out'
     });
   }, []);
+
+  const handleRegister = () => {
+    // Add your registration link or logic here
+    window.open('YOUR_REGISTRATION_LINK', '_blank');
+  };
+
+  const handleRuleBook = () => {
+    // Add your rulebook link or logic here
+    window.open('YOUR_RULEBOOK_LINK', '_blank');
+  };
+
   return (
     <>
       {/* ================= ROBOWAR SECTION ================= */}
@@ -44,16 +56,8 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-buttons">
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766434804/Group_2_fd0ezd.png"
-              alt="Register"
-              className="robowar-btn"
-            />
-            <img
-              src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766434804/Group_2_fd0ezd.png"
-              alt="Register"
-              className="robowar-btn"
-            />
+            <AnimatedButton text="R E G I S T E R" onClick={handleRegister} />
+            <AnimatedButton text="R U L E  B O O K" onClick={handleRuleBook} />
           </div>
         </div>
 
