@@ -8,7 +8,7 @@
     font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 800;
     text-align: center;
-    margin: 8rem 0 -2.5rem 0;
+    margin: 6rem 0 -2.5rem 0;
     color: #51D4FF;
     letter-spacing: 4px;
     text-shadow: 0 5px 10px rgba(8, 72, 94, 0.5);
@@ -293,7 +293,8 @@
     .home-heading {
         font-size: clamp(2.25rem, 5vw, 3.75rem);
         margin-bottom: 2rem;
-        padding-top: 3rem;
+        margin-top: 3rem;
+        padding-top: 0;
     }
 
     .home-center-content {
