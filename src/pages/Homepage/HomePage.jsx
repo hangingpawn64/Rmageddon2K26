@@ -146,7 +146,7 @@ export default function HomePage() {
                         </div>
                         {/* Center: Logo & Character */}
                         <div className="home-center-content relative">
-                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in-up" />
+                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in" />
                         </div>
 
                         {/* Right: Info Box */}
@@ -161,7 +161,7 @@ export default function HomePage() {
                             </div>
                             <div className="home-info-row">
                                 <span className="home-info-label">PRIZE POOL:</span>
-                                <span className="home-info-value home-text-cyan">Rs.2,00,000+</span>
+                                <span className="home-info-value home-text-cyan">Rs.69,420,000+</span>
                             </div>
                         </div>
 
