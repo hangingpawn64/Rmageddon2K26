@@ -32,7 +32,7 @@ const Robowar = () => {
       {/* ================= ROBOWAR SECTION ================= */}
       <section className="robowar-container">
         <div className="robowar-left">
-          <div className="robowar-header">
+          <div className="robowar-header" data-aos="zoom-in" data-aos-delay="500">
             <p className="robowar-title">ROBOWAR</p>
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768074254/Group_514617166_ohluoe.png"
@@ -41,14 +41,14 @@ const Robowar = () => {
           </div>
 
           <div className="robowar-content">
-            <div className="robowar-content-top">
+            <div className="robowar-content-top" data-aos="fade-right" data-aos-delay="1000">
               <p>
                 Enter the world of Robo Wars, where power meets precision,
                 strategy, and innovation rules the battlefield
               </p>
             </div>
 
-            <div className="robowar-content-bottom">
+            <div className="robowar-content-bottom" data-aos="fade-right" data-aos-delay="1500">
               <p>
                 Last year, RoboWars made history as Marathwada's first RoboWars
                 event. This year, the battlefield opens again your chance to test
@@ -57,7 +57,7 @@ const Robowar = () => {
             </div>
           </div>
 
-          <div className="robowar-buttons">
+          <div className="robowar-buttons" data-aos="zoom-in" data-aos-delay="2000">
             <AnimatedButton text="R E G I S T E R" onClick={handleRegister} />
             <AnimatedButton text="R U L E  B O O K" onClick={handleRuleBook} />
           </div>

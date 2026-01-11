@@ -12,7 +12,7 @@
     cursor: pointer;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
-    padding: 0.8em 1.2em;
+    padding: 0.8em 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,6 +127,11 @@
 .animated-btn:hover .animated-btn-clip {
     animation: 0.2s ease-in-out 0.55s both cyanLight8;
     --color: #00FFD1;
+}
+
+.animated-btn:hover {
+    transform: scale(1.01);
+    font-size: clamp(0.65rem, 1.5vw, 1.01rem);
 }
 
 @keyframes changeColor8 {

@@ -41,7 +41,7 @@
 }
 
 .card-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .card-item-img-shadow {
@@ -103,11 +103,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-align-items: center;
+  align-items: center;
   gap: 10px;
   flex-direction: row;
-  padding: 10px ;
-  /* margin: 5px; */
+  padding: 8px;
   color: #FF4B33;
   text-decoration: none;
   text-transform: uppercase;
@@ -117,13 +116,11 @@ align-items: center;
   font-weight: 600;
   cursor: pointer;
   font-family: 'Aldrich', sans-serif;
-  text-align: center;
 }
 
 .card-item-button:hover {
-  background: #ff4b33b9;
+  background: #e64732b9;
   color: #050801;
-  box-shadow: 0 0 1px #FF4B33, 0 0 2px #FF4B33, 0 0 3px #FF4B33;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
