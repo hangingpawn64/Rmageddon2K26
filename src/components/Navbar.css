@@ -119,35 +119,67 @@ body.navbar-scroll-locked {
 /* ======================================================
    DESKTOP NAV LINKS
 ====================================================== */
-.navbar-links-left,
-.navbar-links-right {
-  position: relative;
-  display: block;
-}
-
-.navbar-center {
-  display: none;
-}
-
-.navbar-links-right {
-  margin-left: 30px;
-}
+/* ======================================================
+   NAV LINKS – CLEAN & PREMIUM
+====================================================== */
 
 .navbar-links-list {
   list-style: none;
   display: flex;
-  gap: 80px;
+  align-items: center;
+  gap: 64px;               /* 👈 balanced spacing */
   margin: 0;
   padding: 0;
-  margin-left: 18vh;
 }
 
 .navbar-links-list a {
+  position: relative;
   color: #ffffff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;         /* 👈 slightly smaller = cleaner */
   font-weight: 600;
+  letter-spacing: 0.08em;  /* 👈 premium spacing */
+  padding: 6px 0;
+  transition: color 0.3s ease;
 }
+
+/* ===============================
+   UNDERLINE (DEFAULT STATE)
+================================ */
+/* ===============================
+   SMOOTH UNDERLINE ANIMATION
+================================ */
+
+.navbar-links-list a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 120%;
+  height: 4px;
+  background: #51d4ff;
+
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+}
+
+/* ACTIVE */
+.navbar-links-list a.active::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* EVENTS PAGE COLOR */
+.navbar-container.navbar-events-mode
+.navbar-links-list a.active::after {
+  background: #ff2d2d;
+}
+
 
 /* ======================================================
    HAMBURGER (HARD-LOCKED RIGHT)
@@ -162,6 +194,7 @@ body.navbar-scroll-locked {
   justify-content: center;
   z-index: 30;
 }
+
 
 /* ======================================================
    MOBILE MENU
