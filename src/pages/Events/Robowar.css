@@ -35,7 +35,7 @@
 }
 .robowar-left {
     min-height: 100vh;
-    flex: 1.6;
+    flex: 2;
     display: flex;
     flex-direction: column;
     /* gap: 70px; */
@@ -48,7 +48,7 @@
     flex-direction: column;
     gap: 70px;
     align-items: center;
-    margin-top: 4.5rem;
+    margin-top: 6.5rem;
     justify-content: center;
 }
 .robowar-header {
@@ -149,9 +149,30 @@
 }
 
 
+
 /* cards war section */
 
+@media (max-width: 1170px) {
 
+.robowar-left-content {
+    /* width: 93%; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    margin-top: 6.5rem;
+    justify-content: center;
+}
+.robowar-left {
+    min-height: 100vh;
+    flex: 1.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
 
