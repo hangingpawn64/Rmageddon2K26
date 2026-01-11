@@ -29,12 +29,11 @@ const SponsorSection = () => {
               <span className="sponsor-section-rnxg-underline"></span>
             </div>
 
-            <a href="https://rnxg.co.in" className="sponsor-section-exploreBtn" rel="noopener noreferrer" target="_blank" data-aos="zoom-in" data-aos-delay="0">
-              <img
-                src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"
-                alt="Explore"
-              />
-            </a>
+            <div data-aos="zoom-in" data-aos-delay="0">
+              <a href="https://rnxg.co.in" className="sponsor-section-explore-button" rel="noopener noreferrer" target="_blank">
+                <span>Explore now</span>
+              </a>
+            </div>
           </div>
 
           <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="300">
