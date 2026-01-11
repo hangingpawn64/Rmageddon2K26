@@ -35,10 +35,10 @@
 }
 .robowar-left {
     height: 61vh;
-    flex: 1.6;
+    flex: 1.7;
     display: flex;
     flex-direction: column;
-    gap: 82px;
+    gap: 70px;
     align-items: center;
     margin-top: 0rem;
 }

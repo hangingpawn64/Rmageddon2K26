@@ -47,7 +47,7 @@
   font-family: 'Ethnocentric', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   text-transform: uppercase;
-  color: #51D4FF;
+  color: rgba(64, 244, 255, 0.75);
   line-height: 1;
   letter-spacing: 0.5px;
 }
@@ -157,12 +157,12 @@
 .sponsor-section-slider-vertical {
   display: block;
   max-height: 80%;
-  width: 100svw;
+  width: 100%;
 }
 
 .sponsor-section-slider-horizontal {
   display: none;
-  width: 100svw;
+  width: 100%;
 }
 
 /* utility to keep large images from overflowing */
@@ -384,7 +384,7 @@
     /* font-size: 15px; */
     line-height: 1.4;
     text-align: left;
-      /* text-align: justify; */
+    /* text-align: justify; */
   }
 
   .sponsor-section-left-down,

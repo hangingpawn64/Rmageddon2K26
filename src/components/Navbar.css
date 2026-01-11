@@ -5,6 +5,8 @@ html,
 body {
   width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll 'shrinking' issues */
 }
 
 body.navbar-scroll-locked {
@@ -113,13 +115,6 @@ body.navbar-scroll-locked {
   width: var(--logo-size-desktop);
   z-index: 20;
 }
-
-/* ======================================================
-   DESKTOP NAV LINKS
-====================================================== */
-/* ======================================================
-   NAV LINKS – CLEAN & PREMIUM
-====================================================== */
 
 .navbar-links-list {
   list-style: none;
@@ -284,13 +279,34 @@ body.navbar-scroll-locked {
   .navbar-logo {
     width: var(--logo-size-tablet);
   }
+
+  .navbar-svg-wrapper {
+    display: block;
+    overflow: hidden;
+  }
+
+  .navbar-bg-svg {
+    min-width: 100vw;
+
+    background-size: auto 100%;
+ 
+    background-position: center;
+  }
+
+  /* Remove previous mobile background overrides */
+  .navbar-container:not(.navbar-events-mode) {
+    background: transparent;
+  }
+
+  .navbar-container.navbar-events-mode {
+    background: transparent;
+  }
 }
 
 /* ======================================================
    MOBILE (≤425px)
 ====================================================== */
 @media (max-width: 425px) {
-
   .navbar-container {
     height: var(--navbar-height-mobile);
   }
@@ -302,18 +318,6 @@ body.navbar-scroll-locked {
 
   .navbar-hamburger-wrapper {
     right: var(--hamburger-right-mobile);
-  }
-
-  .navbar-svg-wrapper {
-    display: none;
-  }
-
-  .navbar-container:not(.navbar-events-mode) {
-    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/mainnav_mobile_kxscnh.png") center/cover no-repeat;
-  }
-
-  .navbar-container.navbar-events-mode {
-    background: url("https://res.cloudinary.com/dmbmdfmhl/image/upload/v1768055125/eventnav_mobile_apfimm.png") center/cover no-repeat;
   }
 }
 
