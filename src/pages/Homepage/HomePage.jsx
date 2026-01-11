@@ -37,7 +37,7 @@ export default function HomePage() {
     // Initialize AOS
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 700,
             once: false,
             easing: 'ease-in-out',
             mirror: true
@@ -116,7 +116,7 @@ export default function HomePage() {
                                 </div>
                                 <div className="home-time-separator">
                                     <span>.</span>
-                                    <span>.</span>
+                                    <span></span>
                                 </div>
                                 <div className="home-time-unit">
                                     <div className="home-time-value"><span>{String(timeLeft.hours).padStart(2, '0')}</span></div>
@@ -124,7 +124,7 @@ export default function HomePage() {
                                 </div>
                                 <div className="home-time-separator">
                                     <span>.</span>
-                                    <span>.</span>
+                                    <span></span>
                                 </div>
                                 <div className="home-time-unit">
                                     <div className="home-time-value"><span>{String(timeLeft.minutes).padStart(2, '0')}</span></div>
@@ -132,7 +132,7 @@ export default function HomePage() {
                                 </div>
                                 <div className="home-time-separator">
                                     <span>.</span>
-                                    <span>.</span>
+                                    <span></span>
                                 </div>
                                 <div className="home-time-unit">
                                     <div className="home-time-value"><span>{String(timeLeft.seconds).padStart(2, '0')}</span></div>

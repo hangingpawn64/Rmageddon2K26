@@ -60,7 +60,7 @@
 .home-panel-title {
     font-family: 'Ethnocentric';
     color: #fff;
-    font-size: clamp(1.25rem, 4vw, 2rem);
+    font-size: clamp(1rem, 3.75vw, 1.5rem);
     text-align: center;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -229,7 +229,7 @@
 .home-info-label {
     color: #fff;
     font-family: 'Ethnocentric';
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3.75vw, 1.5rem);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
