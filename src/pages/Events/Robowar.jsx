@@ -32,7 +32,7 @@ const Robowar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper">
+      <div className="top-0 left-0 w-full z-50 flex justify-center events-navbar-wrapper" data-aos="fade-down" data-aos-delay="0">
         <Navbar />
       </div>
 
