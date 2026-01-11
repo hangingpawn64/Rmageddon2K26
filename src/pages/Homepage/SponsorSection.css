@@ -47,7 +47,8 @@
   font-family: 'Ethnocentric', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   text-transform: uppercase;
-  color: rgba(64, 244, 255, 0.75);
+  color: #51D4FF;
+  text-shadow: 2px 2px 4px #000;
   line-height: 1;
   letter-spacing: 0.5px;
 }

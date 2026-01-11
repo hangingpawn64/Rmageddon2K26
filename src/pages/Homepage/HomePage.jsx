@@ -83,7 +83,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 {/* Navbar Overlay */}
-                <div className="absolute top-0 left-0 w-full z-50 flex justify-center">
+                <div className="absolute top-0 left-0 w-full z-50 flex justify-center" data-aos="fade-down" data-aos-delay="0">
                     <Navbar />
                 </div>
 
@@ -101,13 +101,13 @@ export default function HomePage() {
                 <div className="home-content-wrapper relative z-10 min-h-screen flex flex-col items-center justify-start py-2 px-6 lg:px-10 gap-y-2">
 
                     {/* Heading */}
-                    <h1 className='home-heading'>RMAGEDDON 2026</h1>
+                    <h1 className='home-heading' data-aos="zoom-in" data-aos-delay="500">RMAGEDDON 2026</h1>
 
                     {/* Main Content Grid */}
                     <div className="home-main-content-grid w-full flex flex-row lg:flex-row justify-center items-center max-w-full gap-6 lg:gap-10">
 
                         {/* Left: Countdown */}
-                        <div className="home-countdown-container home-glass-panel" data-aos="fade-right">
+                        <div className="home-countdown-container home-glass-panel" data-aos="fade-right" data-aos-delay="1000">
                             <h3 className="home-panel-title">TIME REMAINING</h3>
                             <div className="home-timer-grid">
                                 <div className="home-time-unit">
@@ -142,11 +142,11 @@ export default function HomePage() {
                         </div>
                         {/* Center: Logo & Character */}
                         <div className="home-center-content relative">
-                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in" />
+                            <img src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1767861627/logo_opd1mq.png" alt="logo" className="home-center-logo" data-aos="zoom-in" data-aos-delay="2000" />
                         </div>
 
                         {/* Right: Info Box */}
-                        <div className="home-info-container home-glass-panel" data-aos="fade-left">
+                        <div className="home-info-container home-glass-panel" data-aos="fade-left" data-aos-delay="1000">
                             <div className="home-info-row">
                                 <span className="home-info-label">GAMES:</span>
                                 <span className="home-info-value home-text-cyan">4+</span>
@@ -157,7 +157,7 @@ export default function HomePage() {
                             </div>
                             <div className="home-info-row">
                                 <span className="home-info-label">PRIZE POOL:</span>
-                                <span className="home-info-value home-text-cyan">Rs.69,420,000+</span>
+                                <span className="home-info-value home-text-cyan">Rs.3,00,000+</span>
                             </div>
                         </div>
 
@@ -166,13 +166,13 @@ export default function HomePage() {
                     {/* Bottom Section */}
                     <div className="home-bottom-section-grid w-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
                         {/* Map */}
-                        <div className="home-map-wrapper">
+                        <div className="home-map-wrapper" data-aos="fade-right" data-aos-delay="1500">
                             <a href="https://maps.app.goo.gl/t1SdmXCSgqNS2Fjf9" target="_blank" rel="noopener noreferrer">
                                 <img src="/map.png" alt="map" className="home-map-img" />
                             </a>
                         </div>
                         {/* Mission Text */}
-                        <div className="home-mission-container">
+                        <div className="home-mission-container" data-aos="fade-up" data-aos-delay="1500">
                             <h2 className="home-mission-title">
                                 <span className="home-text-red">Mission Start :</span> Build, Battle, Dominate
                             </h2>

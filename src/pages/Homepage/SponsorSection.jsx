@@ -21,15 +21,15 @@ const SponsorSection = () => {
   return (
     <section className="sponsor-section-container">
       {/* LEFT SIDE */}
-      <div className="sponsor-section-left" data-aos="fade-right">
+      <div className="sponsor-section-left">
         <div className="sponsor-section-left-upper">
           <div className="sponsor-section-upper-head">
-            <div className="sponsor-section-title">
+            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="0">
               <p>RNXG</p>
               <span className="sponsor-section-rnxg-underline"></span>
             </div>
 
-            <a href="https://rnxg.co.in" className="sponsor-section-exploreBtn" rel="noopener noreferrer" target="_blank">
+            <a href="https://rnxg.co.in" className="sponsor-section-exploreBtn" rel="noopener noreferrer" target="_blank" data-aos="zoom-in" data-aos-delay="0">
               <img
                 src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766182828/Group_514617140_1_e6ri5g.png"
                 alt="Explore"
@@ -37,7 +37,7 @@ const SponsorSection = () => {
             </a>
           </div>
 
-          <div className="sponsor-section-glass">
+          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="300">
             <div className="sponsor-section-desc">
               <p>
                 Members of the RNXG, regardless of their fields, collaborate as a
@@ -52,13 +52,13 @@ const SponsorSection = () => {
 
         <div className="sponsor-section-left-down">
           <div className="sponsor-section-down-head">
-            <div className="sponsor-section-title">
+            <div className="sponsor-section-title" data-aos="fade-right" data-aos-delay="600">
               <p>OUR SPONSOR</p>
               <span className="sponsor-section-spon-underline"></span>
             </div>
           </div>
 
-          <div className="sponsor-section-glass">
+          <div className="sponsor-section-glass" data-aos="fade-right" data-aos-delay="900">
             <div className="sponsor-section-desc">
               <p>
                 Powered by our sponsors fueling innovation, robotic excellence,
@@ -69,7 +69,7 @@ const SponsorSection = () => {
             </div>
           </div>
 
-          <div className="sponsor-section-arrow">
+          <div className="sponsor-section-arrow" data-aos="fade-right" data-aos-delay="900">
             <img
               src="https://res.cloudinary.com/dmbmdfmhl/image/upload/v1766338541/Group_514617189_1_emshd0.png"
               alt="arrow"
@@ -88,12 +88,12 @@ const SponsorSection = () => {
         />
 
         {/* Desktop */}
-        <div className="sponsor-section-slider-vertical">
+        <div className="sponsor-section-slider-vertical" data-aos="zoom-in-left" data-aos-delay="1200">
           <VerticalSlider />
         </div>
 
         {/* Mobile */}
-        <div className="sponsor-section-slider-horizontal">
+        <div className="sponsor-section-slider-horizontal" data-aos="zoom-in-left" data-aos-delay="1200">
           <Slider />
         </div>
       </div>

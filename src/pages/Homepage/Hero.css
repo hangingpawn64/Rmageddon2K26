@@ -142,13 +142,15 @@
 
 .hero-hud-line-1 {
   font-size: clamp(1.3rem, 2.1vw, 2rem);
-  color: #7ffcff;
+  color: #51D4FF;
+  text-shadow: 2px 2px 4px #000;
   white-space: nowrap;
 }
 
 .hero-hud-line-2 {
   font-size: clamp(2.4rem, 3.6vw, 3.8rem);
-  color: #7ffcff;
+  color: #51D4FF;
+  text-shadow: 2px 2px 4px #000;
   line-height: 1.1;
   white-space: nowrap;
 }
