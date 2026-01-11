@@ -261,7 +261,7 @@ min-height: 83vh;
   animation: scan 0.4s linear;
 }
 
-/* ===================== ANIMATIONS ===================== */
+
 @keyframes glitchText {
   0% {
     transform: translate(0);
@@ -290,7 +290,6 @@ min-height: 83vh;
   }
 }
 
-/* ===================== LAPTOP (≤1024px) ===================== */
 @media (max-width: 1024px) {
 
   .home3-title {
