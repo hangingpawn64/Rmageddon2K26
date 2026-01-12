@@ -1,3 +1,11 @@
+/* Hide page content when mobile menu is open */
+body.navbar-scroll-locked main,
+body.navbar-scroll-locked .robowar-container,
+body.navbar-scroll-locked .robowar-event-section {
+  opacity: 0;
+  pointer-events: none;
+}
+
 @font-face {
   font-family: 'Ethnocentric';
   src: url('../../assets/fonts/Ethnocentric-Regular.woff2') format('woff2');
