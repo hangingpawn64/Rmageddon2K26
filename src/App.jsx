@@ -19,13 +19,48 @@ import ContactUs from "./pages/Contact/ContactUs";
 /* ===============================
    LAYOUT (SAFE, NO LOADER)
 ================================ */
+import Lenis from "lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+/* ===============================
+   LAYOUT (SAFE, NO LOADER)
+================================ */
 const Layout = () => {
   const currentOutlet = useOutlet();
 
   useEffect(() => {
+    // Enable manual body styling if needed
     document.body.style.overflow = "auto";
     document.body.style.pointerEvents = "auto";
-  });
+
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
+
+    // Sync Lenis with GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    return () => {
+      lenis.destroy();
+      gsap.ticker.remove((time) => {
+        lenis.raf(time * 1000);
+      });
+    };
+  }, []);
 
   return (
     <>

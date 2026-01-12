@@ -31,3 +31,34 @@ html {
 body {
   background-color: #000;
 }
+
+/* Premium Selection Style */
+::selection {
+  background: #ff3fd8;
+  /* Neon pink */
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #ff3fd8;
+  color: #fff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #51D4FF;
+  /* Cyan hover */
+}

@@ -67,7 +67,7 @@ export function PageTransition({ children }) {
             />
             {/* Title Text */}
             <h1
-              className={`relative z-10 text-6xl font-black tracking-wider ${currentPage.color} animate-in fade-in duration-700 ease-out`}
+              className={`relative z-10 text-3xl md:text-6xl font-black tracking-wider ${currentPage.color} animate-in fade-in duration-700 ease-out`}
             >
               {currentPage.title}
             </h1>
